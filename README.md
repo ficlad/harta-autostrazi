@@ -6,6 +6,8 @@ Hartă interactivă a tronsoanelor de autostradă și drum expres din România a
 - ultimele știri pentru fiecare lot;
 - linkuri spre 130km.ro, CNAIR și CNIR.
 
+Site: **https://harta.hangu.ro**
+
 Stadiile, lungimile și termenele sunt preluate din [130km.ro, Review Trim. III 2026](https://www.130km.ro/articol85.html). Traseele de pe hartă sunt schematice, aproximative.
 
 ## Cum funcționează
@@ -32,7 +34,7 @@ Actualizarea atribuie fiecare clip sau știre lotului de pe aceeași autostradă
    - *APIs & Services → Credentials → Create credentials → API key*
    - (recomandat) restricționează cheia doar la YouTube Data API v3
 2. În repo: **Settings → Secrets and variables → Actions → New repository secret**, nume `YT_API_KEY`, valoare = cheia.
-3. **Settings → Pages**: *Source* = **Deploy from a branch**, *Branch* = `main`, folder `/ (root)`.
+3. **Settings → Pages**: *Source* = **Deploy from a branch**, *Branch* = `main`, folder `/ (root)`. Domeniul propriu e în fișierul `CNAME` (DNS: CNAME `harta` → `ficlad.github.io`).
 4. **Actions → Actualizare filmări și știri → Run workflow** pentru o primă rulare.
 
 Fără cheie YouTube, workflow-ul actualizează doar știrile.
