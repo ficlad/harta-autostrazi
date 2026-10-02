@@ -1,113 +1,176 @@
 <title>Harta autostrăzi România</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=Overpass+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Overpass:wght@600;800&family=Overpass+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: aplicație pe un ecran — hartă mare la stânga, panou de tronsoane la dreapta (stivuit pe telefon). Vocabular de indicator rutier. */
+/* Layout: aplicație pe un ecran — hartă la stânga, panou la dreapta (stivuit pe telefon).
+   Direcție: sobru, în spiritul ECL — alb, borduri fine, ierarhie etichetă/valoare; verde de indicator rutier ca accent. Grilă de 8px, rază 4px. */
 :root{
-  --bg:#eef0ec; --panel:#fbfcfa; --fg:#1d2326; --muted:#5d686d; --line:#d6dbd6;
-  --sea:#d7e4e8; --land:#fbfbf7; --land-n:#e6e8e2; --border:#9aa39d;
-  --sign:#0b6e4f; --sign-fg:#ffffff; --shield:#c8102e;
-  --c-work:#e07f00; --c-tender:#6a4fc4; --c-open:#40474c; --sel:#0b6e4f;
+  --bg:#f3f4f2; --panel:#ffffff; --fg:#1b1f22; --muted:#5b6670; --faint:#8a949b; --line:#e3e6e4; --line-2:#cfd5d2;
+  --sea:#dfe9ec; --land:#fbfbf9; --land-n:#eceeea; --border:#a9b2ad; --casing:#ffffff;
+  --sign:#0b6e4f; --sign-2:#095c42; --sign-soft:#e7f2ec; --sign-fg:#ffffff; --shield:#c8102e;
+  --c-work:#e07f00; --c-work-soft:#fdf1e1; --c-tender:#6a4fc4; --c-tender-soft:#efebfa; --c-open:#4a5257; --sel:#0b6e4f;
+  --info:#1f5fa8; --info-soft:#eaf1fa;
+  --shadow:0 1px 2px rgba(20,30,25,.06),0 4px 12px rgba(20,30,25,.08);
+  --font-b:"Public Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
   --font-d:"Overpass","Arial Narrow",Arial,sans-serif; --font-m:"Overpass Mono",ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#121618; --panel:#191e21; --fg:#e6eaea; --muted:#99a4a8; --line:#2c3438;
-  --sea:#0f171b; --land:#20272a; --land-n:#181d20; --border:#47535a;
-  --sign:#1f9a72; --sign-fg:#ffffff; --shield:#d8283f;
-  --c-work:#ffa42b; --c-tender:#a08cf0; --c-open:#a9b2b6; --sel:#3fd19d; color-scheme:dark}}
+  --bg:#111517; --panel:#181d20; --fg:#e7ebec; --muted:#a3adb2; --faint:#7d888e; --line:#283035; --line-2:#36414a;
+  --sea:#0e1619; --land:#1f2629; --land-n:#171c1f; --border:#4a565d; --casing:#111517;
+  --sign:#1f9a72; --sign-2:#178360; --sign-soft:#15302a; --sign-fg:#ffffff; --shield:#d8283f;
+  --c-work:#ffa42b; --c-work-soft:#3a2a12; --c-tender:#a08cf0; --c-tender-soft:#2a2440; --c-open:#aab3b8; --sel:#3fd19d;
+  --info:#7fb2ee; --info-soft:#1a2633; --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.35); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#121618; --panel:#191e21; --fg:#e6eaea; --muted:#99a4a8; --line:#2c3438;
-  --sea:#0f171b; --land:#20272a; --land-n:#181d20; --border:#47535a;
-  --sign:#1f9a72; --sign-fg:#ffffff; --shield:#d8283f;
-  --c-work:#ffa42b; --c-tender:#a08cf0; --c-open:#a9b2b6; --sel:#3fd19d; color-scheme:dark}
+  --bg:#111517; --panel:#181d20; --fg:#e7ebec; --muted:#a3adb2; --faint:#7d888e; --line:#283035; --line-2:#36414a;
+  --sea:#0e1619; --land:#1f2629; --land-n:#171c1f; --border:#4a565d; --casing:#111517;
+  --sign:#1f9a72; --sign-2:#178360; --sign-soft:#15302a; --sign-fg:#ffffff; --shield:#d8283f;
+  --c-work:#ffa42b; --c-work-soft:#3a2a12; --c-tender:#a08cf0; --c-tender-soft:#2a2440; --c-open:#aab3b8; --sel:#3fd19d;
+  --info:#7fb2ee; --info-soft:#1a2633; --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.35); color-scheme:dark}
 html,body{height:100%}
-body{background:var(--bg);color:var(--fg);font-family:var(--font-d);font-size:15px;line-height:1.45}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-b);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
 *{box-sizing:border-box}
 a{color:inherit}
-.app{display:grid;grid-template-columns:minmax(0,1fr) 400px;grid-template-rows:auto minmax(0,1fr);height:100%}
-header{grid-column:1/-1;background:var(--sign);color:var(--sign-fg);padding:12px 16px 12px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;border-bottom:3px solid #fff3}
-header h1{margin:0;font-size:22px;font-weight:800;letter-spacing:.01em;text-wrap:balance;display:flex;align-items:center;gap:10px}
-.sh{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:22px;padding:0 6px;border-radius:5px;background:var(--shield);color:#fff;font-weight:800;font-size:13px;border:2px solid #fff;line-height:1;padding-top:2px}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 420px;grid-template-rows:auto minmax(0,1fr);height:100%}
+
+/* antet */
+header{grid-column:1/-1;background:var(--sign);color:var(--sign-fg);padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 32px}
+header h1{margin:0;font:800 20px/1.2 var(--font-d);letter-spacing:.01em;display:flex;align-items:center;gap:10px;text-wrap:balance}
+.sh{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:22px;padding:2px 6px 0;border-radius:4px;background:var(--shield);color:#fff;font:800 13px/1 var(--font-d);border:2px solid #fff}
 .sh.dex{background:#fff;color:var(--shield);border-color:var(--shield)}
-.totals{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;opacity:.95}
-.totals b{font-family:var(--font-m);font-weight:600;font-variant-numeric:tabular-nums;font-size:15px}
-.totals span{display:flex;align-items:baseline;gap:6px}
-.dot{width:12px;height:4px;border-radius:2px;display:inline-block;align-self:center}
-.src{margin-left:auto;font-size:12px;opacity:.85}
+.totals{display:flex;flex-wrap:wrap;gap:4px 28px;margin:0}
+.totals div{display:grid;gap:0}
+.totals dt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.8;display:flex;align-items:center;gap:6px}
+.totals dd{margin:0;font:600 18px/1.2 var(--font-m);font-variant-numeric:tabular-nums}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;border:2px solid #fff}
+.src{margin-left:auto;font-size:12px;line-height:1.5;opacity:.88;text-align:right}
 .src a{color:#fff}
+
+/* hartă */
 .mapwrap{position:relative;min-width:0;min-height:0;background:var(--sea)}
 #map{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
 #map:active{cursor:grabbing}
 .land{fill:var(--land);stroke:var(--border);stroke-width:1}
 .land.n{fill:var(--land-n);stroke:none}
-.city circle{fill:var(--fg)}
-.city text{fill:var(--muted);font-family:var(--font-d);paint-order:stroke;stroke:var(--land);stroke-width:3px;stroke-linejoin:round}
+.city circle{fill:var(--fg);stroke:var(--land)}
+.city text{fill:var(--muted);font-family:var(--font-b);paint-order:stroke;stroke:var(--land);stroke-linejoin:round}
 .city.big text{fill:var(--fg);font-weight:600}
-.seg{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.seg{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:opacity .2s}
+.casing{stroke:var(--casing)}
+.casing.open{stroke-width:4.5}
+.casing.work{stroke-width:7.5}
+.casing.tender{stroke-width:6}
 .open{stroke:var(--c-open);stroke-width:2.5}
 .work{stroke:var(--c-work);stroke-width:4.5}
 .tender{stroke:var(--c-tender);stroke-width:3.5;stroke-dasharray:6 5}
+.seg.hov{stroke-width:7}
 .hit{stroke:transparent;stroke-width:16;fill:none;cursor:pointer;vector-effect:non-scaling-stroke;pointer-events:stroke}
-.hasvid{stroke:#fff;stroke-width:1.5;fill:var(--c-work)}
-.halo{fill:none;stroke:var(--sel);stroke-width:12;stroke-opacity:.35;stroke-linecap:round;vector-effect:non-scaling-stroke;pointer-events:none}
-.seg.dim{opacity:.25}
-.legend{position:absolute;left:12px;bottom:12px;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:12px;display:grid;gap:4px}
-.legend div{display:flex;align-items:center;gap:8px}
+.vm circle{fill:var(--panel);stroke:var(--c-work);vector-effect:non-scaling-stroke;stroke-width:1.5}
+.vm path{fill:#e3261b}
+.halo{fill:none;stroke:var(--sel);stroke-width:14;stroke-opacity:.28;stroke-linecap:round;vector-effect:non-scaling-stroke;pointer-events:none}
+.seg.dim,.casing.dim{opacity:.2}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;box-shadow:var(--shadow)}
+.legend{position:absolute;left:16px;bottom:16px;padding:10px 12px;font-size:12.5px;display:grid;gap:6px}
+.legend div{display:flex;align-items:center;gap:10px}
 .legend svg{flex:none}
-.zoombtns{position:absolute;right:12px;top:12px;display:grid;gap:4px}
-.zoombtns button{width:34px;height:34px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-size:18px;font-weight:800;cursor:pointer;font-family:var(--font-d)}
-.note-map{position:absolute;right:12px;bottom:12px;font-size:11px;color:var(--muted);background:var(--panel);padding:3px 7px;border-radius:4px;border:1px solid var(--line);max-width:60%}
+.zoombtns{position:absolute;right:16px;top:16px;display:grid;overflow:hidden}
+.zoombtns button{width:36px;height:36px;border:0;border-top:1px solid var(--line);background:var(--panel);color:var(--fg);font:600 18px var(--font-b);cursor:pointer}
+.zoombtns button:first-child{border-top:0}
+.zoombtns button:hover{background:var(--bg)}
+.tip{position:absolute;pointer-events:none;padding:6px 10px;font-size:12.5px;font-weight:600;white-space:nowrap;transform:translate(-50%,calc(-100% - 12px))}
+.note-map{position:absolute;right:16px;bottom:16px;font-size:11.5px;color:var(--muted);padding:4px 8px}
+
+/* panou */
 aside{background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0;min-width:0}
-.ctrl{padding:12px 16px;border-bottom:1px solid var(--line);display:grid;gap:10px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font:600 13px var(--font-d);padding:5px 10px 3px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--fg);color:var(--panel);border-color:var(--fg)}
-.ctrl input{width:100%;font:15px var(--font-d);padding:8px 10px 6px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
-button:focus-visible,input:focus-visible,a:focus-visible,.item:focus-visible{outline:2.5px solid var(--sel);outline-offset:2px}
+.ctrl{padding:16px;border-bottom:1px solid var(--line);display:grid;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 13px var(--font-b);padding:5px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--panel);color:var(--fg);cursor:pointer}
+.chip:hover{border-color:var(--sign)}
+.chip[aria-pressed="true"]{background:var(--sign-soft);color:var(--sign-2);border-color:var(--sign);font-weight:600}
+.search{position:relative}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--faint)}
+.ctrl input{width:100%;font:15px var(--font-b);padding:9px 12px 9px 36px;border:1px solid var(--line-2);border-radius:4px;background:var(--panel);color:var(--fg)}
+.ctrl input:focus{border-color:var(--sign)}
+button:focus-visible,input:focus-visible,a:focus-visible,.item:focus-visible{outline:2px solid var(--sel);outline-offset:2px}
 .scroll{overflow-y:auto;min-height:0;flex:1}
-.detail{padding:14px 16px 16px;border-bottom:1px solid var(--line);background:var(--bg)}
-.detail h2{margin:4px 0 6px;font-size:19px;line-height:1.25;text-wrap:balance}
-.meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted)}
-.meta b{color:var(--fg);font-family:var(--font-m);font-weight:600}
-.pill{display:inline-block;font:800 11px var(--font-d);letter-spacing:.08em;text-transform:uppercase;padding:3px 7px 1px;border-radius:4px;color:#fff}
-.pill.c{background:var(--c-work);color:#1d1300}
-.pill.t{background:var(--c-tender)}
-.dnote{font-size:13px;margin:8px 0 0;color:var(--fg)}
-.vids{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
-.vid a{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;align-items:start;text-decoration:none;padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--panel)}
-.vid a:hover{border-color:var(--c-work)}
-.play{width:44px;height:30px;border-radius:7px;background:#e3261b;display:grid;place-items:center}
-.play::after{content:"";border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
-.vt{font-size:13.5px;font-weight:600;line-height:1.3}
-.vc{font-size:12px;color:var(--muted);margin-top:2px}
-.vc b{font-family:var(--font-m);font-weight:600;color:var(--fg)}
-.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.lnk{font:600 13px var(--font-d);padding:6px 10px 4px;border-radius:6px;border:1.5px solid var(--sign);color:var(--sign);text-decoration:none}
-.lnk.primary{background:var(--sign);color:var(--sign-fg)}
-.empty{font-size:13px;color:var(--muted);margin:10px 0 0}
-.group h3{margin:0;padding:12px 16px 6px;font-size:13px;display:flex;align-items:center;gap:8px;position:sticky;top:0;background:var(--panel);z-index:1}
-.group h3 small{font-weight:400;color:var(--muted);font-family:var(--font-m);font-size:12px}
-.item{display:grid;grid-template-columns:10px minmax(0,1fr) auto;gap:10px;align-items:center;padding:7px 16px;cursor:pointer;border-top:1px solid var(--line)}
+
+/* fișa tronsonului */
+.detail{padding:20px 16px 24px;border-bottom:8px solid var(--bg)}
+.dhead{display:flex;gap:8px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:2px 10px;border-radius:999px}
+.tag i{width:8px;height:8px;border-radius:50%}
+.tag.c{background:var(--c-work-soft);color:var(--fg)} .tag.c i{background:var(--c-work)}
+.tag.t{background:var(--c-tender-soft);color:var(--fg)} .tag.t i{background:var(--c-tender)}
+.detail h2{margin:12px 0 16px;font-size:21px;line-height:1.25;font-weight:700;text-wrap:balance}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;margin:0;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.facts div{background:var(--panel);padding:10px 12px}
+.facts dt{font-size:11.5px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.facts dd{margin:2px 0 0;font-size:16px;font-weight:600;font-variant-numeric:tabular-nums}
+.notice{display:flex;gap:10px;margin-top:12px;padding:10px 12px;background:var(--info-soft);border-left:4px solid var(--info);border-radius:0 4px 4px 0;font-size:13.5px}
+.notice svg{flex:none;color:var(--info);margin-top:2px}
+.sec{display:flex;align-items:center;gap:8px;margin:24px 0 10px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.count{font:600 11px var(--font-m);background:var(--bg);color:var(--muted);border-radius:999px;padding:1px 7px}
+.vids{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.vid a{display:grid;grid-template-columns:128px minmax(0,1fr);gap:12px;align-items:start;text-decoration:none}
+.thumb{position:relative;width:128px;aspect-ratio:16/9;border-radius:4px;overflow:hidden;background:linear-gradient(135deg,#2b3a35,#16201c);max-width:100%}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .pl{position:absolute;inset:0;margin:auto;width:34px;height:24px;border-radius:6px;background:#e3261bdd;display:grid;place-items:center;transition:transform .15s}
+.thumb .pl::after{content:"";border-left:9px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:2px}
+.vid a:hover .pl{transform:scale(1.1)}
+.vid a:hover .vt{text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
+.vt{font-size:14px;font-weight:600;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.vc{font-size:12.5px;color:var(--muted);margin-top:4px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--font-b);padding:8px 14px;border-radius:4px;border:1px solid var(--sign);color:var(--sign);text-decoration:none;background:var(--panel)}
+.btn:hover{background:var(--sign-soft)}
+.btn.primary{background:var(--sign);color:var(--sign-fg)}
+.btn.primary:hover{background:var(--sign-2)}
+.btnrow{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.news{list-style:none;margin:0;padding:0}
+.news li+li{border-top:1px solid var(--line)}
+.news a{display:grid;grid-template-columns:52px minmax(0,1fr) 14px;gap:12px;align-items:start;padding:10px 0;text-decoration:none}
+.news a:hover .nt{text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
+.nd{font:600 12px/1.3 var(--font-m);color:var(--muted);text-align:center;padding-top:2px}
+.nd b{display:block;font-size:17px;color:var(--fg)}
+.nt{font-size:14px;font-weight:500;line-height:1.4}
+.ns{font-size:12.5px;color:var(--muted);margin-top:2px}
+.news .ext{color:var(--faint);margin-top:4px}
+.links{list-style:none;margin:0;padding:0}
+.links a{display:flex;justify-content:space-between;align-items:center;padding:9px 0;text-decoration:none;font-size:14px;font-weight:500;color:var(--sign);border-top:1px solid var(--line)}
+.links li:first-child a{border-top:0}
+.links a:hover{text-decoration:underline;text-underline-offset:3px}
+.empty{font-size:13.5px;color:var(--muted);margin:0}
+.chk{font-size:12px;color:var(--faint);margin:16px 0 0}
+
+/* listă */
+.group h3{margin:0;padding:16px 16px 10px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:center;position:sticky;top:0;background:var(--panel);z-index:1;border-bottom:1px solid var(--line)}
+.group h3 small{font-size:12.5px;font-weight:500;color:var(--muted)}
+.split{grid-column:1/-1;display:flex;height:4px;border-radius:2px;overflow:hidden;background:var(--line);margin-top:4px}
+.split i{display:block}
+.split .c{background:var(--c-work)} .split .t{background:var(--c-tender)}
+.item{display:grid;grid-template-columns:10px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 16px;cursor:pointer;border-bottom:1px solid var(--line)}
 .item:hover{background:var(--bg)}
-.item[aria-current="true"]{background:var(--bg);box-shadow:inset 3px 0 0 var(--sel)}
-.item .bar{width:10px;height:4px;border-radius:2px}
-.item .bar.c{background:var(--c-work)}
-.item .bar.t{background:repeating-linear-gradient(90deg,var(--c-tender) 0 4px,transparent 4px 6px)}
-.item .nm{font-size:14px;line-height:1.3}
-.item .rt{font:12px var(--font-m);color:var(--muted);text-align:right;white-space:nowrap;display:flex;gap:6px;align-items:center}
-.vbadge{font:800 10px var(--font-d);background:#e3261b;color:#fff;border-radius:3px;padding:2px 4px 0}
-.nh{margin:14px 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.news{list-style:none;margin:0;padding:0;display:grid;gap:2px}
-.news a{display:block;text-decoration:none;padding:7px 0 7px 12px;border-left:3px solid var(--line)}
-.news a:hover{border-left-color:var(--sign)}
-.chk{font-size:11.5px;color:var(--muted);margin:10px 0 0}
-footer{padding:12px 16px 20px;font-size:12px;color:var(--muted)}
+.item[aria-current="true"]{background:var(--sign-soft);box-shadow:inset 3px 0 0 var(--sel)}
+.st{width:10px;height:10px;border-radius:50%}
+.st.c{background:var(--c-work)}
+.st.t{background:var(--panel);border:2px solid var(--c-tender)}
+.nm{font-size:14px;font-weight:500;line-height:1.35}
+.sub{font-size:12.5px;color:var(--muted);margin-top:1px}
+.sub .v{color:#c4231a;font-weight:600}
+.km{font:500 13px var(--font-m);color:var(--muted);font-variant-numeric:tabular-nums;text-align:right;min-width:62px}
+footer{padding:16px 16px 24px;font-size:12.5px;color:var(--muted);border-top:8px solid var(--bg)}
 @media (max-width:820px){
-  .app{grid-template-columns:1fr;grid-template-rows:auto 52vh auto;height:auto}
+  .app{grid-template-columns:1fr;grid-template-rows:auto auto auto;height:auto}
+  .mapwrap{display:flex;flex-direction:column}
+  #map{height:min(62vh,74vw);min-height:260px}
+  .legend{position:static;display:flex;flex-wrap:wrap;gap:6px 16px;border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none;padding:10px 16px;font-size:12px}
+  .zoombtns{top:12px;right:12px}
+  .zoombtns button{width:32px;height:32px}
   aside{border-left:0;border-top:1px solid var(--line)}
   .scroll{overflow:visible}
-  .src{margin-left:0}
+  .src{margin-left:0;text-align:left}
   .note-map{display:none}
+  .vid a{grid-template-columns:104px minmax(0,1fr)}
+  .thumb{width:104px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -115,24 +178,25 @@ footer{padding:12px 16px 20px;font-size:12px;color:var(--muted)}
 <div class="app">
 <header>
   <h1><span class="sh">A</span>Harta autostrăzi România</h1>
-  <div class="totals">
-    <span><i class="dot" style="background:var(--c-work)"></i>În execuție <b>991 km</b></span>
-    <span><i class="dot" style="background:#fff;opacity:.8"></i>În licitare <b>321 km</b></span>
-    <span>Deschiși <b>1.476 km</b></span>
-  </div>
+  <dl class="totals">
+    <div><dt><i class="dot" style="background:var(--c-work)"></i>În execuție</dt><dd>991 km</dd></div>
+    <div><dt><i class="dot" style="background:var(--c-tender)"></i>În licitare</dt><dd>321 km</dd></div>
+    <div><dt><i class="dot" style="background:var(--c-open)"></i>Deschiși</dt><dd>1.476 km</dd></div>
+  </dl>
   <div class="src">Stadiu la 30.09.2026 · sursa <a href="https://www.130km.ro/articol85.html" target="_blank" rel="noopener">130km.ro</a><br><span id="upd">Filmări verificate la 02.10.2026</span></div>
 </header>
 
 <div class="mapwrap">
   <svg id="map" role="img" aria-label="Harta tronsoanelor de autostradă în execuție și în licitare"></svg>
-  <div class="zoombtns"><button id="zin" aria-label="Mărește">+</button><button id="zout" aria-label="Micșorează">−</button><button id="zreset" aria-label="Toată țara" style="font-size:12px">RO</button></div>
-  <div class="legend">
-    <div><svg width="28" height="8"><line x1="2" y1="4" x2="26" y2="4" stroke="var(--c-work)" stroke-width="4.5" stroke-linecap="round"/></svg>În execuție</div>
-    <div><svg width="28" height="8"><line x1="2" y1="4" x2="26" y2="4" stroke="var(--c-tender)" stroke-width="3.5" stroke-dasharray="6 5"/></svg>În licitare</div>
-    <div><svg width="28" height="8"><line x1="2" y1="4" x2="26" y2="4" stroke="var(--c-open)" stroke-width="2.5"/></svg>Deschis circulației</div>
-    <div><svg width="28" height="10"><circle cx="14" cy="5" r="4" class="hasvid"/></svg>Are filmare recentă</div>
+  <div class="zoombtns card"><button id="zin" aria-label="Mărește">+</button><button id="zout" aria-label="Micșorează">−</button><button id="zreset" aria-label="Toată țara" style="font-size:11px;font-weight:700">RO</button></div>
+  <div class="legend card">
+    <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-work)" stroke-width="4.5" stroke-linecap="round"/></svg>În execuție</div>
+    <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-tender)" stroke-width="3.5" stroke-dasharray="6 5"/></svg>În licitare</div>
+    <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-open)" stroke-width="2.5" stroke-linecap="round"/></svg>Deschis circulației</div>
+    <div><svg width="30" height="16" viewBox="-15 -8 30 16"><g class="vm"><circle r="7"/><path d="M-2.2,-3.2 L3.4,0 L-2.2,3.2Z"/></g></svg>Are filmare recentă</div>
   </div>
-  <div class="note-map">Trasee schematice, aproximative</div>
+  <div class="tip card" id="tip" hidden></div>
+  <div class="note-map card">Trasee schematice, aproximative</div>
 </div>
 
 <aside>
@@ -143,7 +207,7 @@ footer{padding:12px 16px 20px;font-size:12px;color:var(--muted)}
       <button class="chip" id="f-t" aria-pressed="false">În licitare</button>
       <button class="chip" id="f-v" aria-pressed="false">Cu filmări</button>
     </div>
-    <input id="q" type="search" placeholder="Caută: A8, Zalău, Pașcani…" aria-label="Caută tronson">
+    <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="q" type="search" placeholder="Caută: A8, Zalău, Pașcani…" aria-label="Caută tronson"></div>
   </div>
   <div class="scroll" id="scroll">
     <section class="detail" id="detail"></section>
@@ -170,41 +234,52 @@ const ytSearch = s => 'https://www.youtube.com/results?search_query=' + encodeUR
 const newsSearch = s => 'https://news.google.com/search?q=' + encodeURIComponent(s.q || s.name) + '&hl=ro&gl=RO&ceid=RO:ro';
 const OWNER = {CNAIR:['CNAIR – proiecte','https://www.cnair.ro'], CNIR:['CNIR – proiecte','https://www.cnir.ro']};
 const fmtD = d => d && d.length === 10 ? d.split('-').reverse().join('.') : (d ? d.split('-').reverse().join('.') : '');
+const MON = ['ian','feb','mar','apr','mai','iun','iul','aug','sep','oct','nov','dec'];
+function ago(d){ if (!d) return ''; const t = new Date(d + (d.length === 10 ? 'T12:00:00' : '')); const n = Math.round((Date.now() - t) / 864e5); if (isNaN(n)) return ''; if (n <= 0) return 'azi'; if (n === 1) return 'ieri'; if (n < 7) return `acum ${n} zile`; if (n < 14) return 'acum o săptămână'; if (n < 31) return `acum ${Math.round(n/7)} săptămâni`; if (n < 60) return 'acum o lună'; return `acum ${Math.round(n/30)} luni`; }
+const ICON_EXT = '<svg class="ext" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+const ICON_INFO = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>';
 const fmtKm = k => k == null ? '–' : String(k).replace('.', ',') + ' km';
 
 // ---- map
 const svg = d3.select('#map');
+const tip = document.getElementById('tip');
 const g = svg.append('g');
 const proj = d3.geoMercator();
 const path = d3.geoPath(proj);
 const ro = GEO.features.find(f => f.properties.c === 'RO');
 const line = pts => path({type:'LineString', coordinates: pts.map(p => [p[1], p[0]])});
 
-const gLand = g.append('g'), gOpen = g.append('g'), gSeg = g.append('g'), gHalo = g.append('g'), gCity = g.append('g'), gVid = g.append('g'), gHit = g.append('g');
+const gLand = g.append('g'), gCase = g.append('g'), gOpen = g.append('g'), gSeg = g.append('g'), gHalo = g.append('g'), gVid = g.append('g'), gCity = g.append('g'), gHit = g.append('g');
 let W, H, k = 1;
 function layout(){
   const r = svg.node().getBoundingClientRect(); W = r.width; H = r.height;
   proj.fitExtent([[24,24],[W-24,H-24]], ro);
   gLand.selectAll('path').data(GEO.features).join('path').attr('class', d => 'land' + (d.properties.c === 'RO' ? '' : ' n')).attr('d', path);
   gLand.selectAll('path').filter(d => d.properties.c === 'RO').raise();
+  gCase.selectAll('path.co').data(OPEN).join('path').attr('class','seg casing open co').attr('d', d => line(d[1]));
+  gCase.selectAll('path.cs').data(SEGMENTS).join('path').attr('class', d => 'seg casing cs ' + (d.status === 'c' ? 'work' : 'tender')).attr('d', d => line(d.pts));
   gOpen.selectAll('path').data(OPEN).join('path').attr('class','seg open').attr('d', d => line(d[1]));
   gSeg.selectAll('path').data(SEGMENTS).join('path').attr('class', d => 'seg ' + (d.status === 'c' ? 'work' : 'tender')).attr('d', d => line(d.pts));
   gHit.selectAll('path').data(SEGMENTS).join('path').attr('class','hit').attr('d', d => line(d.pts))
-    .on('click', (e,d) => select(d.id, false)).append('title').text(d => d.name);
+    .on('click', (e,d) => select(d.id, false))
+    .on('mouseenter', (e,d) => { gSeg.selectAll('path').classed('hov', x => x === d); tip.textContent = d.name; tip.hidden = false; })
+    .on('mousemove', e => { const r = svg.node().getBoundingClientRect(); tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px'; })
+    .on('mouseleave', () => { gSeg.selectAll('path').classed('hov', false); tip.hidden = true; });
   const cg = gCity.selectAll('g').data(CITIES).join(enter => { const e = enter.append('g'); e.append('circle'); e.append('text'); return e; })
     .attr('class', d => 'city' + (d[3] === 1 ? ' big' : ''));
   cg.select('circle').attr('cx', d => proj([d[2], d[1]])[0]).attr('cy', d => proj([d[2], d[1]])[1]);
   cg.select('text').attr('x', d => proj([d[2], d[1]])[0]).attr('y', d => proj([d[2], d[1]])[1]).text(d => d[0]);
-  gVid.selectAll('circle').data(SEGMENTS.filter(s => s.vids.length)).join('circle').attr('class','hasvid')
-    .attr('cx', d => mid(d)[0]).attr('cy', d => mid(d)[1]).style('pointer-events','none');
+  gVid.selectAll('g').data(SEGMENTS.filter(s => s.vids.length), d => d.id)
+    .join(enter => { const e = enter.append('g').attr('class','vm').style('pointer-events','none'); e.append('circle').attr('r', 7); e.append('path').attr('d','M-2.2,-3.2 L3.4,0 L-2.2,3.2Z'); return e; })
+    .attr('data-x', d => mid(d)[0]).attr('data-y', d => mid(d)[1]);
   applyFilter(); drawHalo(); rescale();
 }
 function mid(s){ const p = s.pts[Math.floor((s.pts.length-1)/2)], q = s.pts[Math.ceil((s.pts.length-1)/2)]; return proj([(p[1]+q[1])/2, (p[0]+q[0])/2]); }
 function rescale(){
-  gCity.selectAll('circle').attr('r', d => (d[3] === 1 ? 3 : 2.2) / k);
-  gCity.selectAll('text').attr('font-size', d => (d[3] === 1 ? 12.5 : 11) / k).attr('dx', 5/k).attr('dy', -4/k).style('stroke-width', 3/k + 'px')
+  gCity.selectAll('circle').attr('r', d => (d[3] === 1 ? 3.2 : 2.2) / k).style('stroke-width', 1.5 / k);
+  gCity.selectAll('text').attr('font-size', d => (d[3] === 1 ? 12.5 : 10.5) / k).attr('dx', 5/k).attr('dy', -4/k).style('stroke-width', 3/k + 'px')
     .style('display', d => d[3] === 2 && k < 1.6 && W < 700 ? 'none' : null);
-  gVid.selectAll('circle').attr("r", 3.2 / k).style('stroke-width', 1.5 / k);
+  gVid.selectAll('g.vm').attr('transform', function(){ return `translate(${this.dataset.x},${this.dataset.y}) scale(${0.85 / k})`; });
   gLand.selectAll('path').style('stroke-width', 1 / k);
 }
 const zoom = d3.zoom().scaleExtent([1, 14]).on('zoom', e => { k = e.transform.k; g.attr('transform', e.transform); rescale(); });
@@ -231,6 +306,7 @@ function visible(s){
 }
 function applyFilter(){
   gSeg.selectAll('path').classed('dim', d => !visible(d));
+  gCase.selectAll('path.cs').classed('dim', d => !visible(d));
   renderList();
 }
 function drawHalo(){
@@ -252,23 +328,22 @@ function renderDetail(){
     return;
   }
   const s = byId[current];
-  let h = `<div style="display:flex;gap:8px;align-items:center">${shield(s.road)}<span class="pill ${s.status}">${s.status === 'c' ? 'În execuție' : 'În licitare'}</span></div>
-    <h2>${esc(s.name)}</h2>
-    <div class="meta"><span>Lungime <b>${fmtKm(s.km)}</b></span><span>${s.status === 'c' ? 'Termen' : 'Stadiu'} <b>${esc(s.term)}</b></span>${s.owner ? `<span>Beneficiar <b>${s.owner}</b></span>` : ''}</div>`;
-  if (s.note) h += `<p class="dnote">${esc(s.note)}</p>`;
+  const o = OWNER[s.owner];
+  let h = `<div class="dhead">${shield(s.road)}<span class="tag ${s.status}"><i></i>${s.status === 'c' ? 'În execuție' : 'În licitare'}</span></div>
+    <h2>${esc(s.name.replace(/^\S+\s/, ''))}</h2>
+    <dl class="facts"><div><dt>Lungime</dt><dd>${fmtKm(s.km)}</dd></div><div><dt>${s.status === 'c' ? 'Termen' : 'Stadiu'}</dt><dd>${esc(s.term)}</dd></div>${s.owner ? `<div><dt>Beneficiar</dt><dd>${s.owner}</dd></div>` : ''}</dl>`;
+  if (s.note) h += `<div class="notice">${ICON_INFO}<span>${esc(s.note)}</span></div>`;
   if (s.status === 'c'){
+    h += `<h3 class="sec">Filmări recente ${s.vids.length ? `<span class="count">${s.vids.length}</span>` : ''}</h3>`;
     if (s.vids.length){
-      h += '<ul class="vids">' + s.vids.map(v => `<li class="vid"><a href="https://www.youtube.com/watch?v=${v.v}" target="_blank" rel="noopener"><span class="play" aria-hidden="true"></span><span><span class="vt">${esc(v.t)}</span><div class="vc">${v.d ? `<b>${fmtD(v.d)}</b> · ` : ''}${esc(v.c)}</div></span></a></li>`).join('') + '</ul>';
+      h += '<ul class="vids">' + s.vids.map(v => `<li class="vid"><a href="https://www.youtube.com/watch?v=${v.v}" target="_blank" rel="noopener"><span class="thumb"><img src="https://i.ytimg.com/vi/${v.v}/mqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="pl"></span></span><span><span class="vt">${esc(v.t)}</span><div class="vc">${esc(v.c)}${v.d ? ` · <span title="${fmtD(v.d)}">${ago(v.d)}</span>` : ''}</div></span></a></li>`).join('') + '</ul>';
     } else {
-      h += `<p class="empty">Nicio filmare recentă găsită pentru acest lot la 02.10.2026. Caută mai jos, sortat după cele mai noi.</p>`;
+      h += `<p class="empty">Nicio filmare recentă găsită pentru acest lot.</p>`;
     }
-    h += `<div class="links"><a class="lnk primary" href="${ytSearch(s)}" target="_blank" rel="noopener">Caută filmări noi pe YouTube</a><a class="lnk" href="${s.src}" target="_blank" rel="noopener">Fișa pe 130km.ro</a></div>`;
-    h += newsHtml(s);
-  } else {
-    const o = OWNER[s.owner];
-    h += newsHtml(s);
-    h += `<div class="links"><a class="lnk primary" href="${newsSearch(s)}" target="_blank" rel="noopener">Toate știrile</a>${o ? `<a class="lnk" href="${o[1]}" target="_blank" rel="noopener">${o[0]}</a>` : ''}<a class="lnk" href="${s.src}" target="_blank" rel="noopener">Fișa pe 130km.ro</a></div>`;
+    h += `<div class="btnrow"><a class="btn primary" href="${ytSearch(s)}" target="_blank" rel="noopener">Caută filmări noi pe YouTube ${ICON_EXT}</a></div>`;
   }
+  h += newsHtml(s);
+  h += `<h3 class="sec">Linkuri</h3><ul class="links">${s.status === 't' ? `<li><a href="${newsSearch(s)}" target="_blank" rel="noopener">Toate știrile despre acest lot ${ICON_EXT}</a></li>` : ''}${o ? `<li><a href="${o[1]}" target="_blank" rel="noopener">${o[0]} ${ICON_EXT}</a></li>` : ''}<li><a href="${s.src}" target="_blank" rel="noopener">Fișa pe 130km.ro ${ICON_EXT}</a></li></ul>`;
   if (s.checkedAt) h += `<p class="chk">Verificat automat: ${fmtDT(s.checkedAt)}</p>`;
   el.innerHTML = h;
 }
@@ -276,7 +351,11 @@ function renderDetail(){
 function newsHtml(s){
   const n = s.news || [];
   if (!n.length) return '';
-  return `<h4 class="nh">Ultimele știri</h4><ul class="news">` + n.map(x => `<li><a href="${esc(x.u)}" target="_blank" rel="noopener"><span class="vt">${esc(x.t)}</span><div class="vc">${x.d ? `<b>${fmtD(x.d)}</b> · ` : ''}${esc(x.s || '')}</div></a></li>`).join('') + '</ul>';
+  return `<h3 class="sec">Ultimele știri</h3><ul class="news">` + n.map(x => {
+    const p = (x.d || '').split('-');
+    const dd = p.length === 3 ? `<b>${+p[2]}</b>${MON[+p[1]-1]}` : '';
+    return `<li><a href="${esc(x.u)}" target="_blank" rel="noopener"><span class="nd">${dd}</span><span><div class="nt">${esc(x.t)}</div><div class="ns">${esc(x.s || '')}</div></span>${ICON_EXT}</a></li>`;
+  }).join('') + '</ul>';
 }
 function renderList(){
   const el = document.getElementById('list');
@@ -285,9 +364,12 @@ function renderList(){
     const items = SEGMENTS.filter(s => s.road === r && visible(s));
     if (!items.length) return;
     const km = items.reduce((a, s) => a + (s.km || 0), 0);
-    h += `<div class="group"><h3>${shield(r)}<small>${items.length} ${items.length === 1 ? 'tronson' : 'tronsoane'} · ${km.toFixed(1).replace('.', ',')} km</small></h3>`;
+    const kc = items.filter(s => s.status === 'c').reduce((a, s) => a + (s.km || 0), 0);
+    h += `<div class="group"><h3>${shield(r)}<small>${items.length} ${items.length === 1 ? 'tronson' : 'tronsoane'} · ${km.toFixed(1).replace('.', ',')} km</small><span class="split" aria-hidden="true"><i class="c" style="width:${km ? kc/km*100 : 0}%"></i><i class="t" style="width:${km ? (km-kc)/km*100 : 0}%"></i></span></h3>`;
     items.forEach(s => {
-      h += `<div class="item" tabindex="0" role="button" data-id="${s.id}" aria-current="${s.id === current}"><span class="bar ${s.status}"></span><span class="nm">${esc(s.name.replace(/^\S+\s/, ''))}</span><span class="rt">${s.vids.length ? '<span class="vbadge">▶ ' + s.vids.length + '</span>' : ''}${fmtKm(s.km)}</span></div>`;
+      const sub = [s.status === 'c' ? 'În execuție' : 'În licitare', s.status === 'c' ? 'termen ' + esc(s.term) : null].filter(Boolean).join(' · ');
+      const nv = s.vids.length ? ` · <span class="v">${s.vids.length} ${s.vids.length === 1 ? 'filmare' : 'filmări'}</span>` : '';
+      h += `<div class="item" tabindex="0" role="button" data-id="${s.id}" aria-current="${s.id === current}"><span class="st ${s.status}"></span><span><div class="nm">${esc(s.name.replace(/^\S+\s/, ''))}</div><div class="sub">${sub}${nv}</div></span><span class="km">${fmtKm(s.km)}</span></div>`;
     });
     h += '</div>';
   });
