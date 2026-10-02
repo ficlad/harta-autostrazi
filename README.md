@@ -22,6 +22,8 @@ Site static, fără server și fără bază de date:
 | `scripts/update.mjs` | Caută pe YouTube (YouTube Data API) și în Google News RSS |
 | `.github/workflows/update.yml` | Rulează actualizarea luni și joi |
 
+Fiecare lot are și un **grad de execuție** (`progress` în `live.json`). Valorile de bază sunt verificate manual; workflow-ul le păstrează și le actualizează doar când găsește într-o știre atribuită unui singur lot un procent de execuție cu dată mai nouă.
+
 Actualizarea atribuie fiecare clip sau știre lotului de pe aceeași autostradă cu cele mai multe localități potrivite în titlu.
 
 ## Configurare (o singură dată)
