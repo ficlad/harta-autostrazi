@@ -46,7 +46,7 @@ const KW = {
   'a6-l4': ['filiasi', 'bibesti', 'lot 4', 'lotul 4'],
   'a6-l5': ['bibesti', 'targu carbunesti', 'lot 5', 'lotul 5'],
   'a6-l6': ['targu carbunesti', 'targu jiu', 'lot 6', 'lotul 6'],
-  'a7-bp1': ['saucesti', 'trifesti', 'bacau - roman', 'bacau-roman', 'bacau - pascani', 'bacau-pascani', 'lot 1', 'lotul 1'],
+  'a7-bp1': ['saucesti', 'trifesti', 'filipesti', 'bacau - roman', 'bacau-roman', 'bacau - pascani', 'bacau-pascani', 'lot 1', 'lotul 1'],
   'a7-bp2': ['trifesti', 'gheraiesti', 'roman', 'bacau - pascani', 'bacau-pascani', 'lot 2', 'lotul 2'],
   'a7-bp3': ['mircesti', 'sabaoani', 'bacau - pascani', 'bacau-pascani', 'roman-pascani', 'roman - pascani', 'lot 3', 'lotul 3'],
   'a7-ps1': ['roscani', 'pascani-suceava', 'pascani - suceava', 'lot 1', 'lotul 1'],
@@ -69,10 +69,10 @@ const KW = {
   'a8-pod': ['pod', 'prut', 'ungheni', 'zagarancea'],
   'a9-rj': ['remetea', 'jebel'],
   'a9-jm': ['jebel', 'moravita'],
-  'a13-l1': ['boita', 'avrig', 'marsa', 'lot 1', 'lotul 1', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu'],
-  'a13-l2': ['avrig', 'marsa', 'arpasu', 'lot 2', 'lotul 2', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu'],
-  'a13-l3': ['arpasu', 'sambata', 'lot 3', 'lotul 3', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu'],
-  'a13-l4': ['sambata', 'lot 4', 'lotul 4', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu'],
+  'a13-l1': ['boita', 'avrig', 'marsa', 'lot 1', 'lotul 1', 'tronsonul 1', 'trons. 1', 'tronsoanele 1', 'tronsoanelor 1', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu'],
+  'a13-l2': ['avrig', 'marsa', 'arpasu', 'lot 2', 'lotul 2', 'tronsonul 2', 'trons. 2', 'tronsoanele 2', 'tronsoanelor 2', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu'],
+  'a13-l3': ['arpasu', 'sambata', 'lot 3', 'lotul 3', 'tronsonul 3', 'trons. 3', 'tronsoanele 3', 'tronsoanelor 3', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu'],
+  'a13-l4': ['sambata', 'lot 4', 'lotul 4', 'tronsonul 4', 'trons. 4', 'tronsoanele 4', 'tronsoanelor 4', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu'],
   'a14': ['oar', 'satu mare'],
   'dex5a': ['piatra neamt', 'bacau'],
   'dex6-bg': ['braila - galati', 'braila-galati', 'galati'],
@@ -91,6 +91,8 @@ const Q = {
 };
 
 const NOROAD = new Set(['a8-pod']);
+// Expresii care descriu tot traseul, nu un lot anume: contează doar jumătate
+const GENERIC = new Set(['bacau - pascani', 'bacau-pascani', 'sibiu - fagaras', 'sibiu-fagaras', 'fagaras-sibiu', 'fagaras - sibiu', 'pascani-suceava', 'pascani - suceava', 'suceava - siret', 'suceava-siret', 'roman-pascani', 'roman - pascani']);
 const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
   .replace(/ş/g, 's').replace(/ţ/g, 't').replace(/[–—]/g, '-').replace(/\s+/g, ' ');
 const has = (t, k) => new RegExp('(^|[^a-z0-9])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^a-z0-9])').test(t);
@@ -101,7 +103,7 @@ const query = s => Q[s.id] || `${s.road} ${endpoints(s).join(' ')}`;
 // Scor = numărul de cuvinte-cheie ale lotului găsite în titlu (0 dacă lipsește autostrada).
 function score(title, s) {
   const t = norm(title);
-  const n = (KW[s.id] || []).filter(k => has(t, k)).length;
+  const n = (KW[s.id] || []).filter(k => has(t, k)).reduce((a, k) => a + (GENERIC.has(k) ? 0.5 : 1), 0);
   // Podul de la Ungheni apare des fără „A8” în titlu: acceptat cu minim 2 cuvinte-cheie
   if (NOROAD.has(s.id)) return n >= 2 ? n : 0;
   if (!roadAliases(s.road).some(a => has(t, a))) return 0;
