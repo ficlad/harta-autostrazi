@@ -46,7 +46,15 @@
      "d": "2026-09-21"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-07-21",
+    "faza": "",
+    "p": 70,
+    "q": "aproape",
+    "s": "B365",
+    "u": "https://b365.ro/video-a-crescut-ritmul-lucrarilor-de-pe-lotul-1-al-autostrazii-bucurestiului-a0-nord-stadiul-fizic-este-de-aproape-70-ce-conditie-ar-trebui-pentru-deschidere-circulatiei-612885/"
+   }
   },
   "a0-l3": {
    "videos": [
@@ -92,7 +100,15 @@
      "d": "2026-09-15"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-30",
+    "faza": "",
+    "p": 96,
+    "q": "peste",
+    "s": "Oficiul de Știri",
+    "u": "https://oficiuldestiri.ro/a0-nord-pas-decisiv-spre-a2-a-inceput-asfaltarea-pasajului-dn3-de-care-depinde-deschiderea-loturilor-3-si-4"
+   }
   },
   "a0-l4": {
    "videos": [
@@ -131,7 +147,15 @@
      "u": "https://oficiuldestiri.ro/a0-nord-pas-decisiv-spre-a2-a-inceput-asfaltarea-pasajului-dn3-de-care-depinde-deschiderea-loturilor-3-si-4"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-08-04",
+    "faza": "",
+    "p": 99,
+    "q": "",
+    "s": "Arena Construct",
+    "u": "https://arenaconstruct.ro/autostrada-a0-bucuresti-nord-presiune-pe-constructori-pe-ultima-suta-de-metri/"
+   }
   },
   "a1-s2": {
    "videos": [
@@ -177,7 +201,15 @@
      "d": "2026-09-26"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-07-15",
+    "faza": "",
+    "p": 12.6,
+    "q": "",
+    "s": "Antena 3 (CNAIR)",
+    "u": "https://www.antena3.ro/economic/transporturi/autostrada-sibiu-pitesti-lucrarile-pe-sectiunea-boita-cornetu-au-ajuns-la-12-6-constructorii-pot-executa-doar-45-din-proiect-795753.html"
+   }
   },
   "a1-s3": {
    "videos": [
@@ -223,7 +255,15 @@
      "d": "2026-09-22"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-09",
+    "faza": "",
+    "p": 18,
+    "q": "",
+    "s": "Alba24",
+    "u": "https://alba24.ro/video-autostrada-sibiu-pitesti-asfaltari-pe-segmentul-cornetu-tigveni-stadiul-lucrarilor-a-ajuns-la-18-1157164.html"
+   }
   },
   "a1-s4": {
    "videos": [
@@ -269,7 +309,15 @@
      "d": "2026-10-01"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-18",
+    "faza": "",
+    "p": 99,
+    "q": "",
+    "s": "Guvernatorul.ro",
+    "u": "https://www.guvernatorul.ro/autostrada-sibiu-pitesti-la-un-pas-de-deschidere-pe-inca-10-kilometri-sectiunea-tigveni-curtea-de-arges-a-ajuns-la-99/"
+   }
   },
   "a1-ld2": {
    "videos": [
@@ -315,7 +363,15 @@
      "d": "2026-09-21"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-14",
+    "faza": "",
+    "p": 75,
+    "q": "peste",
+    "s": "Constructiv",
+    "u": "https://www.constructiv.ro/2026/09/unelul-de-pe-a1-aproape-de-final-lucrarile-la-lotul-margina-holdea-au-trecut-de-75/"
+   }
   },
   "a3-nm": {
    "videos": [
@@ -361,7 +417,15 @@
      "d": "2026-10-02"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-30",
+    "faza": "",
+    "p": 99.2,
+    "q": "",
+    "s": "Agerpres",
+    "u": "https://agerpres.ro/economic/2026/09/30/pistol-cnair-lucrarile-pe-autostrada-transilvania-intre-nadaselu-si-zimbor-au-ajuns-la-99-2--1598463"
+   }
   },
   "a3-via": {
    "videos": [
@@ -407,7 +471,15 @@
      "d": "2026-10-02"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-10-02",
+    "faza": "",
+    "p": 86,
+    "q": "",
+    "s": "Economedia",
+    "u": "https://economedia.ro/video-autostrada-transilvania-a3-viaductele-de-pe-nadaselu-mihaiesti-si-mihaiesti-zimbor-au-ajuns-la-un-stadiu-fizic-de-86.html"
+   }
   },
   "a3-mz": {
    "videos": [
@@ -453,7 +525,15 @@
      "u": "https://economedia.ro/video-autostrada-transilvania-a3-viaductele-de-pe-nadaselu-mihaiesti-si-mihaiesti-zimbor-au-ajuns-la-un-stadiu-fizic-de-86.html"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-30",
+    "faza": "",
+    "p": 99.2,
+    "q": "",
+    "s": "Agerpres",
+    "u": "https://agerpres.ro/economic/2026/09/30/pistol-cnair-lucrarile-pe-autostrada-transilvania-intre-nadaselu-si-zimbor-au-ajuns-la-99-2--1598463"
+   }
   },
   "a3-pz": {
    "videos": [
@@ -499,7 +579,15 @@
      "d": "2026-09-10"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-07-30",
+    "faza": "proiectare",
+    "p": null,
+    "q": "",
+    "s": "Economica.net",
+    "u": "https://www.economica.net/autostrada-a3-transilvania-20_963949.html"
+   }
   },
   "a3-zn": {
    "videos": [
@@ -545,7 +633,15 @@
      "u": "https://www.transilvaniabusiness.ro/2026/07/31/autostrada-cu-tunelul-meses-va-costa-14-miliarde-e/"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-07-30",
+    "faza": "proiectare",
+    "p": null,
+    "q": "",
+    "s": "Economica.net",
+    "u": "https://www.economica.net/autostrada-a3-transilvania-20_963949.html"
+   }
   },
   "a3-sc": {
    "videos": [
@@ -591,7 +687,15 @@
      "d": "2026-09-30"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-30",
+    "faza": "",
+    "p": 90,
+    "q": "peste",
+    "s": "Alba24",
+    "u": "https://alba24.ro/autostrada-transilvania-26-km-pe-lotul-suplacu-de-barcau-chiribis-in-bihor-ar-putea-fi-deschisi-circulatiei-pe-1-decembrie-1160287.html"
+   }
   },
   "a3-cb": {
    "videos": [
@@ -637,7 +741,15 @@
      "d": "2026-10-01"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-10-01",
+    "faza": "",
+    "p": 78,
+    "q": "",
+    "s": "Economica.net",
+    "u": "https://www.economica.net/autostrada-transilvania-43_981748.html"
+   }
   },
   "a4-tech": {
    "videos": [],
@@ -737,7 +849,15 @@
      "d": "2026-10-01"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-30",
+    "faza": "",
+    "p": 70,
+    "q": "peste",
+    "s": "Economedia",
+    "u": "https://economedia.ro/a7-bacau-pascani-au-inceput-asfaltarile-pe-pasajul-cf-de-la-filipesti-lotul-saucesti-trifesti-a-ajuns-la-68.html"
+   }
   },
   "a7-bp2": {
    "videos": [
@@ -783,7 +903,15 @@
      "d": "2026-09-29"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-30",
+    "faza": "",
+    "p": 70,
+    "q": "aproape",
+    "s": "Economedia",
+    "u": "https://economedia.ro/a7-bacau-pascani-au-inceput-asfaltarile-pe-pasajul-cf-de-la-filipesti-lotul-saucesti-trifesti-a-ajuns-la-68.html"
+   }
   },
   "a7-bp3": {
    "videos": [
@@ -829,12 +957,28 @@
      "d": "2026-09-29"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-30",
+    "faza": "",
+    "p": 54.6,
+    "q": "",
+    "s": "Economedia",
+    "u": "https://economedia.ro/a7-bacau-pascani-au-inceput-asfaltarile-pe-pasajul-cf-de-la-filipesti-lotul-saucesti-trifesti-a-ajuns-la-68.html"
+   }
   },
   "a7-ps1": {
    "videos": [],
    "news": [],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-18",
+    "faza": "fără ordin de începere",
+    "p": null,
+    "q": "",
+    "s": "Ziarul Evenimentul",
+    "u": "https://www.ziarulevenimentul.ro/stiri/moldova/safe-in-impas-a7-pa-cani-suceava-i-dex-suceava-siret-blocate-la-start--217601352.html"
+   }
   },
   "a7-ps2": {
    "videos": [],
@@ -846,7 +990,15 @@
      "d": "2026-08-04"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-18",
+    "faza": "fără ordin de începere",
+    "p": null,
+    "q": "",
+    "s": "Ziarul Evenimentul",
+    "u": "https://www.ziarulevenimentul.ro/stiri/moldova/safe-in-impas-a7-pa-cani-suceava-i-dex-suceava-siret-blocate-la-start--217601352.html"
+   }
   },
   "a7-ss1": {
    "videos": [],
@@ -952,7 +1104,15 @@
      "d": "2026-10-02"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-10-02",
+    "faza": "",
+    "p": 70,
+    "q": "aproape",
+    "s": "Antena 3",
+    "u": "https://www.antena3.ro/economic/transporturi/autostrada-unirii-a8-primii-kilometri-vor-fi-dati-in-circulatie-in-prima-parte-a-anului-viitor-lucrarile-au-ajuns-la-aproape-70-805559.html"
+   }
   },
   "a8-1b": {
    "videos": [],
@@ -976,7 +1136,15 @@
      "u": "https://punctul.ro/presiuni-pentru-emiterea-ordinului-de-incepere-a-lucrarilor-pe-lotul-miercurea-nirajului-sarateni-al-autostrazii-unirii-a8"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-19",
+    "faza": "fără ordin de începere",
+    "p": null,
+    "q": "",
+    "s": "Punctul",
+    "u": "https://punctul.ro/presiuni-pentru-emiterea-ordinului-de-incepere-a-lucrarilor-pe-lotul-miercurea-nirajului-sarateni-al-autostrazii-unirii-a8"
+   }
   },
   "a8-1c": {
    "videos": [],
@@ -1000,7 +1168,15 @@
      "d": "2026-07-08"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-03-30",
+    "faza": "proiectare",
+    "p": null,
+    "q": "",
+    "s": "Constructiv",
+    "u": "https://www.constructiv.ro/2026/03/umb-incepe-proiectarea-loturilor-sarateni-joseni-si-grinties-pipirig-de-pe-a8/"
+   }
   },
   "a8-1d": {
    "videos": [
@@ -1046,7 +1222,15 @@
      "d": "2026-09-23"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-22",
+    "faza": "",
+    "p": 10,
+    "q": "",
+    "s": "Ziarul Evenimentul",
+    "u": "https://www.ziarulevenimentul.ro/stiri/moldova/a8-prinde-viteza-in-harghita-10-din-lucrarile-lotului-joseni-ditrau-dupa-doar-o-luna--217601504.html"
+   }
   },
   "a8-2a": {
    "videos": [],
@@ -1058,17 +1242,41 @@
      "u": "https://www.desteptarea.ro/umbrarescu-pregateste-autorizatia-pentru-cel-mai-dificil-lot-al-autostrazii-unirii-a8-lucrarile-pe-tronsonul-ditrau-grinties-ar-putea-incepe-la-sfarsitul-anului/"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-03-30",
+    "faza": "proiectare",
+    "p": null,
+    "q": "",
+    "s": "Profit.ro",
+    "u": "https://www.profit.ro/povesti-cu-profit/auto-transporturi/foto-umbrarescu-start-la-doua-dintre-cele-mai-dificile-loturi-de-autostrada-construite-in-romania-supravegheat-de-ingineri-slovaci-si-romani-22394441"
+   }
   },
   "a8-2b": {
    "videos": [],
    "news": [],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-03-30",
+    "faza": "proiectare",
+    "p": null,
+    "q": "",
+    "s": "Constructiv",
+    "u": "https://www.constructiv.ro/2026/03/umb-incepe-proiectarea-loturilor-sarateni-joseni-si-grinties-pipirig-de-pe-a8/"
+   }
   },
   "a8-3c": {
    "videos": [],
    "news": [],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-03-30",
+    "faza": "proiectare",
+    "p": null,
+    "q": "",
+    "s": "Profit.ro",
+    "u": "https://www.profit.ro/povesti-cu-profit/auto-transporturi/foto-umbrarescu-start-la-doua-dintre-cele-mai-dificile-loturi-de-autostrada-construite-in-romania-supravegheat-de-ingineri-slovaci-si-romani-22394441"
+   }
   },
   "a8-s3": {
    "videos": [
@@ -1119,7 +1327,15 @@
   "a8-l1": {
    "videos": [],
    "news": [],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-06-12",
+    "faza": "proiectare",
+    "p": null,
+    "q": "",
+    "s": "Constructiv",
+    "u": "https://www.constructiv.ro/2026/06/cnir-a-dat-ordinul-de-incepere-pentru-doua-tronsoane-ale-autostrazii-unirii-a8/"
+   }
   },
   "a8-l2": {
    "videos": [],
@@ -1167,7 +1383,15 @@
      "d": "2026-08-18"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-06-12",
+    "faza": "proiectare",
+    "p": null,
+    "q": "",
+    "s": "Constructiv",
+    "u": "https://www.constructiv.ro/2026/06/cnir-a-dat-ordinul-de-incepere-pentru-doua-tronsoane-ale-autostrazii-unirii-a8/"
+   }
   },
   "a8-l4": {
    "videos": [
@@ -1199,7 +1423,15 @@
      "d": "2026-08-20"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-30",
+    "faza": "contract suspendat în instanță",
+    "p": null,
+    "q": "",
+    "s": "Apix.ro",
+    "u": "https://apix.ro/contractul-pentru-autostrada-iasi-ungheni-ramane-blocat-instanta-amana-pronuntarea/"
+   }
   },
   "a8-pod": {
    "videos": [
@@ -1245,7 +1477,15 @@
      "u": "https://financiarul.ro/companii/podul-peste-prut-de-la-ungheni-a-ajuns-la-55-executie/"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-08-18",
+    "faza": "",
+    "p": 55,
+    "q": "",
+    "s": "Financiarul",
+    "u": "https://financiarul.ro/companii/podul-peste-prut-de-la-ungheni-a-ajuns-la-55-executie/"
+   }
   },
   "a9-rj": {
    "videos": [],
@@ -1333,7 +1573,15 @@
      "u": "https://alba24.ro/video-autostrada-a13-sibiu-fagaras-avanseaza-peste-50-pe-tronsonul-avrig-arpasu-peste-1000-de-muncitori-pe-primele-doua-loturi-1159408.html"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-24",
+    "faza": "",
+    "p": 23.54,
+    "q": "",
+    "s": "Salut Făgăraș",
+    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/"
+   }
   },
   "a13-l2": {
    "videos": [
@@ -1379,7 +1627,15 @@
      "u": "https://alba24.ro/video-autostrada-a13-sibiu-fagaras-avanseaza-peste-50-pe-tronsonul-avrig-arpasu-peste-1000-de-muncitori-pe-primele-doua-loturi-1159408.html"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-24",
+    "faza": "",
+    "p": 50.15,
+    "q": "",
+    "s": "Salut Făgăraș",
+    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/"
+   }
   },
   "a13-l3": {
    "videos": [
@@ -1425,7 +1681,15 @@
      "d": "2026-09-23"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-24",
+    "faza": "",
+    "p": 51.09,
+    "q": "",
+    "s": "Salut Făgăraș",
+    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/"
+   }
   },
   "a13-l4": {
    "videos": [
@@ -1471,12 +1735,28 @@
      "d": "2026-09-25"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-24",
+    "faza": "",
+    "p": 36.26,
+    "q": "",
+    "s": "Salut Făgăraș",
+    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/"
+   }
   },
   "a14": {
    "videos": [],
    "news": [],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-02-10",
+    "faza": "execuție amânată până în mai 2027",
+    "p": null,
+    "q": "",
+    "s": "Economica.net",
+    "u": "https://www.economica.net/drumul-expres-satu-mare-oar-3_911346.html"
+   }
   },
   "dex5a": {
    "videos": [],
@@ -1540,7 +1820,15 @@
      "u": "https://www.economica.net/drum-expres-braila-galati-6_973266.html"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-09-03",
+    "faza": "",
+    "p": 97,
+    "q": "",
+    "s": "G4Media",
+    "u": "https://www.g4media.ro/a-fost-montata-ultima-sectiune-a-podului-peste-siret-drumul-expres-braila-galati-a-ajuns-la-97.html"
+   }
   },
   "dex6-l1": {
    "videos": [],
@@ -1564,7 +1852,15 @@
      "u": "https://probr.ro/cnir-a-emis-decizia-de-expropriere-pentru-drumul-expres-focsani-braila/"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-08-06",
+    "faza": "proiectare (autorizație în analiză)",
+    "p": null,
+    "q": "",
+    "s": "ProBR",
+    "u": "https://probr.ro/umb-a-depus-documentatia-pentru-autorizatia-de-construire-pentru-drumul-expres-focsani-braila/"
+   }
   },
   "dex6-l2": {
    "videos": [],
@@ -1582,7 +1878,15 @@
      "u": "https://probr.ro/cnir-a-emis-decizia-de-expropriere-pentru-drumul-expres-focsani-braila/"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-08-06",
+    "faza": "proiectare (autorizație în analiză)",
+    "p": null,
+    "q": "",
+    "s": "ProBR",
+    "u": "https://probr.ro/umb-a-depus-documentatia-pentru-autorizatia-de-construire-pentru-drumul-expres-focsani-braila/"
+   }
   },
   "dex6-l3": {
    "videos": [],
@@ -1606,7 +1910,15 @@
      "u": "https://probr.ro/cnir-a-emis-decizia-de-expropriere-pentru-drumul-expres-focsani-braila/"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-08-06",
+    "faza": "proiectare (autorizație în analiză)",
+    "p": null,
+    "q": "",
+    "s": "ProBR",
+    "u": "https://probr.ro/umb-a-depus-documentatia-pentru-autorizatia-de-construire-pentru-drumul-expres-focsani-braila/"
+   }
   },
   "dex16-l1": {
    "videos": [
@@ -1638,7 +1950,15 @@
      "d": "2026-07-31"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-05-14",
+    "faza": "fără ordin de începere",
+    "p": null,
+    "q": "",
+    "s": "Bihoreanul",
+    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html"
+   }
   },
   "dex16-l2": {
    "videos": [],
@@ -1656,7 +1976,15 @@
      "u": "https://business24.ro/cnair/proiecte-rutiere-majore-cnair-incertitudine-1667654"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-05-14",
+    "faza": "fără ordin de începere",
+    "p": null,
+    "q": "",
+    "s": "Bihoreanul",
+    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html"
+   }
   },
   "dex16-l3": {
    "videos": [],
@@ -1674,7 +2002,15 @@
      "u": "https://business24.ro/cnair/proiecte-rutiere-majore-cnair-incertitudine-1667654"
     }
    ],
-   "checkedAt": "2026-10-02T11:53:57.739Z"
+   "checkedAt": "2026-10-02T11:53:57.739Z",
+   "progress": {
+    "d": "2026-05-14",
+    "faza": "fără ordin de începere",
+    "p": null,
+    "q": "",
+    "s": "Bihoreanul",
+    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html"
+   }
   }
  }
 }

@@ -161,6 +161,22 @@ async function newsSearch(s) {
 const byDate = (a, b) => (b.d || '').localeCompare(a.d || '');
 const uniq = (arr, key) => { const seen = new Set(); return arr.filter(x => !seen.has(x[key]) && seen.add(x[key])); };
 
+// ---- grad de execuție din titlurile știrilor
+// Ia procentul doar din titluri care vorbesc clar de stadiul lucrărilor („au ajuns la 78%”,
+// „stadiu fizic de peste 70%”), niciodată din sume, costuri sau sondaje.
+const P_CTX = /stadiu|execu[tț]|lucr[aă]ri|progres|ajuns|realizat|finalizat|construit/;
+const P_NEG = /lei|euro|eur\b|buget|cost|pre[tț]|tarif|scump|inflat|sondaj|vot|dobând|taxa|tax[aă]/;
+function extractProgress(title) {
+  const t = norm(title);
+  if (!P_CTX.test(t) || P_NEG.test(t)) return null;
+  const m = t.match(/(?:(peste|aproape|sub|circa|cca\.?)\s+)?(\d{1,3}(?:[.,]\d{1,2})?)\s?%/);
+  if (!m) return null;
+  const p = parseFloat(m[2].replace(',', '.'));
+  if (!(p > 0 && p <= 100)) return null;
+  const q = m[1] === 'peste' || m[1] === 'aproape' || m[1] === 'sub' ? m[1] : (m[1] ? 'aproape' : '');
+  return { p, q };
+}
+
 // ---- rulare
 const livePath = new URL('live.json', ROOT);
 const prev = fs.existsSync(livePath) ? JSON.parse(fs.readFileSync(livePath, 'utf8')) : { lots: {} };
@@ -179,7 +195,10 @@ const vAssigned = assign(uniq(allVideos, 'v'), x => x.t);
 const nAssigned = assign(uniq(allNews, 'u'), x => x.t);
 const now = new Date().toISOString();
 const lots = {};
-let newV = 0, newN = 0;
+let newV = 0, newN = 0, newP = 0;
+// câte loturi a primit fiecare știre: procentul se ia doar din știrile atribuite unui singur lot
+const nCount = {};
+for (const arr of Object.values(nAssigned)) for (const n of arr) nCount[n.u] = (nCount[n.u] || 0) + 1;
 for (const s of SEGMENTS) {
   const old = prev.lots?.[s.id] || {};
   const clean = ({ road, ...x }) => x;
@@ -188,8 +207,21 @@ for (const s of SEGMENTS) {
   const news = uniq([...(nAssigned[s.id] || []).map(clean), ...(old.news || [])], 'u').sort(byDate).slice(0, MAX_ITEMS);
   newV += vids.filter(v => !(old.videos || []).some(o => o.v === v.v)).length;
   newN += news.filter(n => !(old.news || []).some(o => o.u === n.u)).length;
-  lots[s.id] = { videos: vids, news, checkedAt: now };
+  // grad de execuție: păstrează valoarea existentă; o înlocuiește doar cu una din presă, cu dată mai nouă
+  let progress = old.progress || null;
+  if (s.status === 'c') {
+    for (const n of (nAssigned[s.id] || []).filter(n => nCount[n.u] === 1).sort(byDate)) {
+      const g = extractProgress(n.t);
+      if (!g || !n.d) continue;
+      if (!progress || !progress.d || n.d > progress.d) {
+        progress = { p: g.p, q: g.q, faza: '', d: n.d, s: n.s || '', u: n.u };
+        newP++;
+      }
+      break; // doar cea mai nouă știre cu procent
+    }
+  }
+  lots[s.id] = { videos: vids, news, checkedAt: now, ...(progress ? { progress } : {}) };
 }
-fs.writeFileSync(livePath, JSON.stringify({ lastRun: now, summary: `${newV} filmări noi, ${newN} știri noi`, lots }, null, 1));
-console.log(`Gata: ${newV} filmări noi, ${newN} știri noi.${KEY ? '' : ' (fără YT_API_KEY: doar știri)'}`);
+fs.writeFileSync(livePath, JSON.stringify({ lastRun: now, summary: `${newV} filmări noi, ${newN} știri noi, ${newP} grade de execuție actualizate`, lots }, null, 1));
+console.log(`Gata: ${newV} filmări noi, ${newN} știri noi, ${newP} grade de execuție actualizate.${KEY ? '' : ' (fără YT_API_KEY: doar știri)'}`);
 if (errors.length) console.log('Erori:\n' + errors.join('\n'));
