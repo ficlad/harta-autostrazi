@@ -1,0 +1,36 @@
+name: Descarcă trasee (CESTRIN + OpenStreetMap)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 3 * * 1'   # lunar ar fi suficient; săptămânal, luni dimineață
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Descarcă traseele
+        run: node scripts/fetch-geometry.mjs
+      - name: Construiește traseele loturilor
+        run: |
+          if [ -f scripts/build-geometry.mjs ]; then node scripts/build-geometry.mjs && node scripts/build.mjs; fi
+      - name: Salvează
+        run: |
+          git config user.name "harta-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data src index.html
+          git diff --cached --quiet || git commit -m "Actualizare trasee (CESTRIN + OpenStreetMap)"
+          git pull --rebase
+          git push
