@@ -2,7 +2,7 @@ name: Actualizare filmări și știri
 
 on:
   schedule:
-    - cron: '46 5 * * 1,4'   # luni și joi, 07:46 ora României de vară (05:46 UTC)
+    - cron: '46 4 * * *'     # zilnic, 07:46 ora României de vară (04:46 UTC)
   workflow_dispatch:          # buton „Run workflow” pentru rulare manuală
 
 permissions:
