@@ -103,9 +103,12 @@ function ends(paths, S) {
 // ---- surse
 const cesById = Object.fromEntries(CES.map(f => [f.a.objectid, f]));
 const cesOpen = CES.filter(f => /FOLOSINTA/.test(f.a.categorie_drum || '')).flatMap(f => f.paths).filter(P => !isLoop(P));
-const cesOther = CES.filter(f => !/FOLOSINTA/.test(f.a.categorie_drum || '') && !/NODURI/.test((f.a.indicativ_drum || '') + (f.a.sectorul || ''))).flatMap(f => f.paths).filter(P => !isLoop(P));
-const osmCons = OSM.filter(w => w.t.highway === 'construction').map(w => w.g);
-const osmProp = OSM.filter(w => w.t.highway === 'proposed').map(w => w.g);
+const cesOther = CES.filter(f => !/FOLOSINTA/.test(f.a.categorie_drum || '') && !/NODURI/.test((f.a.indicativ_drum || '') + (f.a.sectorul || ''))).flatMap(f => f.paths).filter(P => !isLoop(P) && !(lenOf(P) > 8 && dp(P, TOL).length <= 2));
+const osmCons = OSM.filter(w => w.t.highway === 'construction');
+const osmProp = OSM.filter(w => w.t.highway === 'proposed');
+// o cale OSM cu ref (ex. „A7”) se folosește doar pentru loturile aceleiași autostrăzi
+const refOk = (w, road) => { const r = (w.t.ref || '').toUpperCase().replace(/\s/g, ''); if (!r) return true; const R = road.toUpperCase(); return r.split(';').some(x => x === R || x === R.replace('DEX', 'DX') || x.replace('DX', 'DEX') === R); };
+const forRoad = (ways, road) => ways.filter(w => refOk(w, road)).map(w => w.g);
 const osmOpen = OSM.filter(w => w.t.highway === 'motorway' || w.t.highway === 'trunk').map(w => w.g);
 const direct = {};
 for (const [oid, [ids]] of Object.entries(MAP)) for (const id of ids) (direct[id] ||= []).push(+oid);
@@ -121,10 +124,16 @@ for (const s of SEGMENTS) {
   if (dpaths.length) {
     const shared = ids.some(o => MAP[o][0].length > 1);
     const c = shared ? splitNearest(dpaths, s.id, ids.flatMap(o => MAP[o][0])) : dpaths;
-    if (c.reduce((a, P) => a + lenOf(P), 0) > 0.3 * want) { got = c; src = 'cestrin'; }
+    const L = c.reduce((a, P) => a + lenOf(P), 0), V = c.reduce((a, P) => a + P.length, 0);
+    const placeholder = L > 8 && c.every(P => dp(P, TOL).length <= 2); // linie dreaptă trasă provizoriu, nu traseul real
+    if (L > 0.3 * want && !placeholder) { got = c; src = 'cestrin'; }
   }
   // 2) OSM șantier, 3) alte trasee CESTRIN (licitație, pregătire), 4) OSM propus
-  for (const [group, name] of [[osmCons, 'osm'], [cesOther, 'cestrin'], [osmProp, 'osm']]) {
+  // OSM: șantier + propus împreună (unde lipsește șantierul, completează traseul propus)
+  const cons = forRoad(osmCons, s.road), prop = forRoad(osmProp, s.road);
+  const consCov = clip(cons, S).reduce((a, P) => a + lenOf(P), 0);
+  const groups = consCov >= 0.3 * want ? [[cons.concat(prop), 'osm'], [cesOther, 'cestrin']] : [[cesOther, 'cestrin'], [cons.concat(prop), 'osm']];
+  for (const [group, name] of groups) {
     if (got) break;
     const c = dedupe(clip(group, S));
     if (c.reduce((a, P) => a + lenOf(P), 0) >= 0.5 * want) { got = c; src = name; }
@@ -142,7 +151,63 @@ let open = finish(dedupe(cesOpen));
 const extra = finish(dedupe(osmOpen.filter(P => lenOf(P) > 0.3), open.concat(lotPaths)));
 open = open.concat(extra);
 
+// ---- racorduri: fiecare lot e decupat separat, așa că între loturi vecine (sau între un lot și autostrada în care
+// se leagă) pot rămâne goluri de câțiva km. Capătul lotului se leagă de cel mai apropiat capăt de lot / traseu
+// (≤ JOIN km), urmând traseul real din surse acolo unde există, altfel în linie dreaptă.
+const JOIN = 5, TOUCH = 0.08;
+const allSrc = CES.flatMap(f => f.paths).concat(OSM.map(w => w.g)).filter(P => !isLoop(P));
+function nearestOn(p, paths) { // cel mai apropiat punct de pe trasee: [distanța km, punctul]
+  let best = [Infinity, null];
+  for (const P of paths) for (let i = 1; i < P.length; i++) {
+    const a = P[i - 1], b = P[i], [t, d] = proj(p, a, b);
+    if (d < best[0]) best = [d, [a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])]];
+  }
+  return best;
+}
+function fill(p, q) { // traseul real dintre p și q, dacă vreo sursă îl acoperă
+  const D = dist(p, q); let best = null, bestCov = 0.4;
+  for (const P of allSrc) {
+    let run = [];
+    const flush = () => {
+      if (run.length > 1) {
+        const ts = run.map(x => proj(x, p, q)[0]), cov = Math.max(...ts) - Math.min(...ts);
+        if (cov > bestCov) { bestCov = cov; best = run.slice(); }
+      }
+      run = [];
+    };
+    for (const x of P) { if (dist(p, x) + dist(x, q) <= D * 1.12 + 0.25) run.push(x); else flush(); }
+    flush();
+  }
+  if (!best) return [p, q];
+  if (proj(best[0], p, q)[0] > proj(best[best.length - 1], p, q)[0]) best.reverse();
+  return [p, ...best, q];
+}
+const lotIds = Object.keys(lots), fixed = new Set(), stat2 = { joined: 0, filled: 0 };
+const ll = e => [e[1], e[0]], la = p => [p[1], p[0]];
+for (const id of lotIds) {
+  const L = lots[id]; if (!L.e) continue;
+  for (const k of [0, 1]) {
+    if (fixed.has(id + k)) continue;
+    const p = ll(L.e[k]);
+    const others = lotIds.filter(o => o !== id);
+    const [dPath, qPath] = nearestOn(p, others.flatMap(o => lots[o].p).concat(open));
+    if (dPath <= TOUCH || dPath > JOIN) continue;
+    // de preferat capătul unui lot vecin, dacă e aproape cât cel mai apropiat traseu
+    let tgt = qPath, pair = null, dEnd = Infinity;
+    for (const o of others) if (lots[o].e) for (const j of [0, 1]) {
+      const d = dist(p, ll(lots[o].e[j]));
+      if (d < dEnd) { dEnd = d; pair = [o, j]; }
+    }
+    if (pair && dEnd <= Math.min(JOIN, dPath + 1.5)) { tgt = ll(lots[pair[0]].e[pair[1]]); fixed.add(pair[0] + pair[1]); }
+    const B = fill(p, tgt);
+    if (B.length > 2) stat2.filled++;
+    L.p.push(dp(B, TOL).map(r4));
+    L.e[k] = la(r4(tgt));
+    fixed.add(id + k); stat2.joined++;
+  }
+}
+
 const out = { v: new Date().toISOString().slice(0, 10), lots, open };
 const txt = JSON.stringify(out);
 fs.writeFileSync(new URL('src/geo-lots.json', ROOT), txt);
-console.log(`Trasee: ${stat.cestrin} din CESTRIN, ${stat.osm} din OSM, ${stat.schematic} schematice; rețea deschisă ${open.length} bucăți (+${extra.length} din OSM). ${Math.round(txt.length / 1024)} KB`);
+console.log(`Racorduri: ${stat2.joined} (${stat2.filled} pe traseul real). Trasee: ${stat.cestrin} din CESTRIN, ${stat.osm} din OSM, ${stat.schematic} schematice; rețea deschisă ${open.length} bucăți (+${extra.length} din OSM). ${Math.round(txt.length / 1024)} KB`);
