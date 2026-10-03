@@ -92,6 +92,7 @@ header h1{margin:0;font:800 20px/1.2 var(--font-d);letter-spacing:.01em;display:
 .mapwrap.bm-sat .city text{fill:#fff;stroke:rgba(0,0,0,.65)}
 .mapwrap.bm-sat .city circle{fill:#fff;stroke:#000}
 .mapwrap.bm-sat .casing{stroke:rgba(0,0,0,.55)}
+.mapwrap.bm-topo .city{display:none}
 
 /* panou */
 aside{background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0;min-width:0}
@@ -224,7 +225,7 @@ footer{padding:16px 16px 24px;font-size:12.5px;color:var(--muted);border-top:8px
   </div>
   <div class="tip card" id="tip" hidden></div>
   <div class="note-map card" id="att">Trasee schematice, aproximative</div>
-  <div class="bmsw card" role="group" aria-label="Fundal hartă" hidden><button data-bm="simple" aria-pressed="true">Simplu</button><button data-bm="map" aria-pressed="false">Hartă</button><button data-bm="sat" aria-pressed="false">Satelit</button></div>
+  <div class="bmsw card" role="group" aria-label="Fundal hartă" hidden><button data-bm="simple" aria-pressed="true">Simplu</button><button data-bm="map" aria-pressed="false">Hartă</button><button data-bm="topo" aria-pressed="false">Relief</button><button data-bm="sat" aria-pressed="false">Satelit</button></div>
 </div>
 
 <aside>
@@ -442,7 +443,8 @@ function rescale(){
 }
 // ---- hartă de fundal (doar pe site-ul public; artifactul nu poate încărca imagini externe)
 const BASEMAPS = {
-  map: { light: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}.png', dark: 'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', att: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>' },
+  map: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', dark: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', att: 'Fundal © Esri, HERE, Garmin, © OpenStreetMap' },
+  topo: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', att: 'Fundal © Esri, HERE, Garmin, USGS, © OpenStreetMap' },
   sat: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', att: 'Imagini © Esri, Maxar, Earthstar Geographics' },
 };
 let basemap = 'simple';
@@ -470,7 +472,7 @@ const queueTiles = () => { if (!tileRaf) tileRaf = requestAnimationFrame(() => {
 function setBasemap(b){
   basemap = BASEMAPS[b] ? b : 'simple';
   const mw = document.querySelector('.mapwrap');
-  mw.classList.toggle('bm', basemap !== 'simple'); mw.classList.toggle('bm-sat', basemap === 'sat');
+  mw.classList.toggle('bm', basemap !== 'simple'); mw.classList.toggle('bm-sat', basemap === 'sat'); mw.classList.toggle('bm-topo', basemap === 'topo');
   document.querySelectorAll('.bmsw button').forEach(x => x.setAttribute('aria-pressed', x.dataset.bm === basemap));
   const att = document.getElementById('att');
   if (att) att.innerHTML = (basemap !== 'simple' ? BASEMAPS[basemap].att + ' · ' : '') + traseeAtt;
