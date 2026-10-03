@@ -48,12 +48,16 @@
    ],
    "checkedAt": "2026-10-02T11:53:57.739Z",
    "progress": {
-    "d": "2026-07-21",
+    "d": "2026-10-01",
     "faza": "",
-    "p": 70,
-    "q": "aproape",
-    "s": "B365",
-    "u": "https://b365.ro/video-a-crescut-ritmul-lucrarilor-de-pe-lotul-1-al-autostrazii-bucurestiului-a0-nord-stadiul-fizic-este-de-aproape-70-ce-conditie-ar-trebui-pentru-deschidere-circulatiei-612885/"
+    "p": 78.8,
+    "q": "",
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 58.22,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a0-l3": {
@@ -107,7 +111,11 @@
     "p": 96,
     "q": "peste",
     "s": "Oficiul de Știri",
-    "u": "https://oficiuldestiri.ro/a0-nord-pas-decisiv-spre-a2-a-inceput-asfaltarea-pasajului-dn3-de-care-depinde-deschiderea-loturilor-3-si-4"
+    "u": "https://oficiuldestiri.ro/a0-nord-pas-decisiv-spre-a2-a-inceput-asfaltarea-pasajului-dn3-de-care-depinde-deschiderea-loturilor-3-si-4",
+    "f": 72.53,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a0-l4": {
@@ -149,12 +157,16 @@
    ],
    "checkedAt": "2026-10-02T11:53:57.739Z",
    "progress": {
-    "d": "2026-08-04",
+    "d": "2026-10-01",
     "faza": "",
-    "p": 99,
+    "p": 100,
     "q": "",
-    "s": "Arena Construct",
-    "u": "https://arenaconstruct.ro/autostrada-a0-bucuresti-nord-presiune-pe-constructori-pe-ultima-suta-de-metri/"
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 97,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a1-s2": {
@@ -208,7 +220,11 @@
     "p": 12.6,
     "q": "",
     "s": "Antena 3 (CNAIR)",
-    "u": "https://www.antena3.ro/economic/transporturi/autostrada-sibiu-pitesti-lucrarile-pe-sectiunea-boita-cornetu-au-ajuns-la-12-6-constructorii-pot-executa-doar-45-din-proiect-795753.html"
+    "u": "https://www.antena3.ro/economic/transporturi/autostrada-sibiu-pitesti-lucrarile-pe-sectiunea-boita-cornetu-au-ajuns-la-12-6-constructorii-pot-executa-doar-45-din-proiect-795753.html",
+    "f": 13.18,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a1-s3": {
@@ -262,7 +278,11 @@
     "p": 18,
     "q": "",
     "s": "Alba24",
-    "u": "https://alba24.ro/video-autostrada-sibiu-pitesti-asfaltari-pe-segmentul-cornetu-tigveni-stadiul-lucrarilor-a-ajuns-la-18-1157164.html"
+    "u": "https://alba24.ro/video-autostrada-sibiu-pitesti-asfaltari-pe-segmentul-cornetu-tigveni-stadiul-lucrarilor-a-ajuns-la-18-1157164.html",
+    "f": 21.76,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a1-s4": {
@@ -365,12 +385,16 @@
    ],
    "checkedAt": "2026-10-02T11:53:57.739Z",
    "progress": {
-    "d": "2026-09-14",
+    "d": "2026-10-01",
     "faza": "",
-    "p": 75,
-    "q": "peste",
-    "s": "Constructiv",
-    "u": "https://www.constructiv.ro/2026/09/unelul-de-pe-a1-aproape-de-final-lucrarile-la-lotul-margina-holdea-au-trecut-de-75/"
+    "p": 75.35,
+    "q": "",
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 68.03,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a3-nm": {
@@ -424,7 +448,11 @@
     "p": 99.2,
     "q": "",
     "s": "Agerpres",
-    "u": "https://agerpres.ro/economic/2026/09/30/pistol-cnair-lucrarile-pe-autostrada-transilvania-intre-nadaselu-si-zimbor-au-ajuns-la-99-2--1598463"
+    "u": "https://agerpres.ro/economic/2026/09/30/pistol-cnair-lucrarile-pe-autostrada-transilvania-intre-nadaselu-si-zimbor-au-ajuns-la-99-2--1598463",
+    "f": 87.57,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a3-via": {
@@ -478,7 +506,11 @@
     "p": 86,
     "q": "",
     "s": "Economedia",
-    "u": "https://economedia.ro/video-autostrada-transilvania-a3-viaductele-de-pe-nadaselu-mihaiesti-si-mihaiesti-zimbor-au-ajuns-la-un-stadiu-fizic-de-86.html"
+    "u": "https://economedia.ro/video-autostrada-transilvania-a3-viaductele-de-pe-nadaselu-mihaiesti-si-mihaiesti-zimbor-au-ajuns-la-un-stadiu-fizic-de-86.html",
+    "f": 49.64,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a3-mz": {
@@ -532,7 +564,11 @@
     "p": 99.2,
     "q": "",
     "s": "Agerpres",
-    "u": "https://agerpres.ro/economic/2026/09/30/pistol-cnair-lucrarile-pe-autostrada-transilvania-intre-nadaselu-si-zimbor-au-ajuns-la-99-2--1598463"
+    "u": "https://agerpres.ro/economic/2026/09/30/pistol-cnair-lucrarile-pe-autostrada-transilvania-intre-nadaselu-si-zimbor-au-ajuns-la-99-2--1598463",
+    "f": 87.57,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a3-pz": {
@@ -694,7 +730,11 @@
     "p": 90,
     "q": "peste",
     "s": "Alba24",
-    "u": "https://alba24.ro/autostrada-transilvania-26-km-pe-lotul-suplacu-de-barcau-chiribis-in-bihor-ar-putea-fi-deschisi-circulatiei-pe-1-decembrie-1160287.html"
+    "u": "https://alba24.ro/autostrada-transilvania-26-km-pe-lotul-suplacu-de-barcau-chiribis-in-bihor-ar-putea-fi-deschisi-circulatiei-pe-1-decembrie-1160287.html",
+    "f": 51.53,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a3-cb": {
@@ -851,12 +891,16 @@
    ],
    "checkedAt": "2026-10-02T11:53:57.739Z",
    "progress": {
-    "d": "2026-09-30",
+    "d": "2026-10-01",
     "faza": "",
-    "p": 70,
-    "q": "peste",
-    "s": "Economedia",
-    "u": "https://economedia.ro/a7-bacau-pascani-au-inceput-asfaltarile-pe-pasajul-cf-de-la-filipesti-lotul-saucesti-trifesti-a-ajuns-la-68.html"
+    "p": 71.7,
+    "q": "",
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 50.61,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a7-bp2": {
@@ -910,7 +954,11 @@
     "p": 70,
     "q": "aproape",
     "s": "Economedia",
-    "u": "https://economedia.ro/a7-bacau-pascani-au-inceput-asfaltarile-pe-pasajul-cf-de-la-filipesti-lotul-saucesti-trifesti-a-ajuns-la-68.html"
+    "u": "https://economedia.ro/a7-bacau-pascani-au-inceput-asfaltarile-pe-pasajul-cf-de-la-filipesti-lotul-saucesti-trifesti-a-ajuns-la-68.html",
+    "f": 42.26,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a7-bp3": {
@@ -959,12 +1007,16 @@
    ],
    "checkedAt": "2026-10-02T11:53:57.739Z",
    "progress": {
-    "d": "2026-09-30",
+    "d": "2026-10-01",
     "faza": "",
-    "p": 54.6,
+    "p": 55.7,
     "q": "",
-    "s": "Economedia",
-    "u": "https://economedia.ro/a7-bacau-pascani-au-inceput-asfaltarile-pe-pasajul-cf-de-la-filipesti-lotul-saucesti-trifesti-a-ajuns-la-68.html"
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 28.71,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a7-ps1": {
@@ -977,7 +1029,11 @@
     "p": null,
     "q": "",
     "s": "Ziarul Evenimentul",
-    "u": "https://www.ziarulevenimentul.ro/stiri/moldova/safe-in-impas-a7-pa-cani-suceava-i-dex-suceava-siret-blocate-la-start--217601352.html"
+    "u": "https://www.ziarulevenimentul.ro/stiri/moldova/safe-in-impas-a7-pa-cani-suceava-i-dex-suceava-siret-blocate-la-start--217601352.html",
+    "f": 0,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a7-ps2": {
@@ -997,7 +1053,11 @@
     "p": null,
     "q": "",
     "s": "Ziarul Evenimentul",
-    "u": "https://www.ziarulevenimentul.ro/stiri/moldova/safe-in-impas-a7-pa-cani-suceava-i-dex-suceava-siret-blocate-la-start--217601352.html"
+    "u": "https://www.ziarulevenimentul.ro/stiri/moldova/safe-in-impas-a7-pa-cani-suceava-i-dex-suceava-siret-blocate-la-start--217601352.html",
+    "f": 0,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a7-ss1": {
@@ -1127,7 +1187,11 @@
     "p": 70,
     "q": "aproape",
     "s": "Antena 3",
-    "u": "https://www.antena3.ro/economic/transporturi/autostrada-unirii-a8-primii-kilometri-vor-fi-dati-in-circulatie-in-prima-parte-a-anului-viitor-lucrarile-au-ajuns-la-aproape-70-805559.html"
+    "u": "https://www.antena3.ro/economic/transporturi/autostrada-unirii-a8-primii-kilometri-vor-fi-dati-in-circulatie-in-prima-parte-a-anului-viitor-lucrarile-au-ajuns-la-aproape-70-805559.html",
+    "f": 41.92,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a8-1b": {
@@ -1340,12 +1404,16 @@
    ],
    "checkedAt": "2026-10-02T11:53:57.739Z",
    "progress": {
-    "p": 7,
+    "p": 13,
     "q": "",
     "faza": "",
-    "d": "2026-04-13",
-    "s": "Ziare.com (date CESTRIN)",
-    "u": "https://ziare.com/infrastructura/autostrada-unirii-a8-licitatii-contracte-atribuite-cnair-cnir-2026-imprumuturi-safe-2006259"
+    "d": "2026-10-01",
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 4.26,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a8-l1": {
@@ -1503,12 +1571,16 @@
    ],
    "checkedAt": "2026-10-02T11:53:57.739Z",
    "progress": {
-    "d": "2026-08-18",
+    "d": "2026-10-01",
     "faza": "",
-    "p": 55,
+    "p": 80,
     "q": "",
-    "s": "Financiarul",
-    "u": "https://financiarul.ro/companii/podul-peste-prut-de-la-ungheni-a-ajuns-la-55-executie/"
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 45,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a9-rj": {
@@ -1599,12 +1671,16 @@
    ],
    "checkedAt": "2026-10-02T11:53:57.739Z",
    "progress": {
-    "d": "2026-09-24",
+    "d": "2026-10-01",
     "faza": "",
-    "p": 23.54,
+    "p": 24,
     "q": "",
-    "s": "Salut Făgăraș",
-    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/"
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 31.81,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a13-l2": {
@@ -1658,7 +1734,11 @@
     "p": 50.15,
     "q": "",
     "s": "Salut Făgăraș",
-    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/"
+    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/",
+    "f": 47.84,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a13-l3": {
@@ -1712,7 +1792,11 @@
     "p": 51.09,
     "q": "",
     "s": "Salut Făgăraș",
-    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/"
+    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/",
+    "f": 48.62,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a13-l4": {
@@ -1766,7 +1850,11 @@
     "p": 36.26,
     "q": "",
     "s": "Salut Făgăraș",
-    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/"
+    "u": "https://salutfagaras.ro/autostrada-sibiu-fagaras-lucrarile-trec-de-50-pe-doua-tronsoane-cum-evolueaza-santierul-a13/",
+    "f": 43.3,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a14": {
@@ -1779,7 +1867,11 @@
     "p": null,
     "q": "",
     "s": "Economica.net",
-    "u": "https://www.economica.net/drumul-expres-satu-mare-oar-3_911346.html"
+    "u": "https://www.economica.net/drumul-expres-satu-mare-oar-3_911346.html",
+    "f": 0,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "dex5a": {
@@ -1851,7 +1943,11 @@
     "p": 97,
     "q": "",
     "s": "G4Media",
-    "u": "https://www.g4media.ro/a-fost-montata-ultima-sectiune-a-podului-peste-siret-drumul-expres-braila-galati-a-ajuns-la-97.html"
+    "u": "https://www.g4media.ro/a-fost-montata-ultima-sectiune-a-podului-peste-siret-drumul-expres-braila-galati-a-ajuns-la-97.html",
+    "f": 86.27,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "dex6-l1": {
@@ -1981,7 +2077,11 @@
     "p": null,
     "q": "",
     "s": "Bihoreanul",
-    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html"
+    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html",
+    "f": 0,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "dex16-l2": {
@@ -2007,7 +2107,11 @@
     "p": null,
     "q": "",
     "s": "Bihoreanul",
-    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html"
+    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html",
+    "f": 0,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "dex16-l3": {
@@ -2033,7 +2137,11 @@
     "p": null,
     "q": "",
     "s": "Bihoreanul",
-    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html"
+    "u": "https://www.ebihoreanul.ro/stiri/construirea-drumului-expres-oradea-arad-ar-putea-incepe-in-aceasta-vara-cnir-a-inceput-discutiile-cu-constructorii-dupa-ce-a-preluat-proiectul-de-la-cnair-201955.html",
+    "f": 0,
+    "fd": "2026-10-01",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   }
  }

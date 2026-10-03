@@ -7,6 +7,7 @@
 // cu cele mai multe cuvinte-cheie găsite în titlu, ca un clip „Moțca – Leghin” să ajungă
 // la Secț. III și nu la lotul 1 care doar pornește din Moțca.
 import fs from 'fs';
+import { fetchCestrin, applyCestrin } from './cestrin.mjs';
 
 const ROOT = new URL('../', import.meta.url);
 const KEY = process.env.YT_API_KEY;
@@ -214,7 +215,8 @@ for (const s of SEGMENTS) {
       const g = extractProgress(n.t);
       if (!g || !n.d) continue;
       if (!progress || !progress.d || n.d > progress.d) {
-        progress = { p: g.p, q: g.q, faza: '', d: n.d, s: n.s || '', u: n.u };
+        const keepFin = progress && progress.f != null ? { f: progress.f, fd: progress.fd, fs: progress.fs, fu: progress.fu } : {};
+        progress = { p: g.p, q: g.q, faza: '', d: n.d, s: n.s || '', u: n.u, ...keepFin };
         newP++;
       }
       break; // doar cea mai nouă știre cu procent
@@ -222,6 +224,14 @@ for (const s of SEGMENTS) {
   }
   lots[s.id] = { videos: vids, news, checkedAt: now, ...(progress ? { progress } : {}) };
 }
+// stadiul fizic și financiar oficial (CESTRIN)
+let cestrinNote = '';
+try {
+  const ch = applyCestrin(lots, await fetchCestrin());
+  newP += ch.filter(x => !/^[!~]/.test(x)).length;
+  cestrinNote = ch.length ? '\nCESTRIN:\n' + ch.join('\n') : '\nCESTRIN: nicio schimbare';
+} catch (e) { errors.push('CESTRIN: ' + e.message); }
 fs.writeFileSync(livePath, JSON.stringify({ lastRun: now, summary: `${newV} filmări noi, ${newN} știri noi, ${newP} grade de execuție actualizate`, lots }, null, 1));
 console.log(`Gata: ${newV} filmări noi, ${newN} știri noi, ${newP} grade de execuție actualizate.${KEY ? '' : ' (fără YT_API_KEY: doar știri)'}`);
+if (cestrinNote) console.log(cestrinNote);
 if (errors.length) console.log('Erori:\n' + errors.join('\n'));
