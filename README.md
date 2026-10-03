@@ -19,6 +19,9 @@ Site static, fără server și fără bază de date:
 | `src/data.js` | Loturile: stadiu, km, termen, traseu |
 | `src/src.html` | Sursa paginii (HTML/CSS/JS, d3 din cdnjs) |
 | `src/geo.json` | Contururi România și vecini (Natural Earth 1:10m, domeniu public) |
+| `src/geo-lots.json` | Traseele reale simplificate (~40 KB), încărcate după afișarea hărții |
+| `scripts/fetch-geometry.mjs` | Descarcă traseele din CESTRIN și OpenStreetMap (workflow săptămânal) |
+| `scripts/build-geometry.mjs` | Potrivește traseele pe loturi și le simplifică |
 | `scripts/update.mjs` | Caută pe YouTube (YouTube Data API) și în Google News RSS |
 | `scripts/cestrin.mjs` | Stadiul fizic și financiar oficial din harta CESTRIN „Transparență” |
 | `.github/workflows/update.yml` | Rulează actualizarea zilnic |
@@ -49,3 +52,7 @@ Când un lot trece din licitare în execuție, se deschide sau primește un term
 ## Licență
 
 MIT
+
+## Surse hartă
+
+Trasee: CESTRIN „Transparență” și © OpenStreetMap contributors (ODbL). Fundal opțional: © Esri și furnizorii săi.
