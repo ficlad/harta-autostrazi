@@ -4,20 +4,20 @@ const P130 = r => 'https://www.130km.ro/' + r;
 const SEGMENTS = [
 // ---------- A0
 {id:'a0-l1',road:'A0',name:'A0 Nord lot 1: DJ601 – DN1',status:'c',km:17.5,term:'2026',src:P130('a0.html'),pts:[[44.43,25.93],[44.50,25.96],[44.56,26.01],[44.59,26.05]]},
-{id:'a0-l3',road:'A0',name:'A0 Nord lot 3: Afumați – Cernica (DN2–DN3)',status:'c',km:6.3,term:'toamna 2026',note:'Lotul are 8,6 km; 2,3 km sunt deja deschiși.',src:P130('a0.html'),pts:[[44.53,26.24],[44.49,26.27],[44.44,26.28]]},
-{id:'a0-l4',road:'A0',name:'A0 Nord lot 4: DN3 – A2',status:'c',km:4.47,term:'2026 (legat de lotul 3)',src:P130('a0.html'),pts:[[44.44,26.28],[44.40,26.27]]},
+{id:'a0-l3',road:'A0',name:'A0 Nord lot 3: Afumați – Cernica (DN2–DN3)',status:'c',km:6.3,term:'~20 octombrie 2026',note:'Lotul are 8,6 km; 2,3 km sunt deja deschiși.',src:P130('a0.html'),pts:[[44.53,26.24],[44.49,26.27],[44.44,26.28]]},
+{id:'a0-l4',road:'A0',name:'A0 Nord lot 4: DN3 – A2',status:'c',km:4.47,term:'~20 octombrie 2026 (odată cu lotul 3)',src:P130('a0.html'),pts:[[44.44,26.28],[44.40,26.27]]},
 // ---------- A1
-{id:'a1-s2',road:'A1',name:'A1 Sibiu–Pitești secț. 2: Boița – Cornetu',status:'c',km:31.3,term:'2030',src:P130('a1.html'),pts:[[45.63,24.26],[45.55,24.27],[45.48,24.28],[45.42,24.31]]},
+{id:'a1-s2',road:'A1',name:'A1 Sibiu–Pitești secț. 2: Boița – Cornetu',status:'c',km:31.3,term:'2030',note:'A1 Sibiu–Boița e închisă 5 oct. – 19 dec. 2026 pentru lucrări în nodul Boița.',src:P130('a1.html'),pts:[[45.63,24.26],[45.55,24.27],[45.48,24.28],[45.42,24.31]]},
 {id:'a1-s3',road:'A1',name:'A1 Sibiu–Pitești secț. 3: Cornetu – Tigveni',status:'c',km:37.9,term:'2030',src:P130('a1.html'),pts:[[45.42,24.31],[45.35,24.38],[45.26,24.48],[45.17,24.58]]},
-{id:'a1-s4',road:'A1',name:'A1 Sibiu–Pitești secț. 4: Tigveni – Curtea de Argeș',status:'c',km:9.9,term:'toamna 2026',src:P130('a1.html'),pts:[[45.17,24.58],[45.14,24.68]]},
+{id:'a1-s4',road:'A1',name:'A1 Sibiu–Pitești secț. 4: Tigveni – Curtea de Argeș',status:'c',km:9.9,term:'octombrie 2026',note:'Lucrări finalizate; deschiderea urmează după testele tunelului Momaia.',src:P130('a1.html'),pts:[[45.17,24.58],[45.14,24.68]]},
 {id:'a1-ld2',road:'A1',name:'A1 Lugoj–Deva lot 2: Margina – Holdea',status:'c',km:13.5,term:'S1 2027',src:P130('a1.html'),pts:[[45.85,22.27],[45.88,22.35],[45.89,22.43]]},
 // ---------- A3
-{id:'a3-nm',road:'A3',name:'A3 Nădășelu – Mihăiești',status:'c',km:16.8,term:'2027',src:P130('a3.html'),pts:[[46.84,23.36],[46.89,23.32],[46.93,23.29]]},
+{id:'a3-nm',road:'A3',name:'A3 Nădășelu – Mihăiești',status:'c',km:16.8,term:'2027',note:'Lucrări la 99,2%; deschiderea depinde de viaductele Mihăiești și Topa Mică.',src:P130('a3.html'),pts:[[46.84,23.36],[46.89,23.32],[46.93,23.29]]},
 {id:'a3-via',road:'A3',name:'A3 Viaductele Mihăiești și Topa Mică',status:'c',km:3.2,term:'în execuție',note:'Proiect separat, inclus în traseul Nădășelu – Zimbor.',src:P130('a3.html'),pts:[[46.93,23.29],[46.95,23.285]]},
-{id:'a3-mz',road:'A3',name:'A3 Mihăiești – Zimbor',status:'c',km:13.3,term:'2027',src:P130('a3.html'),pts:[[46.95,23.285],[46.98,23.28],[47.00,23.27]]},
+{id:'a3-mz',road:'A3',name:'A3 Mihăiești – Zimbor',status:'c',km:13.3,term:'2027',note:'Lucrări la 99,2%; deschiderea depinde de viaductele Mihăiești și Topa Mică.',src:P130('a3.html'),pts:[[46.95,23.285],[46.98,23.28],[47.00,23.27]]},
 {id:'a3-pz',road:'A3',name:'A3 Poarta Sălajului – Zalău',status:'c',km:15.1,term:'2031',note:'Include tunelul Meseș (2,9 km).',src:P130('a3.html'),pts:[[47.07,23.20],[47.12,23.13],[47.17,23.06]]},
 {id:'a3-zn',road:'A3',name:'A3 Zalău – Nușfalău',status:'c',km:25.8,term:'2031',src:P130('a3.html'),pts:[[47.17,23.06],[47.19,22.90],[47.20,22.70]]},
-{id:'a3-sc',road:'A3',name:'A3 Suplacu de Barcău – Chiribiș',status:'c',km:26.4,term:'2026',src:P130('a3.html'),pts:[[47.25,22.52],[47.24,22.40],[47.22,22.22]]},
+{id:'a3-sc',road:'A3',name:'A3 Suplacu de Barcău – Chiribiș',status:'c',km:26.4,term:'2026',note:'Deschidere estimată la 1 decembrie 2026.',src:P130('a3.html'),pts:[[47.25,22.52],[47.24,22.40],[47.22,22.22]]},
 {id:'a3-cb',road:'A3',name:'A3 Chiribiș – Biharia',status:'c',km:28.9,term:'2027',src:P130('a3.html'),pts:[[47.22,22.22],[47.19,22.08],[47.15,21.92]]},
 // ---------- A4
 {id:'a4-tech',road:'A4',name:'A4 Alternativa Techirghiol: Constanța Sud – Olimp',status:'t',km:30.6,term:'în licitare',owner:'CNIR',src:P130('a4.html'),q:'autostrada A4 Alternativa Techirghiol licitatie',pts:[[44.10,28.60],[44.00,28.57],[43.92,28.58],[43.87,28.60]]},
@@ -48,8 +48,8 @@ const SEGMENTS = [
 {id:'a8-s3',road:'A8',name:'A8 Secț. III: Leghin – Târgu Neamț/Moțca',status:'c',km:29.9,term:'2028',note:'Se termină la Moțca, unde începe lotul 1 spre Târgu Frumos.',src:P130('a8.html'),pts:[[47.21,26.22],[47.20,26.36],[47.22,26.50],[47.24,26.62]]},
 {id:'a8-l1',road:'A8',name:'A8 lot 1: Târgu Neamț/Moțca – Târgu Frumos',status:'c',km:27.0,term:'2030',src:P130('a8.html'),pts:[[47.24,26.62],[47.23,26.80],[47.21,27.00]]},
 {id:'a8-l2',road:'A8',name:'A8 lot 2: Târgu Frumos – Lețcani (DN28)',status:'t',km:28.6,term:'în licitare',owner:'CNIR',src:P130('a8.html'),q:'autostrada A8 Targu Frumos Letcani lot 2 licitatie',pts:[[47.21,27.00],[47.20,27.20],[47.18,27.42]]},
-{id:'a8-l3',road:'A8',name:'A8 lot 3: Lețcani (DN28) – Iași (DN24)',status:'c',km:17.7,term:'2030',src:P130('a8.html'),pts:[[47.18,27.42],[47.13,27.52],[47.12,27.63]]},
-{id:'a8-l4',road:'A8',name:'A8 lot 4: Iași (DN24) – Vama/Pod Ungheni',status:'c',km:15.5,term:'2030',note:'Contract semnat în iulie 2026, suspendat în instanță.',src:P130('a8.html'),pts:[[47.12,27.63],[47.17,27.72],[47.21,27.78]]},
+{id:'a8-l3',road:'A8',name:'A8 lot 3: Lețcani (DN28) – Iași (DN24)',status:'c',km:17.7,term:'2030',note:'Contestație în anulare Concelex, termen la Curtea de Apel pe 7 oct. 2026.',src:P130('a8.html'),pts:[[47.18,27.42],[47.13,27.52],[47.12,27.63]]},
+{id:'a8-l4',road:'A8',name:'A8 lot 4: Iași (DN24) – Vama/Pod Ungheni',status:'c',km:15.5,term:'2030',note:'Contract semnat în iulie 2026, suspendat în instanță; pronunțarea amânată la 6 oct. 2026.',src:P130('a8.html'),pts:[[47.12,27.63],[47.17,27.72],[47.21,27.78]]},
 {id:'a8-pod',road:'A8',name:'A8 Pod peste Prut la Ungheni',status:'c',km:1.1,term:'2026',src:P130('a8.html'),pts:[[47.21,27.78],[47.21,27.80]]},
 // ---------- A9
 {id:'a9-rj',road:'A9',name:'A9 Remetea Mare – Jebel',status:'t',km:35.7,term:'în licitare',owner:'CNAIR',src:P130('a9.html'),q:'autostrada Timisoara Moravita Remetea Mare Jebel licitatie',pts:[[45.78,21.38],[45.68,21.33],[45.56,21.24]]},
@@ -62,7 +62,7 @@ const SEGMENTS = [
 // ---------- A14
 {id:'a14',road:'A14',name:'A14 Oar – Satu Mare (profil drum expres)',status:'c',km:10.8,term:'contract semnat',src:P130('a14.html'),pts:[[47.81,22.76],[47.80,22.83],[47.79,22.89]]},
 // ---------- DEx
-{id:'dex5a',road:'DEx5A',name:'DEx5A Bacău – Piatra Neamț',status:'t',km:51.0,term:'constructor desemnat, procedură contestată',owner:'CNAIR',src:P130('dex5a.html'),q:'drum expres Bacau Piatra Neamt contestatie contract',pts:[[46.60,26.88],[46.70,26.70],[46.83,26.52],[46.93,26.38]]},
+{id:'dex5a',road:'DEx5A',name:'DEx5A Bacău – Piatra Neamț',status:'t',km:51.0,term:'contestație respinsă definitiv (01.10.2026), ofertă în reevaluare',owner:'CNAIR',src:P130('dex5a.html'),q:'drum expres Bacau Piatra Neamt contestatie contract',pts:[[46.60,26.88],[46.70,26.70],[46.83,26.52],[46.93,26.38]]},
 {id:'dex6-bg',road:'DEx6',name:'DEx6 Brăila – Galați',status:'c',km:12.3,term:'2026',src:P130('dxbrgl.html'),pts:[[45.29,27.97],[45.36,27.99],[45.43,28.01]]},
 {id:'dex6-l1',road:'DEx6',name:'DEx6 lot 1: Focșani (A7) – Măicănești (DN23)',status:'c',km:28.2,term:'2029',src:P130('dxbrgl.html'),pts:[[45.68,27.17],[45.60,27.33],[45.50,27.50]]},
 {id:'dex6-l2',road:'DEx6',name:'DEx6 lot 2: Măicănești – Siliștea (DJ221C)',status:'c',km:37.6,term:'2029',src:P130('dxbrgl.html'),pts:[[45.50,27.50],[45.41,27.68],[45.33,27.85]]},
