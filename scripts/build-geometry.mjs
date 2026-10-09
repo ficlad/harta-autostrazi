@@ -130,7 +130,9 @@ const osmProp = OSM.filter(w => w.t.highway === 'proposed');
 // o cale OSM cu ref (ex. „A7”) se folosește doar pentru loturile aceleiași autostrăzi
 const refOk = (w, road) => { const r = (w.t.ref || '').toUpperCase().replace(/\s/g, ''); if (!r) return true; const R = road.toUpperCase(); return r.split(';').some(x => x === R || x === R.replace('DEX', 'DX') || x.replace('DX', 'DEX') === R); };
 // căile fără ref: la autostrăzi doar cele de clasă autostradă (altfel intră drumuri de legătură, variante ocolitoare)
-const forRoad = (ways, road) => ways.filter(w => refOk(w, road) && (w.t.ref || /^DEX/i.test(road) || (w.t.construction || w.t.proposed) === 'motorway')).map(w => w.g);
+// la drumurile expres, căile fără ref intră doar dacă drumul nu are deloc căi cu ref în OSM (altfel prindem alte DEx-uri vecine)
+const hasRef = road => OSM.some(w => w.t.ref && refOk(w, road));
+const forRoad = (ways, road) => ways.filter(w => refOk(w, road) && (w.t.ref || (/^DEX/i.test(road) && !hasRef(road)) || (w.t.construction || w.t.proposed) === 'motorway')).map(w => w.g);
 const osmOpen = OSM.filter(w => w.t.highway === 'motorway' || w.t.highway === 'trunk').map(w => w.g);
 const direct = {};
 for (const [oid, [ids]] of Object.entries(MAP)) for (const id of ids) (direct[id] ||= []).push(+oid);
@@ -221,6 +223,7 @@ for (const id of lotIds) {
       if (d < dEnd) { dEnd = d; pair = [o, j]; }
     }
     if (pair && dEnd <= Math.min(JOIN, dPath + 1.5)) { tgt = ll(lots[pair[0]].e[pair[1]]); fixed.add(pair[0] + pair[1]); }
+    if (dist(ll(L.e[1 - k]), tgt) < dist(p, tgt)) continue;   // ținta e de partea celuilalt capăt al lotului
     const B = fill(p, tgt);
     if (B.length > 2) stat2.filled++;
     L.p.push(dp(B, TOL).map(r4));

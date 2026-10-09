@@ -40,8 +40,8 @@ const SEGMENTS = [
 // ---------- A8
 {id:'a8-s1',road:'A8',name:'A8 Secț. I: Târgu Mureș – Miercurea Nirajului',status:'c',km:24.4,term:'2027',src:P130('a8.html'),pts:[[46.55,24.60],[46.54,24.70],[46.53,24.80]]},
 {id:'a8-1b',road:'A8',name:'A8 lot 1B: Miercurea Nirajului – Sărățeni',status:'c',km:23.4,term:'2027',src:P130('a8.html'),pts:[[46.53,24.80],[46.55,24.92],[46.58,25.01]]},
-{id:'a8-1c',road:'A8',name:'A8 lot 1C: Sărățeni – Joseni',status:'c',km:32.4,term:'2030',src:P130('a8.html'),pts:[[46.58,25.01],[46.63,25.18],[46.67,25.35],[46.70,25.49]]},
-{id:'a8-1d',road:'A8',name:'A8 lot 1D: Joseni – Ditrău',status:'c',km:14.4,term:'2028',src:P130('a8.html'),pts:[[46.70,25.49],[46.76,25.50],[46.82,25.51]]},
+{id:'a8-1c',road:'A8',name:'A8 lot 1C: Sărățeni – Joseni',status:'c',km:32.4,term:'2030',src:P130('a8.html'),pts:[[46.5595,25.024],[46.565,25.16],[46.571,25.22],[46.595,25.272],[46.605,25.32],[46.625,25.361],[46.658,25.378],[46.704,25.39]]},
+{id:'a8-1d',road:'A8',name:'A8 lot 1D: Joseni – Ditrău',status:'c',km:14.4,term:'2028',src:P130('a8.html'),pts:[[46.704,25.39],[46.737,25.433],[46.762,25.49],[46.792,25.512],[46.8175,25.537]]},
 {id:'a8-2a',road:'A8',name:'A8 lot 2A: Ditrău – Grințieș',status:'c',km:null,term:'2029',src:P130('a8.html'),pts:[[46.82,25.51],[46.90,25.63],[46.98,25.75],[47.05,25.86]]},
 {id:'a8-2b',road:'A8',name:'A8 lot 2B: Grințieș – Pipirig',status:'c',km:34.1,term:'2030',src:P130('a8.html'),pts:[[47.05,25.86],[47.13,25.96],[47.24,26.07]]},
 {id:'a8-3c',road:'A8',name:'A8 lot 3C: Pipirig – Vânători Neamț / Leghin',status:'c',km:19.3,term:'2029',src:P130('a8.html'),pts:[[47.24,26.07],[47.23,26.15],[47.21,26.22]]},
@@ -64,9 +64,9 @@ const SEGMENTS = [
 // ---------- DEx
 {id:'dex5a',road:'DEx5A',name:'DEx5A Bacău – Piatra Neamț',status:'t',km:51.0,term:'contestație respinsă definitiv (01.10.2026), ofertă în reevaluare',owner:'CNAIR',src:P130('dex5a.html'),q:'drum expres Bacau Piatra Neamt contestatie contract',pts:[[46.60,26.88],[46.70,26.70],[46.83,26.52],[46.93,26.38]]},
 {id:'dex6-bg',road:'DEx6',name:'DEx6 Brăila – Galați',status:'c',km:12.3,term:'2026',src:P130('dxbrgl.html'),pts:[[45.29,27.97],[45.36,27.99],[45.43,28.01]]},
-{id:'dex6-l1',road:'DEx6',name:'DEx6 lot 1: Focșani (A7) – Măicănești (DN23)',status:'c',km:28.2,term:'2029',src:P130('dxbrgl.html'),pts:[[45.68,27.17],[45.60,27.33],[45.50,27.50]]},
-{id:'dex6-l2',road:'DEx6',name:'DEx6 lot 2: Măicănești – Siliștea (DJ221C)',status:'c',km:37.6,term:'2029',src:P130('dxbrgl.html'),pts:[[45.50,27.50],[45.41,27.68],[45.33,27.85]]},
-{id:'dex6-l3',road:'DEx6',name:'DEx6 lot 3: Siliștea – Brăila (DEx6)',status:'c',km:7.7,term:'2029',src:P130('dxbrgl.html'),pts:[[45.33,27.85],[45.29,27.97]]},
+{id:'dex6-l1',road:'DEx6',name:'DEx6 lot 1: Focșani (A7) – Măicănești (DN23)',status:'c',km:28.2,term:'2029',src:P130('dxbrgl.html'),pts:[[45.6223,27.2181],[45.6125,27.3036],[45.586,27.3557],[45.5595,27.4154],[45.54,27.443],[45.5186,27.469]]},
+{id:'dex6-l2',road:'DEx6',name:'DEx6 lot 2: Măicănești – Siliștea (DJ221C)',status:'c',km:37.6,term:'2029',src:P130('dxbrgl.html'),pts:[[45.5186,27.469],[45.4622,27.4817],[45.4278,27.5018],[45.389,27.5352],[45.3742,27.5952],[45.3556,27.6652],[45.3276,27.7278],[45.3065,27.7843],[45.2968,27.8211]]},
+{id:'dex6-l3',road:'DEx6',name:'DEx6 lot 3: Siliștea – Brăila (DEx6)',status:'c',km:7.7,term:'2029',src:P130('dxbrgl.html'),pts:[[45.2968,27.8211],[45.2899,27.856],[45.2861,27.8706],[45.2958,27.9114]]},
 {id:'dex16-l1',road:'DEx16',name:'DEx16 lot 1: Oradea – Salonta',status:'c',km:33.7,term:'2028',src:P130('dex16.html'),pts:[[47.01,21.93],[46.90,21.80],[46.80,21.66]]},
 {id:'dex16-l2',road:'DEx16',name:'DEx16 lot 2: Salonta – Chișineu-Criș',status:'c',km:39.7,term:'2028',src:P130('dex16.html'),pts:[[46.80,21.66],[46.66,21.58],[46.52,21.52]]},
 {id:'dex16-l3',road:'DEx16',name:'DEx16 lot 3: Chișineu-Criș – Arad',status:'c',km:47.1,term:'2028',src:P130('dex16.html'),pts:[[46.52,21.52],[46.36,21.42],[46.20,21.33]]},
