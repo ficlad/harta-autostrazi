@@ -68,6 +68,13 @@ header h1{margin:0;font:800 20px/1.2 var(--font-d);letter-spacing:.01em;display:
 .vm path{fill:#e3261b}
 .node{fill:var(--panel);stroke:var(--fg);vector-effect:non-scaling-stroke;stroke-width:1.4}
 .node.dim{opacity:.25}
+.juncs{pointer-events:none}
+.jn circle{fill:var(--sign);stroke:var(--panel);stroke-width:1.5}
+.jn.plan circle{fill:var(--panel);stroke:var(--sign)}
+.jn text{display:none;font:600 11px var(--font-b);fill:var(--sign);paint-order:stroke;stroke:var(--land);stroke-width:3px;stroke-linejoin:round}
+.juncs.lbl .jn text{display:block}
+.juncs.lbl .jn text.off{display:none}
+.mapwrap.bm-sat .jn text{fill:#fff;stroke:rgba(0,0,0,.7)}
 .endpt circle{fill:var(--sel);stroke:var(--panel);vector-effect:non-scaling-stroke;stroke-width:2}
 .endpt text{fill:var(--fg);font-family:var(--font-b);font-weight:700;paint-order:stroke;stroke:var(--land);stroke-linejoin:round}
 .halo{fill:none;stroke:var(--sel);stroke-width:14;stroke-opacity:.28;stroke-linecap:round;vector-effect:non-scaling-stroke;pointer-events:none}
@@ -221,6 +228,7 @@ footer{padding:16px 16px 24px;font-size:12.5px;color:var(--muted);border-top:8px
     <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-tender)" stroke-width="3.5" stroke-dasharray="6 5"/></svg>În licitare</div>
     <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-open)" stroke-width="2.5" stroke-linecap="round"/></svg>Deschis circulației</div>
     <div><svg width="30" height="10" viewBox="-15 -5 30 10"><line x1="-12" y1="0" x2="12" y2="0" stroke="var(--c-work)" stroke-width="4.5" stroke-linecap="round"/><circle r="3" class="node"/></svg>Capăt de lot</div>
+    <div class="lg-j"><svg width="30" height="10" viewBox="-15 -5 30 10"><circle r="3.6" fill="var(--sign)" stroke="var(--panel)" stroke-width="1.5"/></svg>Nod rutier (la zoom)</div>
     <div><svg width="30" height="16" viewBox="-15 -8 30 16"><g class="vm"><circle r="7"/><path d="M-2.2,-3.2 L3.4,0 L-2.2,3.2Z"/></g></svg>Are filmare recentă</div>
   </div>
   <div class="tip card" id="tip" hidden></div>
@@ -391,8 +399,10 @@ const lotEnds = s => s.ends || [s.pts[0], s.pts[s.pts.length-1]];
 const openData = () => OPENG ? OPENG.map(c => ({c})) : OPEN.map(o => ({c: o[1].map(p => [p[1], p[0]])}));
 const openPath = d => path({type:'LineString', coordinates: d.c});
 
-const gLand = g.append('g'), gCase = g.append('g'), gOpen = g.append('g'), gSeg = g.append('g'), gHalo = g.append('g'), gNode = g.append('g'), gVid = g.append('g'), gCity = g.append('g'), gEnds = g.append('g'), gHit = g.append('g');
+const gLand = g.append('g'), gCase = g.append('g'), gOpen = g.append('g'), gSeg = g.append('g'), gHalo = g.append('g'), gNode = g.append('g'), gJunc = g.append('g').attr('class','juncs'), gVid = g.append('g'), gCity = g.append('g'), gEnds = g.append('g'), gHit = g.append('g');
 let W, H, k = 1;
+let JUNC = [];
+const JZ = 4, JZT = 6;
 function layout(){
   const r = svg.node().getBoundingClientRect(); W = r.width; H = r.height;
   proj.fitExtent([[24,24],[W-24,H-24]], ro);
@@ -418,6 +428,10 @@ function layout(){
   SEGMENTS.forEach(sg => lotEnds(sg).forEach(p => { const key = p[0].toFixed(2) + ',' + p[1].toFixed(2); const n = nodes.get(key) || {p, ids: []}; n.ids.push(sg.id); nodes.set(key, n); }));
   gNode.selectAll('circle').data([...nodes.values()]).join('circle').attr('class','node')
     .attr('cx', d => proj([d.p[1], d.p[0]])[0]).attr('cy', d => proj([d.p[1], d.p[0]])[1]);
+  gJunc.selectAll('g').data(JUNC).join(enter => { const e = enter.append('g'); e.append('circle').attr('r', 3.6); e.append('text').attr('x', 7).attr('y', 3.5); return e; })
+    .attr('class', d => 'jn' + (d[3] === 'o' ? '' : ' plan'))
+    .attr('data-x', d => proj([d[0], d[1]])[0]).attr('data-y', d => proj([d[0], d[1]])[1])
+    .select('text').text(d => d[2]);
   applyFilter(); drawHalo(); rescale();
 }
 // Localitățile de capăt ale unui lot, din numele lui („…: Leghin – Târgu Neamț/Moțca”)
@@ -440,6 +454,25 @@ function rescale(){
   gEnds.selectAll('text').attr('font-size', 12 / k).attr('dx', 8 / k).attr('dy', -8 / k).style('stroke-width', 3.5 / k + 'px');
   gVid.selectAll('g.vm').attr('transform', function(){ return `translate(${this.dataset.x},${this.dataset.y}) scale(${0.85 / k})`; });
   gLand.selectAll('path').style('stroke-width', 1 / k);
+  // nodurile rutiere apar doar la zoom: punctul de la JZ, numele drumurilor de la JZT
+  gJunc.style('display', k < JZ ? 'none' : null).classed('lbl', k >= JZT);
+  if (k >= JZ) gJunc.selectAll('g.jn').attr('transform', function(){ return `translate(${this.dataset.x},${this.dataset.y}) scale(${1 / k})`; });
+  if (k >= JZT) placeJuncLabels();
+}
+// etichetele nodurilor nu se suprapun: se afișează pe rând (întâi cele deschise), sărind peste cele care s-ar călca
+function placeJuncLabels(){
+  const t = d3.zoomTransform(svg.node()), boxes = [];
+  const items = gJunc.selectAll('g.jn').nodes().map(n => ({ n, d: n.__data__, x: t.applyX(+n.dataset.x), y: t.applyY(+n.dataset.y) }))
+    .filter(o => o.x > -200 && o.x < W + 20 && o.y > -20 && o.y < H + 20)
+    .sort((a, b) => (a.d[3] !== 'o') - (b.d[3] !== 'o') || b.d[2].length - a.d[2].length);
+  gJunc.selectAll('text').classed('off', true);
+  for (const o of items) {
+    if (o.d[2] === 'nod rutier') continue;
+    const tx = o.n.querySelector('text'); const w = (tx._w ||= tx.getComputedTextLength() || o.d[2].length * 6);
+    const b = [o.x + 5, o.y - 9, o.x + 9 + w, o.y + 6];
+    if (boxes.some(q => b[0] < q[2] && b[2] > q[0] && b[1] < q[3] && b[3] > q[1])) continue;
+    boxes.push(b, [o.x - 5, o.y - 5, o.x + 5, o.y + 5]); tx.classList.remove('off');
+  }
 }
 // ---- hartă de fundal (doar pe site-ul public; artifactul nu poate încărca imagini externe)
 const BASEMAPS = {
@@ -655,6 +688,7 @@ function applyGeo(G){
   if (!G || !G.lots) return;
   Object.entries(G.lots).forEach(([id, l]) => { const s = byId[id]; if (s && l.p && l.p.length){ s.geo = l.p; if (l.e) s.ends = l.e; } });
   if (G.open && G.open.length) OPENG = G.open;
+  if (G.j) JUNC = G.j;
   traseeAtt = 'Trasee: CESTRIN · © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>';
   setBasemap(basemap); layout();
 }

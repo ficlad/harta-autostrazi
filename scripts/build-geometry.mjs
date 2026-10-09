@@ -229,7 +229,66 @@ for (const id of lotIds) {
   }
 }
 
-const out = { v: new Date().toISOString().slice(0, 10), lots, open };
+// ---- noduri rutiere (bretele): un punct per nod, cu drumurile de care se leagă; pe hartă apar doar la zoom
+const JN = fs.existsSync(new URL('data/raw/junctions.json', ROOT)) ? rd('data/raw/junctions.json') : null;
+const junc = [];
+if (JN) {
+  const kind = t => t.highway === 'construction' ? 'c' : t.highway === 'proposed' ? 'p' : 'o';
+  const isMain = t => { const h = t.highway === 'construction' ? t.construction : t.highway === 'proposed' ? t.proposed : t.highway; return h === 'motorway' || (h === 'trunk' && (t.motorroad === 'yes' || t.highway !== h)); };
+  const roadCls = t => t.highway === 'construction' ? t.construction : t.highway === 'proposed' ? t.proposed : t.highway;
+  // componente conexe de bretele (au noduri comune)
+  const par = JN.links.map((_, i) => i), find = i => par[i] === i ? i : (par[i] = find(par[i]));
+  const byNode = new Map();
+  JN.links.forEach((l, i) => l.n.forEach(n => { if (byNode.has(n)) par[find(i)] = find(byNode.get(n)); else byNode.set(n, i); }));
+  const comps = new Map();
+  JN.links.forEach((l, i) => { const r = find(i); if (!comps.has(r)) comps.set(r, []); comps.get(r).push(l); });
+  const roadsAt = new Map(); // nod → drumuri (non-bretea) care trec prin el
+  for (const r of JN.roads) for (const n of r.n) { if (!roadsAt.has(n)) roadsAt.set(n, []); roadsAt.get(n).push(r.t); }
+  const exitAt = new Map(JN.exits.map(e => [e.id, e]));
+  const net = lotPaths.concat(open);
+  let raw = [];
+  for (const ls of comps.values()) {
+    const nodes = new Set(ls.flatMap(l => l.n));
+    const touch = [...nodes].flatMap(n => roadsAt.get(n) || []);
+    const mains = touch.filter(isMain), others = touch.filter(t => !isMain(t));
+    if (!mains.length) continue;                         // bretele care nu țin de o autostradă / drum expres
+    const pts = ls.flatMap(l => l.g), c = [pts.reduce((a, p) => a + p[0], 0) / pts.length, pts.reduce((a, p) => a + p[1], 0) / pts.length];
+    if (nearestOn(c, net)[0] > 1.5) continue;           // doar pe traseele de pe hartă
+    const ex = [...nodes].map(n => exitAt.get(n)).find(Boolean);
+    const refs = new Set(), names = new Set(), mrefs = new Set(mains.map(t => (t.ref || '').split(';')[0]).filter(Boolean));
+    for (const t of others) {
+      const cls = roadCls(t);
+      if (!/^(trunk|primary|secondary|tertiary|unclassified|residential|road)$/.test(cls || '')) continue;
+      if (t.ref) t.ref.split(';').forEach(r => refs.add(r.trim())); else if (t.name) names.add(t.name);
+    }
+    for (const l of ls) if (l.t.dref) l.t.dref.split(';').forEach(r => { r = r.trim(); if (r && !mrefs.has(r)) refs.add(r); });
+    // doar bretele care duc spre un drum (nu parcări / spații de servicii)
+    const realRoad = others.some(t => /^(trunk|primary|secondary|tertiary|unclassified|residential|road|living_street)$/.test(roadCls(t) || ''));
+    if (!realRoad && mrefs.size < 2 && !refs.size) continue;
+    const st = ls.some(l => kind(l.t) === 'o') ? 'o' : ls.some(l => kind(l.t) === 'c') ? 'c' : 'p';
+    raw.push({ c, refs, names, mrefs, name: ex && ex.name && ex.name.split(/[,;]/)[0].trim(), st, n: pts.length });
+  }
+  // un nod rutier poate avea mai multe grupuri de bretele separate (ex. romb): le unim dacă sunt foarte apropiate
+  raw.sort((a, b) => b.n - a.n);
+  const merged = [];
+  for (const r of raw) {
+    const m = merged.find(x => dist(x.c, r.c) < 1.2);
+    if (m) { r.refs.forEach(x => m.refs.add(x)); r.names.forEach(x => m.names.add(x)); r.mrefs.forEach(x => m.mrefs.add(x)); m.name ||= r.name; if (r.st === 'o') m.st = 'o'; }
+    else merged.push(r);
+  }
+  for (const m of merged) {
+    // nod între autostrăzi: le numim pe toate; altfel drumurile naționale/județene întâi, apoi numele străzilor
+    const sortRef = a => [...a].sort((x, y) => (/^A/.test(y) - /^A/.test(x)) || (/^DN/.test(y) - /^DN/.test(x)) || x.localeCompare(y, 'ro', { numeric: true }));
+    const roads = m.mrefs.size > 1 ? sortRef(m.mrefs) : sortRef(m.refs).slice(0, 3);
+    for (let i = roads.length - 1; i >= 0; i--) if (roads.some(r => r !== roads[i] && r.endsWith(roads[i]))) roads.splice(i, 1); // „DNCB / CB” → „DNCB”
+    if (!roads.length && m.names.size) roads.push([...m.names][0]);
+    if (m.name && m.name.split(/[\s/-]+/).every(w => /^[A-Z]{1,3}\d+[A-Z]?$/.test(w))) m.name = '';  // numele ieșirii e doar „A3 A7”
+    const label = [m.name, roads.join(' / ')].filter(Boolean).join(' · ') || 'nod rutier';
+    junc.push([...r4(m.c), label, m.st]);
+  }
+}
+
+const out = { v: new Date().toISOString().slice(0, 10), lots, open, j: junc };
 const txt = JSON.stringify(out);
 fs.writeFileSync(new URL('src/geo-lots.json', ROOT), txt);
-console.log(`Bucăți lipite: ${stitched}. Racorduri: ${stat2.joined} (${stat2.filled} pe traseul real). Trasee: ${stat.cestrin} din CESTRIN, ${stat.osm} din OSM, ${stat.schematic} schematice; rețea deschisă ${open.length} bucăți (+${extra.length} din OSM). ${Math.round(txt.length / 1024)} KB`);
+console.log(`Noduri rutiere: ${junc.length}. Bucăți lipite: ${stitched}. Racorduri: ${stat2.joined} (${stat2.filled} pe traseul real). Trasee: ${stat.cestrin} din CESTRIN, ${stat.osm} din OSM, ${stat.schematic} schematice; rețea deschisă ${open.length} bucăți (+${extra.length} din OSM). ${Math.round(txt.length / 1024)} KB`);
