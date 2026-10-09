@@ -94,6 +94,27 @@ function dedupe(paths, kept = []) {
   }
   return out;
 }
+// lipește bucățile aceluiași lot: capetele apropiate (≤ GAP km) se unesc, ca traseul să fie continuu, nu „pe bucăți”
+const GAP = 2;
+let stitched = 0;
+function stitch(paths, S) {
+  // ordonează bucățile de-a lungul liniei lotului, le orientează în același sens și le înșiră fără întoarceri
+  const cum = cumOf(S);
+  const items = paths.map(P => { let ts = P.map(p => onLine(p, S, cum)[0]); if (ts[ts.length - 1] < ts[0]) { P = P.slice().reverse(); ts = ts.slice().reverse(); } return { P, ts }; })
+    .sort((a, b) => a.ts[0] - b.ts[0]);
+  const out = []; let cur = null, curT = -1;
+  for (const { P, ts } of items) {
+    if (cur) {
+      let k = 0; while (k < P.length && ts[k] <= curT) k++;          // fără să ne întoarcem peste ce e deja desenat
+      const rest = P.slice(k); if (rest.length === 0) continue;
+      if (dist(cur[cur.length - 1], rest[0]) <= GAP) { cur.push(...rest); curT = Math.max(curT, ts[ts.length - 1]); stitched++; continue; }
+      out.push(cur);
+    }
+    cur = P.slice(); curT = ts[ts.length - 1];
+  }
+  if (cur) out.push(cur);
+  return out.filter(P => P.length > 1);
+}
 function ends(paths, S) {
   const cum = cumOf(S); let lo = [2, null], hi = [-1, null];
   for (const P of paths) for (const p of P) { const [t] = onLine(p, S, cum); if (t < lo[0]) lo = [t, p]; if (t > hi[0]) hi = [t, p]; }
@@ -140,7 +161,7 @@ for (const s of SEGMENTS) {
     if (c.reduce((a, P) => a + lenOf(P), 0) >= 0.5 * want) { got = c; src = name; }
   }
   if (!got) { stat.schematic++; continue; }
-  const paths = finish(dedupe(got));
+  const paths = finish(stitch(dedupe(got), S));
   if (!paths.length) { stat.schematic++; continue; }
   stat[src]++;
   lots[s.id] = { p: paths, e: ends(paths, S), s: src };
@@ -211,4 +232,4 @@ for (const id of lotIds) {
 const out = { v: new Date().toISOString().slice(0, 10), lots, open };
 const txt = JSON.stringify(out);
 fs.writeFileSync(new URL('src/geo-lots.json', ROOT), txt);
-console.log(`Racorduri: ${stat2.joined} (${stat2.filled} pe traseul real). Trasee: ${stat.cestrin} din CESTRIN, ${stat.osm} din OSM, ${stat.schematic} schematice; rețea deschisă ${open.length} bucăți (+${extra.length} din OSM). ${Math.round(txt.length / 1024)} KB`);
+console.log(`Bucăți lipite: ${stitched}. Racorduri: ${stat2.joined} (${stat2.filled} pe traseul real). Trasee: ${stat.cestrin} din CESTRIN, ${stat.osm} din OSM, ${stat.schematic} schematice; rețea deschisă ${open.length} bucăți (+${extra.length} din OSM). ${Math.round(txt.length / 1024)} KB`);
