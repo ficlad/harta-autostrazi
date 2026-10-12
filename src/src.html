@@ -61,7 +61,7 @@ header h1{margin:0;font:800 20px/1.2 var(--font-d);letter-spacing:.01em;display:
 .casing.tender{stroke-width:6}
 .open{stroke:var(--c-open);stroke-width:2.5}
 .work{stroke:var(--c-work);stroke-width:4.5}
-.tender{stroke:var(--c-tender);stroke-width:3.5;stroke-dasharray:6 5}
+.tender{stroke:var(--c-tender);stroke-width:3.5}
 .seg.hov{stroke-width:7}
 .hit{stroke:transparent;stroke-width:16;fill:none;cursor:pointer;vector-effect:non-scaling-stroke;pointer-events:stroke}
 .vm circle{fill:var(--panel);stroke:var(--c-work);vector-effect:non-scaling-stroke;stroke-width:1.5}
@@ -73,7 +73,7 @@ header h1{margin:0;font:800 20px/1.2 var(--font-d);letter-spacing:.01em;display:
 .rdn{fill:none;stroke:var(--faint);stroke-opacity:.7;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .rdn.c,.rdn.p{stroke-dasharray:3 3}
 .ramp{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
-.ramp.o{stroke:var(--c-open)} .ramp.c{stroke:var(--c-work)} .ramp.p{stroke:var(--c-tender);stroke-dasharray:4 3}
+.ramp.o{stroke:var(--c-open)} .ramp.c{stroke:var(--c-work)} .ramp.p{stroke:var(--c-tender)}
 .mapwrap.bm-sat .rdn{stroke:rgba(255,255,255,.55)}
 .juncs.det circle{display:none}
 .jn circle{fill:var(--sign);stroke:var(--panel);stroke-width:1.5}
@@ -232,7 +232,7 @@ footer{padding:16px 16px 24px;font-size:12.5px;color:var(--muted);border-top:8px
   <div class="zoombtns card"><button id="zin" aria-label="Mărește">+</button><button id="zout" aria-label="Micșorează">−</button><button id="zreset" aria-label="Toată țara" style="font-size:11px;font-weight:700">RO</button></div>
   <div class="legend card">
     <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-work)" stroke-width="4.5" stroke-linecap="round"/></svg>În execuție</div>
-    <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-tender)" stroke-width="3.5" stroke-dasharray="6 5"/></svg>În licitare</div>
+    <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-tender)" stroke-width="3.5" stroke-linecap="round"/></svg>În licitare</div>
     <div><svg width="30" height="10"><line x1="3" y1="5" x2="27" y2="5" stroke="var(--c-open)" stroke-width="2.5" stroke-linecap="round"/></svg>Deschis circulației</div>
     <div><svg width="30" height="10" viewBox="-15 -5 30 10"><line x1="-12" y1="0" x2="12" y2="0" stroke="var(--c-work)" stroke-width="4.5" stroke-linecap="round"/><circle r="3" class="node"/></svg>Capăt de lot</div>
     <div class="lg-j"><svg width="30" height="10" viewBox="-15 -5 30 10"><circle r="3.6" fill="var(--sign)" stroke="var(--panel)" stroke-width="1.5"/></svg>Nod rutier (la zoom)</div>
