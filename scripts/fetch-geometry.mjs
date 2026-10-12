@@ -52,47 +52,64 @@ out tags geom qt;`;
 async function overpass(q) {
   const eps = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
   let last;
-  for (const ep of eps) {
-    try {
-      const r = await fetch(ep, { method: 'POST', body: 'data=' + encodeURIComponent(q), headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'harta-autostrazi (github.com/ficlad/harta-autostrazi)' } });
-      if (!r.ok) throw new Error(ep + ' ' + r.status);
-      return await r.json();
-    } catch (e) { last = e; console.log('Overpass eșuat:', e.message); }
+  for (let round = 0; round < 2; round++) {          // serverele Overpass sunt des ocupate: încă o tură după o pauză
+    if (round) await new Promise(r => setTimeout(r, 45000));
+    for (const ep of eps) {
+      try {
+        const r = await fetch(ep, { method: 'POST', body: 'data=' + encodeURIComponent(q), headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'harta-autostrazi (github.com/ficlad/harta-autostrazi)' } });
+        if (!r.ok) throw new Error(ep + ' ' + r.status);
+        return await r.json();
+      } catch (e) { last = e; console.log('Overpass eșuat:', e.message); }
+    }
   }
   throw last;
 }
 
 // Noduri rutiere: bretelele (motorway_link / trunk_link, inclusiv în șantier sau propuse), punctele de ieșire
 // și drumurile de care se leagă bretelele → data/raw/junctions.json
-async function junctions() {
-  const j = await overpass(`[out:json][timeout:600][maxsize:1073741824];
-area["ISO3166-1"="RO"][admin_level=2]->.ro;
+const LINKS = `area["ISO3166-1"="RO"][admin_level=2]->.ro;
 (
   way["highway"~"^(motorway_link|trunk_link)$"](area.ro);
   way["highway"="construction"]["construction"~"^(motorway_link|trunk_link)$"](area.ro);
   way["highway"="proposed"]["proposed"~"^(motorway_link|trunk_link)$"](area.ro);
-)->.l;
+)->.l;`;
+async function junctions() {
+  // 1) bretelele, ieșirile și drumurile de care se leagă (fără geometria drumurilor — interogare ușoară)
+  const j = await overpass(`[out:json][timeout:300];
+${LINKS}
 .l out body geom qt;
 node(w.l)->.n;
 node.n["highway"="motorway_junction"];
 out body qt;
 way(bn.n)->.w;
-(.w; - .l;)->.r;
-way.r["highway"~"^(motorway|trunk)$"];
-out body qt;
-way.r["highway"!~"^(motorway|trunk)$"];
-out body geom qt;`);
+(.w; - .l;);
+out body qt;`);
   const tg = t => (({ highway, construction, proposed, ref, name, motorroad, destination, 'destination:ref': dref }) => ({ highway, construction, proposed, ref, name, motorroad, destination, dref }))(t || {});
+  const P5 = p => [Math.round(p.lon * 1e5) / 1e5, Math.round(p.lat * 1e5) / 1e5];
   const out = { links: [], exits: [], roads: [] };
   for (const e of j.elements) {
-    if (e.type === 'node') out.exits.push({ id: e.id, p: [Math.round(e.lon * 1e5) / 1e5, Math.round(e.lat * 1e5) / 1e5], name: e.tags && e.tags.name, ref: e.tags && e.tags.ref });
-    else if (e.type === 'way' && e.geometry) out.links.push({ n: e.nodes, t: tg(e.tags), g: e.geometry.map(p => [Math.round(p.lon * 1e5) / 1e5, Math.round(p.lat * 1e5) / 1e5]) });
-    else if (e.type === 'way') out.roads.push({ n: e.nodes, t: tg(e.tags), all: e.nodes, g: (e.geometry || []).map(p => p && [Math.round(p.lon * 1e5) / 1e5, Math.round(p.lat * 1e5) / 1e5]) });
+    if (e.type === 'node') out.exits.push({ id: e.id, p: P5(e), name: e.tags && e.tags.name, ref: e.tags && e.tags.ref });
+    else if (e.type === 'way' && e.geometry) out.links.push({ n: e.nodes, t: tg(e.tags), g: e.geometry.map(P5) });
+    else if (e.type === 'way') out.roads.push({ id: e.id, n: e.nodes, t: tg(e.tags) });
   }
-  // din drumuri păstrăm doar nodurile comune cu bretelele (fișier mic)
+  // 2) geometria drumurilor obișnuite legate de bretele (pentru schița nodului la zoom mare); dacă eșuează,
+  //    se păstrează geometria din fișierul anterior
+  const geo = new Map();
+  try {
+    const g = await overpass(`[out:json][timeout:300];
+${LINKS}
+node(w.l)->.n;
+way(bn.n)["highway"~"^(primary|secondary|tertiary|unclassified|residential|trunk|living_street|road|service)$"];
+out ids geom qt;`);
+    for (const e of g.elements) if (e.geometry) geo.set(e.id, e.geometry.map(P5));
+    console.log('Geometrie drumuri legate:', geo.size);
+  } catch (e) {
+    console.log('Geometria drumurilor legate nu s-a putut descărca:', e.message);
+    try { for (const r of JSON.parse(fs.readFileSync(new URL('data/raw/junctions.json', ROOT), 'utf8')).roads) if (r.id && r.g) geo.set(r.id, r.g); } catch {}
+  }
+  // din drumuri păstrăm nodurile comune cu bretelele (+ geometria, unde există)
   const ln = new Set(out.links.flatMap(l => l.n));
-  // drumurile: nodurile comune cu bretelele + geometria (pentru schița nodului la zoom mare)
-  out.roads = out.roads.map(r => ({ n: r.n.filter(x => ln.has(x)), t: r.t, g: r.g.filter(Boolean) })).filter(r => r.n.length);
+  out.roads = out.roads.map(r => ({ id: r.id, n: r.n.filter(x => ln.has(x)), t: r.t, g: geo.get(r.id) })).filter(r => r.n.length);
   fs.writeFileSync(new URL('data/raw/junctions.json', ROOT), JSON.stringify(out));
   console.log('Noduri:', out.links.length, 'bretele,', out.exits.length, 'ieșiri,', out.roads.length, 'drumuri legate');
 }
