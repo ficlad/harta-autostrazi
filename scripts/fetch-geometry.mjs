@@ -65,7 +65,7 @@ async function overpass(q) {
 // Noduri rutiere: bretelele (motorway_link / trunk_link, inclusiv în șantier sau propuse), punctele de ieșire
 // și drumurile de care se leagă bretelele → data/raw/junctions.json
 async function junctions() {
-  const j = await overpass(`[out:json][timeout:300];
+  const j = await overpass(`[out:json][timeout:600][maxsize:1073741824];
 area["ISO3166-1"="RO"][admin_level=2]->.ro;
 (
   way["highway"~"^(motorway_link|trunk_link)$"](area.ro);
@@ -77,7 +77,10 @@ node(w.l)->.n;
 node.n["highway"="motorway_junction"];
 out body qt;
 way(bn.n)->.w;
-(.w; - .l;);
+(.w; - .l;)->.r;
+way.r["highway"~"^(motorway|trunk)$"];
+out body qt;
+way.r["highway"!~"^(motorway|trunk)$"];
 out body geom qt;`);
   const tg = t => (({ highway, construction, proposed, ref, name, motorroad, destination, 'destination:ref': dref }) => ({ highway, construction, proposed, ref, name, motorroad, destination, dref }))(t || {});
   const out = { links: [], exits: [], roads: [] };
@@ -97,5 +100,5 @@ out body geom qt;`);
 let ok = true;
 try { await cestrin(); } catch (e) { ok = false; console.log('Eroare CESTRIN:', e.message); }
 try { await osm(); } catch (e) { ok = false; console.log('Eroare OSM:', e.message); }
-try { await junctions(); } catch (e) { ok = false; console.log('Eroare noduri:', e.message); }
+try { await junctions(); } catch (e) { console.log('Eroare noduri (rămâne fișierul vechi):', e.message); }
 if (!ok) process.exitCode = 1;
