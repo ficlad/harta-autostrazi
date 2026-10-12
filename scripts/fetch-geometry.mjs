@@ -99,7 +99,10 @@ out body qt;`);
     const g = await overpass(`[out:json][timeout:300];
 ${LINKS}
 node(w.l)->.n;
-way(bn.n)["highway"~"^(primary|secondary|tertiary|unclassified|residential|trunk|living_street|road|service)$"];
+(
+  way(bn.n)["highway"~"^(primary|secondary|tertiary|unclassified|residential|trunk|living_street|road|service)$"];
+  way(bn.n)["highway"~"^(construction|proposed)$"]["construction"!~"motorway|trunk_link"]["proposed"!~"motorway|trunk_link"];
+);
 out ids geom qt;`);
     for (const e of g.elements) if (e.geometry) geo.set(e.id, e.geometry.map(P5));
     console.log('Geometrie drumuri legate:', geo.size);
