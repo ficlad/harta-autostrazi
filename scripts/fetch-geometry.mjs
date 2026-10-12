@@ -78,17 +78,18 @@ node.n["highway"="motorway_junction"];
 out body qt;
 way(bn.n)->.w;
 (.w; - .l;);
-out body qt;`);
+out body geom qt;`);
   const tg = t => (({ highway, construction, proposed, ref, name, motorroad, destination, 'destination:ref': dref }) => ({ highway, construction, proposed, ref, name, motorroad, destination, dref }))(t || {});
   const out = { links: [], exits: [], roads: [] };
   for (const e of j.elements) {
     if (e.type === 'node') out.exits.push({ id: e.id, p: [Math.round(e.lon * 1e5) / 1e5, Math.round(e.lat * 1e5) / 1e5], name: e.tags && e.tags.name, ref: e.tags && e.tags.ref });
     else if (e.type === 'way' && e.geometry) out.links.push({ n: e.nodes, t: tg(e.tags), g: e.geometry.map(p => [Math.round(p.lon * 1e5) / 1e5, Math.round(p.lat * 1e5) / 1e5]) });
-    else if (e.type === 'way') out.roads.push({ n: e.nodes, t: tg(e.tags) });
+    else if (e.type === 'way') out.roads.push({ n: e.nodes, t: tg(e.tags), all: e.nodes, g: (e.geometry || []).map(p => p && [Math.round(p.lon * 1e5) / 1e5, Math.round(p.lat * 1e5) / 1e5]) });
   }
   // din drumuri păstrăm doar nodurile comune cu bretelele (fișier mic)
   const ln = new Set(out.links.flatMap(l => l.n));
-  out.roads = out.roads.map(r => ({ n: r.n.filter(x => ln.has(x)), t: r.t })).filter(r => r.n.length);
+  // drumurile: nodurile comune cu bretelele + geometria (pentru schița nodului la zoom mare)
+  out.roads = out.roads.map(r => ({ n: r.n.filter(x => ln.has(x)), t: r.t, g: r.g.filter(Boolean) })).filter(r => r.n.length);
   fs.writeFileSync(new URL('data/raw/junctions.json', ROOT), JSON.stringify(out));
   console.log('Noduri:', out.links.length, 'bretele,', out.exits.length, 'ieșiri,', out.roads.length, 'drumuri legate');
 }
