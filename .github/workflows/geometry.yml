@@ -22,10 +22,11 @@ jobs:
         with:
           node-version: 22
       - name: Descarcă traseele
-        run: node scripts/fetch-geometry.mjs
+        continue-on-error: true
+        run: node scripts/fetch-geometry.mjs 2>&1 | tee data/raw/fetch.log; exit ${PIPESTATUS[0]}
       - name: Construiește traseele loturilor
         run: |
-          if [ -f scripts/build-geometry.mjs ]; then node scripts/build-geometry.mjs && node scripts/build.mjs; fi
+          if [ -f scripts/build-geometry.mjs ]; then node scripts/build-geometry.mjs && node scripts/build-geometry.mjs --detail && node scripts/build.mjs; fi
       - name: Salvează
         run: |
           git config user.name "harta-bot"

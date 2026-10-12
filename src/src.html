@@ -69,6 +69,13 @@ header h1{margin:0;font:800 20px/1.2 var(--font-d);letter-spacing:.01em;display:
 .node{fill:var(--panel);stroke:var(--fg);vector-effect:non-scaling-stroke;stroke-width:1.4}
 .node.dim{opacity:.25}
 .juncs{pointer-events:none}
+.det{pointer-events:none}
+.rdn{fill:none;stroke:var(--line-2);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.rdn.c,.rdn.p{stroke-dasharray:3 3}
+.ramp{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.ramp.o{stroke:var(--c-open)} .ramp.c{stroke:var(--c-work)} .ramp.p{stroke:var(--c-tender);stroke-dasharray:4 3}
+.mapwrap.bm-sat .rdn{stroke:rgba(255,255,255,.55)}
+.juncs.det circle{display:none}
 .jn circle{fill:var(--sign);stroke:var(--panel);stroke-width:1.5}
 .jn.plan circle{fill:var(--panel);stroke:var(--sign)}
 .jn text{display:none;font:600 11px var(--font-b);fill:var(--sign);paint-order:stroke;stroke:var(--land);stroke-width:3px;stroke-linejoin:round}
@@ -288,12 +295,19 @@ const line = pts => path({type:'LineString', coordinates: pts.map(p => [p[1], p[
 // Trasee reale (CESTRIN + OpenStreetMap), încărcate separat; până atunci și ca rezervă: linia schematică
 let OPENG = null;
 const segGeo = s => s.geo ? {type:'MultiLineString', coordinates: s.geo} : {type:'LineString', coordinates: s.pts.map(p => [p[1], p[0]])};
-const segPath = s => path(segGeo(s));
+// linii netede: curbă Catmull-Rom prin punctele proiectate (traseele sunt simplificate, altfel ar arăta frânte)
+const curve = d3.line().curve(d3.curveCatmullRom.alpha(0.5));
+const pd = c => c.length > 1 ? curve(c.map(p => proj(p))) : '';
+// la zoom mare: varianta detaliată (ambele căi de rulare, bretele, drumurile legate), încărcată doar atunci
+let DET = null, detOn = false, detLoading = false;
+const KD = 8;
+const segCoords = s => detOn && DET.lots[s.id] ? DET.lots[s.id].p : s.geo ? s.geo : [s.pts.map(p => [p[1], p[0]])];
+const segPath = s => segCoords(s).map(pd).join('');
 const lotEnds = s => s.ends || [s.pts[0], s.pts[s.pts.length-1]];
-const openData = () => OPENG ? OPENG.map(c => ({c})) : OPEN.map(o => ({c: o[1].map(p => [p[1], p[0]])}));
-const openPath = d => path({type:'LineString', coordinates: d.c});
+const openData = () => detOn ? DET.open.map(c => ({c})) : OPENG ? OPENG.map(c => ({c})) : OPEN.map(o => ({c: o[1].map(p => [p[1], p[0]])}));
+const openPath = d => pd(d.c);
 
-const gLand = g.append('g'), gCase = g.append('g'), gOpen = g.append('g'), gSeg = g.append('g'), gHalo = g.append('g'), gNode = g.append('g'), gJunc = g.append('g').attr('class','juncs'), gVid = g.append('g'), gCity = g.append('g'), gEnds = g.append('g'), gHit = g.append('g');
+const gLand = g.append('g'), gRoad = g.append('g').attr('class','det'), gRamp = g.append('g').attr('class','det'), gCase = g.append('g'), gOpen = g.append('g'), gSeg = g.append('g'), gHalo = g.append('g'), gNode = g.append('g'), gJunc = g.append('g').attr('class','juncs'), gVid = g.append('g'), gCity = g.append('g'), gEnds = g.append('g'), gHit = g.append('g');
 let W, H, k = 1;
 let JUNC = [];
 const JZ = 4, JZT = 6;
@@ -322,6 +336,9 @@ function layout(){
   SEGMENTS.forEach(sg => lotEnds(sg).forEach(p => { const key = p[0].toFixed(2) + ',' + p[1].toFixed(2); const n = nodes.get(key) || {p, ids: []}; n.ids.push(sg.id); nodes.set(key, n); }));
   gNode.selectAll('circle').data([...nodes.values()]).join('circle').attr('class','node')
     .attr('cx', d => proj([d.p[1], d.p[0]])[0]).attr('cy', d => proj([d.p[1], d.p[0]])[1]);
+  gRoad.selectAll('path').data(detOn ? DET.rd : []).join('path').attr('class', d => 'rdn ' + d[0]).attr('d', d => pd(d[1]));
+  gRamp.selectAll('path').data(detOn ? DET.rp : []).join('path').attr('class', d => 'ramp ' + d[0]).attr('d', d => pd(d[1]));
+  gJunc.classed('det', detOn);
   gJunc.selectAll('g').data(JUNC).join(enter => { const e = enter.append('g'); e.append('circle').attr('r', 3.6); e.append('text').attr('x', 7).attr('y', 3.5); return e; })
     .attr('class', d => 'jn' + (d[3] === 'o' ? '' : ' plan'))
     .attr('data-x', d => proj([d[0], d[1]])[0]).attr('data-y', d => proj([d[0], d[1]])[1])
@@ -370,9 +387,9 @@ function placeJuncLabels(){
 }
 // ---- hartă de fundal (doar pe site-ul public; artifactul nu poate încărca imagini externe)
 const BASEMAPS = {
-  map: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', dark: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', att: 'Fundal © Esri, HERE, Garmin, © OpenStreetMap' },
-  topo: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', att: 'Fundal © Esri, HERE, Garmin, USGS, © OpenStreetMap' },
-  sat: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', att: 'Imagini © Esri, Maxar, Earthstar Geographics' },
+  map: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', dark: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', att: 'Fundal © Esri, HERE, Garmin, © OpenStreetMap', maxz: 16 },
+  topo: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', att: 'Fundal © Esri, HERE, Garmin, USGS, © OpenStreetMap', maxz: 17 },
+  sat: { light: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', att: 'Imagini © Esri, Maxar, Earthstar Geographics', maxz: 18 },
 };
 let basemap = 'simple';
 const gTiles = svg.insert('g', ':first-child').attr('class', 'tiles');
@@ -384,7 +401,7 @@ function drawTiles(){
   const s = proj.scale() * t.k, tr = proj.translate();
   const ox = tr[0] * t.k + t.x - Math.PI * s, oy = tr[1] * t.k + t.y - Math.PI * s;
   const world = 2 * Math.PI * s;
-  const z = Math.max(0, Math.min(18, Math.round(Math.log2(world / 256))));
+  const z = Math.max(0, Math.min(BASEMAPS[basemap].maxz || 18, Math.round(Math.log2(world / 256))));
   const n = 2 ** z, ts = world / n;
   const tpl = BASEMAPS[basemap][dark() && BASEMAPS[basemap].dark ? 'dark' : 'light'];
   const tiles = [];
@@ -407,8 +424,20 @@ function setBasemap(b){
   drawTiles();
 }
 let traseeAtt = 'Trasee schematice, aproximative';
-const zoom = d3.zoom().scaleExtent([1, 14]).on('zoom', e => { k = e.transform.k; g.attr('transform', e.transform); rescale(); queueTiles(); });
+const zoom = d3.zoom().scaleExtent([1, 220]).on('zoom', e => { k = e.transform.k; g.attr('transform', e.transform); rescale(); queueTiles(); checkDetail(); });
+// trece pe varianta detaliată la zoom mare (și înapoi); fișierul se descarcă o singură dată, la primul zoom mare
+function checkDetail(){
+  const want = k >= KD;
+  if (want && !DET){
+    if (detLoading) return;
+    if (typeof GEODETAIL !== 'undefined'){ DET = GEODETAIL; }
+    else if (typeof DETAIL_URL !== 'undefined'){ detLoading = true; fetch(DETAIL_URL).then(r => r.ok ? r.json() : null).then(j => { if (j && j.lots){ DET = j; checkDetail(); } }).catch(() => {}); return; }
+    else return;
+  }
+  if (DET && want !== detOn){ detOn = want; layout(); }
+}
 svg.call(zoom);
+window.__harta = { proj, zoom, svg };
 d3.select('#zin').on('click', () => svg.transition().duration(250).call(zoom.scaleBy, 1.6));
 d3.select('#zout').on('click', () => svg.transition().duration(250).call(zoom.scaleBy, 1/1.6));
 d3.select('#zreset').on('click', () => svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity));

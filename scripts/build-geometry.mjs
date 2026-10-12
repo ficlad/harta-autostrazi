@@ -14,7 +14,10 @@ const SEGMENTS = new Function(fs.readFileSync(new URL('src/data.js', ROOT), 'utf
 const CES = fs.existsSync(new URL('data/raw/cestrin-geo.json', ROOT)) ? rd('data/raw/cestrin-geo.json') : [];
 const OSM = fs.existsSync(new URL('data/raw/osm.json', ROOT)) ? rd('data/raw/osm.json') : [];
 
-const TOL = 0.0011;          // toleranța de simplificare, grade (~110 m)
+// --detail: varianta detaliată pentru zoom mare (src/geo-detail.json): simplificare ~8 m, ambele căi de rulare,
+// bretelele nodurilor și bucăți din drumurile de care se leagă; se încarcă în pagină doar când dai zoom
+const DETAIL = process.argv.includes('--detail');
+const TOL = DETAIL ? 0.00007 : 0.0011;   // toleranța de simplificare, grade (~8 m / ~110 m)
 const NEAR = 6;              // km: cât de departe de linia schematică poate fi traseul real
 const KM = 111.32;
 
@@ -50,7 +53,8 @@ function dp(P, tol) { // Douglas–Peucker
   if (max <= tol) return [a, b];
   return dp(P.slice(0, idx + 1), tol).slice(0, -1).concat(dp(P.slice(idx), tol));
 }
-const r4 = p => [Math.round(p[0] * 1e4) / 1e4, Math.round(p[1] * 1e4) / 1e4];
+const RND = DETAIL ? 1e5 : 1e4;
+const r4 = p => [Math.round(p[0] * RND) / RND, Math.round(p[1] * RND) / RND];
 const finish = paths => paths.map(P => dp(P, TOL).map(r4)).filter(P => P.length >= 2);
 const isLoop = P => P.length > 3 && dist(P[0], P[P.length - 1]) < 0.05;
 
@@ -159,11 +163,11 @@ for (const s of SEGMENTS) {
   const groups = consCov >= 0.3 * want ? [[cons.concat(prop), 'osm'], [cesOther, 'cestrin']] : [[cesOther, 'cestrin'], [cons.concat(prop), 'osm']];
   for (const [group, name] of groups) {
     if (got) break;
-    const c = dedupe(clip(group, S));
-    if (c.reduce((a, P) => a + lenOf(P), 0) >= 0.5 * want) { got = c; src = name; }
+    const cl = clip(group, S), c = dedupe(cl);
+    if (c.reduce((a, P) => a + lenOf(P), 0) >= 0.5 * want) { got = DETAIL ? cl : c; src = name; }
   }
   if (!got) { stat.schematic++; continue; }
-  const paths = finish(stitch(dedupe(got), S));
+  const paths = DETAIL ? finish(got) : finish(stitch(dedupe(got), S));
   if (!paths.length) { stat.schematic++; continue; }
   stat[src]++;
   lots[s.id] = { p: paths, e: ends(paths, S), s: src };
@@ -171,9 +175,18 @@ for (const s of SEGMENTS) {
 
 // rețeaua deschisă: CESTRIN + autostrăzile OSM noi (care nu se suprapun cu CESTRIN sau cu loturile)
 const lotPaths = Object.values(lots).flatMap(l => l.p);
-let open = finish(dedupe(cesOpen));
-const extra = finish(dedupe(osmOpen.filter(P => lenOf(P) > 0.3), open.concat(lotPaths)));
-open = open.concat(extra);
+let open, extra;
+if (DETAIL) {
+  // detaliat: autostrăzile din OSM (ambele căi), apoi CESTRIN doar unde OSM lipsește
+  const overlaps = (P, ref) => { const sm = P.filter((_, i) => i % Math.max(1, Math.floor(P.length / 8)) === 0); return sm.filter(p => ref.some(R => R.some((q, i) => i && proj(p, R[i - 1], q)[1] < 0.15))).length >= sm.length * 0.6; };
+  open = finish(osmOpen.filter(P => !overlaps(P, lotPaths)));
+  extra = finish(dedupe(cesOpen, open.concat(lotPaths)));
+  open = open.concat(extra);
+} else {
+  open = finish(dedupe(cesOpen));
+  extra = finish(dedupe(osmOpen.filter(P => lenOf(P) > 0.3), open.concat(lotPaths)));
+  open = open.concat(extra);
+}
 
 // ---- racorduri: fiecare lot e decupat separat, așa că între loturi vecine (sau între un lot și autostrada în care
 // se leagă) pot rămâne goluri de câțiva km. Capătul lotului se leagă de cel mai apropiat capăt de lot / traseu
@@ -233,6 +246,7 @@ for (const id of lotIds) {
 }
 
 // ---- noduri rutiere (bretele): un punct per nod, cu drumurile de care se leagă; pe hartă apar doar la zoom
+const ramps = [], roadsNear = [];
 const JN = fs.existsSync(new URL('data/raw/junctions.json', ROOT)) ? rd('data/raw/junctions.json') : null;
 const junc = [];
 if (JN) {
@@ -247,6 +261,7 @@ if (JN) {
   JN.links.forEach((l, i) => { const r = find(i); if (!comps.has(r)) comps.set(r, []); comps.get(r).push(l); });
   const roadsAt = new Map(); // nod → drumuri (non-bretea) care trec prin el
   for (const r of JN.roads) for (const n of r.n) { if (!roadsAt.has(n)) roadsAt.set(n, []); roadsAt.get(n).push(r.t); }
+  const roadObjAt = new Map(); for (const r of JN.roads) for (const n of r.n) { if (!roadObjAt.has(n)) roadObjAt.set(n, []); roadObjAt.get(n).push(r); }
   const exitAt = new Map(JN.exits.map(e => [e.id, e]));
   const net = lotPaths.concat(open);
   let raw = [];
@@ -269,14 +284,15 @@ if (JN) {
     const realRoad = others.some(t => /^(trunk|primary|secondary|tertiary|unclassified|residential|road|living_street)$/.test(roadCls(t) || ''));
     if (!realRoad && mrefs.size < 2 && !refs.size) continue;
     const st = ls.some(l => kind(l.t) === 'o') ? 'o' : ls.some(l => kind(l.t) === 'c') ? 'c' : 'p';
-    raw.push({ c, refs, names, mrefs, name: ex && ex.name && ex.name.split(/[,;]/)[0].trim(), st, n: pts.length });
+    const rset = new Set([...nodes].flatMap(n => roadObjAt.get(n) || []).filter(r => !isMain(r.t)));
+    raw.push({ c, refs, names, mrefs, name: ex && ex.name && ex.name.split(/[,;]/)[0].trim(), st, n: pts.length, ls: ls.slice(), rs: [...rset] });
   }
   // un nod rutier poate avea mai multe grupuri de bretele separate (ex. romb): le unim dacă sunt foarte apropiate
   raw.sort((a, b) => b.n - a.n);
   const merged = [];
   for (const r of raw) {
     const m = merged.find(x => dist(x.c, r.c) < 1.2);
-    if (m) { r.refs.forEach(x => m.refs.add(x)); r.names.forEach(x => m.names.add(x)); r.mrefs.forEach(x => m.mrefs.add(x)); m.name ||= r.name; if (r.st === 'o') m.st = 'o'; }
+    if (m) { m.ls.push(...r.ls); m.rs.push(...r.rs); r.refs.forEach(x => m.refs.add(x)); r.names.forEach(x => m.names.add(x)); r.mrefs.forEach(x => m.mrefs.add(x)); m.name ||= r.name; if (r.st === 'o') m.st = 'o'; }
     else merged.push(r);
   }
   for (const m of merged) {
@@ -289,9 +305,24 @@ if (JN) {
     const label = [m.name, roads.join(' / ')].filter(Boolean).join(' · ') || 'nod rutier';
     junc.push([...r4(m.c), label, m.st]);
   }
+  if (DETAIL) {
+    // schița nodului: bretelele și drumurile legate, tăiate la ~1 km în jurul nodului
+    for (const m of merged) {
+      for (const l of m.ls) { const P = finish([l.g])[0]; if (P) ramps.push([kind(l.t), P]); }
+      for (const r of new Set(m.rs)) {
+        if (!r.g || r.g.length < 2) continue;
+        let cur = [];
+        const flush = () => { if (cur.length > 1) { const P = finish([cur])[0]; if (P) roadsNear.push([kind(r.t), P]); } cur = []; };
+        for (const p of r.g) { if (dist(p, m.c) <= 1.0) cur.push(p); else flush(); }
+        flush();
+      }
+    }
+  }
 }
 
-const out = { v: new Date().toISOString().slice(0, 10), lots, open, j: junc };
+const out = DETAIL
+  ? { v: new Date().toISOString().slice(0, 10), lots: Object.fromEntries(Object.entries(lots).map(([id, l]) => [id, { p: l.p }])), open, rp: ramps, rd: roadsNear }
+  : { v: new Date().toISOString().slice(0, 10), lots, open, j: junc };
 const txt = JSON.stringify(out);
-fs.writeFileSync(new URL('src/geo-lots.json', ROOT), txt);
+fs.writeFileSync(new URL(DETAIL ? 'src/geo-detail.json' : 'src/geo-lots.json', ROOT), txt);
 console.log(`Noduri rutiere: ${junc.length}. Bucăți lipite: ${stitched}. Racorduri: ${stat2.joined} (${stat2.filled} pe traseul real). Trasee: ${stat.cestrin} din CESTRIN, ${stat.osm} din OSM, ${stat.schematic} schematice; rețea deschisă ${open.length} bucăți (+${extra.length} din OSM). ${Math.round(txt.length / 1024)} KB`);
