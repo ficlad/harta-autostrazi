@@ -102,17 +102,34 @@ node(w.l)->.n;
 (
   way(bn.n)["highway"~"^(primary|secondary|tertiary|unclassified|residential|trunk|living_street|road|service)$"];
   way(bn.n)["highway"~"^(construction|proposed)$"]["construction"!~"motorway|trunk_link"]["proposed"!~"motorway|trunk_link"];
-);
-out ids geom qt;`);
-    for (const e of g.elements) if (e.geometry) geo.set(e.id, e.geometry.map(P5));
-    console.log('Geometrie drumuri legate:', geo.size);
+)->.r1;
+.r1 out body geom qt;
+node(w.r1)->.n2;
+(
+  way(bn.n2)["highway"~"^(primary|secondary|tertiary|trunk)$"];
+  way(bn.n2)["highway"~"^(construction|proposed)$"]["construction"!~"motorway|trunk_link"]["proposed"!~"motorway|trunk_link"];
+)->.r2;
+(.r2; - .r1;);
+out body geom qt;`);
+    // primul strat: drumurile atinse direct de bretele; al doilea: drumurile mari în care acestea se varsă
+    // (ex. sensul giratoriu → DN-ul relocat)
+    const r1ids = new Set(out.roads.map(r => r.id)), r2 = [];
+    for (const e of g.elements) {
+      if (!e.geometry) continue;
+      if (r1ids.has(e.id)) geo.set(e.id, { g: e.geometry.map(P5), n: e.nodes });
+      else r2.push({ id: e.id, t: tg(e.tags), g: e.geometry.map(P5), n: e.nodes });
+    }
+    const n1 = new Set([...geo.values()].flatMap(x => x.n)), n2 = new Set(r2.flatMap(x => x.n));
+    for (const v of geo.values()) v.nn = v.n.filter(x => n2.has(x));
+    out.roads2 = r2.map(r => ({ id: r.id, t: r.t, g: r.g, n: r.n.filter(x => n1.has(x)) })).filter(r => r.n.length);
+    console.log('Geometrie drumuri legate:', geo.size, '+', out.roads2.length, 'drumuri mari vecine');
   } catch (e) {
     console.log('Geometria drumurilor legate nu s-a putut descărca:', e.message);
-    try { for (const r of JSON.parse(fs.readFileSync(new URL('data/raw/junctions.json', ROOT), 'utf8')).roads) if (r.id && r.g) geo.set(r.id, r.g); } catch {}
+    try { const old = JSON.parse(fs.readFileSync(new URL('data/raw/junctions.json', ROOT), 'utf8')); for (const r of old.roads) if (r.id && r.g) geo.set(r.id, { g: r.g, nn: r.nn || [] }); out.roads2 = old.roads2 || []; } catch {}
   }
   // din drumuri păstrăm nodurile comune cu bretelele (+ geometria, unde există)
   const ln = new Set(out.links.flatMap(l => l.n));
-  out.roads = out.roads.map(r => ({ id: r.id, n: r.n.filter(x => ln.has(x)), t: r.t, g: geo.get(r.id) })).filter(r => r.n.length);
+  out.roads = out.roads.map(r => { const x = geo.get(r.id); return { id: r.id, n: r.n.filter(x => ln.has(x)), t: r.t, g: x && x.g, nn: x && x.nn }; }).filter(r => r.n.length);
   fs.writeFileSync(new URL('data/raw/junctions.json', ROOT), JSON.stringify(out));
   console.log('Noduri:', out.links.length, 'bretele,', out.exits.length, 'ieșiri,', out.roads.length, 'drumuri legate');
 }

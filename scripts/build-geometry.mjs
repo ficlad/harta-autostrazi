@@ -309,7 +309,9 @@ if (JN) {
     // schița nodului: bretelele și drumurile legate, tăiate la ~1 km în jurul nodului
     for (const m of merged) {
       for (const l of m.ls) { const P = finish([l.g])[0]; if (P) ramps.push([kind(l.t), P]); }
-      for (const r of new Set(m.rs)) {
+      const nn = new Set(m.rs.flatMap(r => r.nn || []));
+      const extra2 = nn.size ? (JN.roads2 || []).filter(r => r.n.some(x => nn.has(x))) : [];
+      for (const r of new Set(m.rs.concat(extra2))) {
         if (!r.g || r.g.length < 2) continue;
         let cur = [];
         const flush = () => { if (cur.length > 1) { const P = finish([cur])[0]; if (P) roadsNear.push([kind(r.t), P]); } cur = []; };
