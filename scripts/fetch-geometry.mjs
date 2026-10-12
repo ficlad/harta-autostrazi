@@ -58,7 +58,9 @@ async function overpass(q) {
       try {
         const r = await fetch(ep, { method: 'POST', body: 'data=' + encodeURIComponent(q), headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'harta-autostrazi (github.com/ficlad/harta-autostrazi)' } });
         if (!r.ok) throw new Error(ep + ' ' + r.status);
-        return await r.json();
+        const j = await r.json();
+        if (j.remark && /error|timed out|out of memory/i.test(j.remark)) throw new Error(ep + ' ' + j.remark.slice(0, 120));
+        return j;
       } catch (e) { last = e; console.log('Overpass eșuat:', e.message); }
     }
   }
@@ -104,7 +106,8 @@ node(w.l)->.n;
   way(bn.n)["highway"~"^(construction|proposed)$"]["construction"!~"motorway|trunk_link"]["proposed"!~"motorway|trunk_link"];
 )->.r1;
 .r1 out body geom qt;
-node(w.r1)->.n2;
+(way.r1["junction"="roundabout"]; way.r1["highway"~"^(construction|proposed)$"];)->.r1s;
+node(w.r1s)->.n2;
 (
   way(bn.n2)["highway"~"^(primary|secondary|tertiary|trunk)$"];
   way(bn.n2)["highway"~"^(construction|proposed)$"]["construction"!~"motorway|trunk_link"]["proposed"!~"motorway|trunk_link"];
@@ -122,9 +125,11 @@ out body geom qt;`);
     const n1 = new Set([...geo.values()].flatMap(x => x.n)), n2 = new Set(r2.flatMap(x => x.n));
     for (const v of geo.values()) v.nn = v.n.filter(x => n2.has(x));
     out.roads2 = r2.map(r => ({ id: r.id, t: r.t, g: r.g, n: r.n.filter(x => n1.has(x)) })).filter(r => r.n.length);
+    if (!geo.size) throw new Error('răspuns gol');
     console.log('Geometrie drumuri legate:', geo.size, '+', out.roads2.length, 'drumuri mari vecine');
   } catch (e) {
     console.log('Geometria drumurilor legate nu s-a putut descărca:', e.message);
+    geo.clear();
     try { const old = JSON.parse(fs.readFileSync(new URL('data/raw/junctions.json', ROOT), 'utf8')); for (const r of old.roads) if (r.id && r.g) geo.set(r.id, { g: r.g, nn: r.nn || [] }); out.roads2 = old.roads2 || []; } catch {}
   }
   // din drumuri păstrăm nodurile comune cu bretelele (+ geometria, unde există)
