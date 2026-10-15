@@ -62,7 +62,7 @@ const SEGMENTS = [
 // ---------- A14
 {id:'a14',road:'A14',name:'A14 Oar – Satu Mare (profil drum expres)',status:'c',km:10.8,term:'final 2028 / 2029',note:'Ordin de începere emis, dar execuția începe abia la 3 mai 2027.',src:P130('a14.html'),pts:[[47.81,22.76],[47.80,22.83],[47.79,22.89]]},
 // ---------- DEx
-{id:'dex5a',road:'DEx5A',name:'DEx5A Bacău – Piatra Neamț',status:'t',km:51.0,term:'contestație respinsă definitiv (01.10.2026), ofertă în reevaluare',owner:'CNAIR',src:P130('dex5a.html'),q:'drum expres Bacau Piatra Neamt contestatie contract',pts:[[46.60,26.88],[46.70,26.70],[46.83,26.52],[46.93,26.38]]},
+{id:'dex5a',road:'DEx5A',name:'DEx5A Bacău – Piatra Neamț',status:'t',km:51.0,term:'contestație respinsă definitiv (01.10.2026), ofertă în reevaluare',owner:'CNAIR',src:P130('dex5a.html'),q:'drum expres Bacau Piatra Neamt contestatie contract',pts:[[46.706,26.9],[46.689,26.84],[46.692,26.78],[46.71,26.65],[46.80,26.58],[46.87,26.53],[46.915,26.43]]},
 {id:'dex6-bg',road:'DEx6',name:'DEx6 Brăila – Galați',status:'c',km:12.3,term:'2026',src:P130('dxbrgl.html'),pts:[[45.29,27.97],[45.36,27.99],[45.43,28.01]]},
 {id:'dex6-l1',road:'DEx6',name:'DEx6 lot 1: Focșani (A7) – Măicănești (DN23)',status:'c',km:28.2,term:'2029',src:P130('dxbrgl.html'),pts:[[45.6223,27.2181],[45.6125,27.3036],[45.586,27.3557],[45.5595,27.4154],[45.54,27.443],[45.5186,27.469]]},
 {id:'dex6-l2',road:'DEx6',name:'DEx6 lot 2: Măicănești – Siliștea (DJ221C)',status:'c',km:37.6,term:'2029',src:P130('dxbrgl.html'),pts:[[45.5186,27.469],[45.4622,27.4817],[45.4278,27.5018],[45.389,27.5352],[45.3742,27.5952],[45.3556,27.6652],[45.3276,27.7278],[45.3065,27.7843],[45.2968,27.8211]]},

@@ -160,7 +160,10 @@ for (const s of SEGMENTS) {
   // OSM: șantier + propus împreună (unde lipsește șantierul, completează traseul propus)
   const cons = forRoad(osmCons, s.road), prop = forRoad(osmProp, s.road);
   const consCov = clip(cons, S).reduce((a, P) => a + lenOf(P), 0);
-  const groups = consCov >= 0.3 * want ? [[cons.concat(prop), 'osm'], [cesOther, 'cestrin']] : [[cesOther, 'cestrin'], [cons.concat(prop), 'osm']];
+  // drum doar propus, dar desenat complet în OSM cu ref-ul lui (ex. DEx5A): OSM are și bretelele nodurilor, deci îl preferăm
+  const propCov = prop.length ? clip(prop.filter(P => P), S).reduce((a, P) => a + lenOf(P), 0) : 0;
+  const osmFirst = consCov >= 0.3 * want || (s.status === 't' && osmProp.some(w => w.t.ref && refOk(w, s.road)) && propCov >= 1.4 * want);
+  const groups = osmFirst ? [[cons.concat(prop), 'osm'], [cesOther, 'cestrin']] : [[cesOther, 'cestrin'], [cons.concat(prop), 'osm']];
   for (const [group, name] of groups) {
     if (got) break;
     const cl = clip(group, S), c = dedupe(cl);
