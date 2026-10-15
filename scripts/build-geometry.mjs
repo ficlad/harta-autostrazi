@@ -279,6 +279,13 @@ if (JN) {
     if (nearestOn(c, net)[0] > 1.5) continue;           // doar pe traseele de pe hartă
     const ex = [...nodes].map(n => exitAt.get(n)).find(Boolean);
     const refs = new Set(), names = new Set(), mrefs = new Set(mains.map(t => (t.ref || '').split(';')[0]).filter(Boolean));
+    // autostradă fără ref în OSM (ex. A7 în șantier, cu numele „Lot 1”): o recunoaștem după lotul de pe hartă cel mai apropiat
+    if (mains.some(t => !t.ref)) {
+      for (const [id, l] of Object.entries(lots)) {
+        const sg = SEGMENTS.find(x => x.id === id);
+        if (sg && !mrefs.has(sg.road) && nearestOn(c, l.p)[0] < 0.6) mrefs.add(sg.road);
+      }
+    }
     for (const t of others) {
       const cls = roadCls(t);
       if (!/^(trunk|primary|secondary|tertiary|unclassified|residential|road)$/.test(cls || '')) continue;
@@ -287,6 +294,15 @@ if (JN) {
     for (const l of ls) if (l.t.dref) l.t.dref.split(';').forEach(r => { r = r.trim(); if (r && !mrefs.has(r)) refs.add(r); });
     // doar bretele care duc spre un drum (nu parcări / spații de servicii)
     const realRoad = others.some(t => /^(trunk|primary|secondary|tertiary|unclassified|residential|road|living_street)$/.test(roadCls(t) || ''));
+    const service = others.some(t => /^(rest_area|services)$/.test(roadCls(t) || ''));
+    // nod între două autostrăzi desenat în OSM fără legătură la cealaltă (ex. DEx5A propus la A7 în șantier):
+    // îl recunoaștem după un lot al altui drum care trece la mai puțin de 0,8 km
+    if (!realRoad && !service && mrefs.size === 1 && !refs.size) {
+      for (const [id, l] of Object.entries(lots)) {
+        const sg = SEGMENTS.find(x => x.id === id);
+        if (sg && !mrefs.has(sg.road) && nearestOn(c, l.p)[0] < 0.8) mrefs.add(sg.road);
+      }
+    }
     if (!realRoad && mrefs.size < 2 && !refs.size) continue;
     const st = ls.some(l => kind(l.t) === 'o') ? 'o' : ls.some(l => kind(l.t) === 'c') ? 'c' : 'p';
     const rset = new Set([...nodes].flatMap(n => roadObjAt.get(n) || []).filter(r => !isMain(r.t)));
