@@ -1432,7 +1432,20 @@
   },
   "a8-3c": {
    "videos": [],
-   "news": [],
+   "news": [
+    {
+     "u": "https://www.monitorulderoman.ro/a8-incep-exproprierile-la-grinties-pipirig-si-vanatori-neamt/",
+     "t": "A8, încep exproprierile la Grințieș, Pipirig și Vânători-Neamț",
+     "s": "Monitorul de Roman",
+     "d": "2026-02-19"
+    },
+    {
+     "u": "https://www.ziarulevenimentul.ro/stiri/moldova/inca-un-pas-pe-autostrada-a8-lotul-montan-pipirig-vanatori-neamt-intra-in-antier--217581653.html",
+     "t": "Încă un pas pe autostrada A8. Lotul montan Pipirig-Vânători Neamț intră în șantier",
+     "s": "Ziarul Evenimentul",
+     "d": "2025-04-30"
+    }
+   ],
    "checkedAt": "2026-10-15T05:08:58.286Z",
    "progress": {
     "d": "2026-03-30",

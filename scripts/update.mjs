@@ -61,7 +61,7 @@ const KW = {
   'a8-1d': ['joseni', 'ditrau', '1d'],
   'a8-2a': ['ditrau', 'grinties', '2a'],
   'a8-2b': ['grinties', 'pipirig', '2b'],
-  'a8-3c': ['pipirig', 'leghin', 'vanatori', '3c'],
+  'a8-3c': ['pipirig', 'leghin', 'vanatori', '2c'],
   'a8-s3': ['leghin', 'motca', 'targu neamt', 'tg neamt', 'agapia', 'sacalusesti'],
   'a8-l1': ['motca', 'targu frumos', 'tg frumos', 'lot 1', 'tronsonul 1'],
   'a8-l2': ['targu frumos', 'letcani', 'lot 2', 'tronsonul 2'],
