@@ -217,7 +217,12 @@ function fill(p, q) { // traseul real dintre p și q, dacă vreo sursă îl acop
   }
   if (!best) return [p, q];
   if (proj(best[0], p, q)[0] > proj(best[best.length - 1], p, q)[0]) best.reverse();
-  return [p, ...best, q];
+  // fără întoarceri: doar punctele care înaintează de la p spre q (altfel apare un „cârlig” la capătul lotului)
+  const ax = p[0] * cosLat, ay = p[1], dx = q[0] * cosLat - ax, dy = q[1] - ay, L2 = dx * dx + dy * dy || 1;
+  const tRaw = x => ((x[0] * cosLat - ax) * dx + (x[1] - ay) * dy) / L2;
+  const mid = []; let last = 0.02;
+  for (const x of best) { const t = tRaw(x); if (t > last && t < 0.98) { mid.push(x); last = t; } }
+  return [p, ...mid, q];
 }
 const lotIds = Object.keys(lots), fixed = new Set(), stat2 = { joined: 0, filled: 0 };
 const ll = e => [e[1], e[0]], la = p => [p[1], p[0]];
