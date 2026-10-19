@@ -166,7 +166,7 @@ const uniq = (arr, key) => { const seen = new Set(); return arr.filter(x => !see
 // Ia procentul doar din titluri care vorbesc clar de stadiul lucrărilor („au ajuns la 78%”,
 // „stadiu fizic de peste 70%”), niciodată din sume, costuri sau sondaje.
 const P_CTX = /stadiu|execu[tț]|lucr[aă]ri|progres|ajuns|realizat|finalizat|construit/;
-const P_NEG = /lei|euro|eur\b|buget|cost|pre[tț]|tarif|scump|inflat|sondaj|vot|dobând|taxa|tax[aă]/;
+const P_NEG = /tunel|viaduct|\bpod(ul)?\b|lei|euro|eur\b|buget|cost|pre[tț]|tarif|scump|inflat|sondaj|vot|dobând|taxa|tax[aă]/;
 function extractProgress(title) {
   const t = norm(title);
   if (!P_CTX.test(t) || P_NEG.test(t)) return null;
