@@ -1,7 +1,4 @@
 CESTRIN: 140 obiecte
-Overpass eșuat: https://overpass-api.de/api/interpreter 504
-Overpass eșuat: https://overpass.kumi.systems/api/interpreter 500
-Overpass eșuat: https://overpass.private.coffee/api/interpreter 500
-Eroare OSM: https://overpass.private.coffee/api/interpreter 500
-Geometrie drumuri legate: 4105 + 1733 drumuri mari vecine
-Noduri: 5586 bretele, 385 ieșiri, 5449 drumuri legate
+OSM: 9846 segmente de la https://overpass-api.de/api/interpreter
+Geometrie drumuri legate: 4139 + 1743 drumuri mari vecine
+Noduri: 5646 bretele, 385 ieșiri, 5485 drumuri legate
