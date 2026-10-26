@@ -10,7 +10,11 @@ import { MAP } from './cestrin.mjs';
 
 const ROOT = new URL('../', import.meta.url);
 const rd = f => JSON.parse(fs.readFileSync(new URL(f, ROOT), 'utf8'));
-const SEGMENTS = new Function(fs.readFileSync(new URL('src/data.js', ROOT), 'utf8') + '\nreturn SEGMENTS;')();
+const { SEGMENTS: SEG0, OPEN: OPEN0 } = new Function(fs.readFileSync(new URL('src/data.js', ROOT), 'utf8') + '\nreturn { SEGMENTS, OPEN };')();
+// tronsoane deschise recent (în OPEN cu al treilea câmp = id-ul fostului lot): traseul se calculează ca la un lot,
+// apoi trece în rețeaua deschisă — până când CESTRIN / OSM le marchează ele însele ca deschise
+const OPENED = OPEN0.filter(o => o[2]).map(o => ({ id: o[2], road: o[0], pts: o[1], status: 'o' }));
+const SEGMENTS = SEG0.concat(OPENED);
 const CES = fs.existsSync(new URL('data/raw/cestrin-geo.json', ROOT)) ? rd('data/raw/cestrin-geo.json') : [];
 const OSM = fs.existsSync(new URL('data/raw/osm.json', ROOT)) ? rd('data/raw/osm.json') : [];
 
@@ -177,6 +181,8 @@ for (const s of SEGMENTS) {
 }
 
 // rețeaua deschisă: CESTRIN + autostrăzile OSM noi (care nu se suprapun cu CESTRIN sau cu loturile)
+const openedPaths = [];
+for (const o of OPENED) if (lots[o.id]) { openedPaths.push(...lots[o.id].p); delete lots[o.id]; }
 const lotPaths = Object.values(lots).flatMap(l => l.p);
 let open, extra;
 if (DETAIL) {
@@ -184,11 +190,11 @@ if (DETAIL) {
   const overlaps = (P, ref) => { const sm = P.filter((_, i) => i % Math.max(1, Math.floor(P.length / 8)) === 0); return sm.filter(p => ref.some(R => R.some((q, i) => i && proj(p, R[i - 1], q)[1] < 0.15))).length >= sm.length * 0.6; };
   open = finish(osmOpen.filter(P => !overlaps(P, lotPaths)));
   extra = finish(dedupe(cesOpen, open.concat(lotPaths)));
-  open = open.concat(extra);
+  open = open.concat(extra, dedupe(openedPaths, open));
 } else {
   open = finish(dedupe(cesOpen));
   extra = finish(dedupe(osmOpen.filter(P => lenOf(P) > 0.3), open.concat(lotPaths)));
-  open = open.concat(extra);
+  open = open.concat(extra, dedupe(openedPaths, open.concat(extra)));
 }
 
 // ---- racorduri: fiecare lot e decupat separat, așa că între loturi vecine (sau între un lot și autostrada în care
