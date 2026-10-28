@@ -192,7 +192,28 @@ for (const s of SEGMENTS) {
   await sleep(400);
 }
 
+// filmări trimise manual (data/extra-videos.json: [{"v":"ID","lot":"opțional"}]) — detaliile se iau din YouTube,
+// lotul din titlu (sau cel dat explicit)
+const forced = {};
+try {
+  const extra = JSON.parse(fs.readFileSync(new URL('data/extra-videos.json', ROOT), 'utf8'));
+  if (extra.length && KEY) {
+    const u = new URL('https://www.googleapis.com/youtube/v3/videos');
+    u.searchParams.set('part', 'snippet'); u.searchParams.set('id', extra.map(x => x.v).join(',')); u.searchParams.set('key', KEY);
+    const j = await (await fetch(u)).json();
+    const roads = [...new Set(SEGMENTS.map(s => s.road))];
+    for (const i of j.items || []) {
+      const it = { v: i.id, t: decode(i.snippet.title), c: decode(i.snippet.channelTitle), h: '', d: i.snippet.publishedAt.slice(0, 10) };
+      const want = extra.find(x => x.v === i.id);
+      if (want && want.lot) { (forced[want.lot] ||= []).push(it); continue; }
+      const nt = norm(it.t);
+      const inTitle = roads.filter(r => new RegExp('\\b' + norm(r).replace(/^dex/, 'd(e)?x\\s?') + '\\b').test(nt));
+      for (const road of (inTitle.length ? inTitle : roads)) allVideos.push({ ...it, road });
+    }
+  }
+} catch (e) { if (e.code !== 'ENOENT') errors.push('filmări manuale: ' + e.message); }
 const vAssigned = assign(uniq(allVideos, 'v'), x => x.t);
+for (const [id, list] of Object.entries(forced)) (vAssigned[id] ||= []).push(...list);
 const nAssigned = assign(uniq(allNews, 'u'), x => x.t);
 const now = new Date().toISOString();
 const lots = {};
