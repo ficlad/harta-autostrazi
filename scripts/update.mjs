@@ -11,7 +11,7 @@ import { fetchCestrin, applyCestrin } from './cestrin.mjs';
 
 const ROOT = new URL('../', import.meta.url);
 const KEY = process.env.YT_API_KEY;
-const VIDEO_DAYS = 60, NEWS_DAYS = 90, MAX_ITEMS = 3;
+const VIDEO_DAYS = 60, NEWS_DAYS = 90, MAX_ITEMS = 3, MAX_VIDEOS = 6;
 
 // ---- loturile, citite din src/data.js
 const src = fs.readFileSync(new URL('src/data.js', ROOT), 'utf8');
@@ -131,7 +131,7 @@ const decode = s => s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').replace(/&amp
 async function ytSearch(s) {
   const after = new Date(Date.now() - VIDEO_DAYS * 864e5).toISOString();
   const u = new URL('https://www.googleapis.com/youtube/v3/search');
-  Object.entries({ part: 'snippet', type: 'video', order: 'date', maxResults: '15', q: query(s), publishedAfter: after, relevanceLanguage: 'ro', regionCode: 'RO', key: KEY })
+  Object.entries({ part: 'snippet', type: 'video', order: 'date', maxResults: '25', q: query(s), publishedAfter: after, relevanceLanguage: 'ro', regionCode: 'RO', key: KEY })
     .forEach(([k, v]) => u.searchParams.set(k, v));
   const r = await fetch(u);
   if (!r.ok) throw new Error(`YouTube ${r.status}: ${(await r.text()).slice(0, 200)}`);
@@ -204,7 +204,7 @@ for (const s of SEGMENTS) {
   const old = prev.lots?.[s.id] || {};
   const clean = ({ road, ...x }) => x;
   const vids = s.status === 'c'
-    ? uniq([...(vAssigned[s.id] || []).map(clean), ...(old.videos || [])], 'v').sort(byDate).slice(0, MAX_ITEMS) : [];
+    ? uniq([...(vAssigned[s.id] || []).map(clean), ...(old.videos || [])], 'v').sort(byDate).slice(0, MAX_VIDEOS) : [];
   const news = uniq([...(nAssigned[s.id] || []).map(clean), ...(old.news || [])], 'u').sort(byDate).slice(0, MAX_ITEMS);
   newV += vids.filter(v => !(old.videos || []).some(o => o.v === v.v)).length;
   newN += news.filter(n => !(old.news || []).some(o => o.u === n.u)).length;
