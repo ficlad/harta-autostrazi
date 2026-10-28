@@ -1,6 +1,6 @@
 {
- "lastRun": "2026-10-28T19:28:28.131Z",
- "summary": "3 filmări noi, 6 știri noi, 6 grade de execuție actualizate",
+ "lastRun": "2026-10-28T19:40:45.287Z",
+ "summary": "73 filmări noi, 10 știri noi, 2 grade de execuție actualizate",
  "lots": {
   "a0-l1": {
    "videos": [
@@ -24,6 +24,13 @@
      "c": "PROGER GLOBAL NETWORK",
      "h": "",
      "d": "2026-10-18"
+    },
+    {
+     "v": "nBZoH9fJ9hI",
+     "t": "AUTOSTRADA A0 NORD LOT 1 A1-DN1.",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-10-14"
     }
    ],
    "news": [
@@ -34,13 +41,19 @@
      "d": "2026-10-25"
     },
     {
-     "u": "https://www.zf.ro/constructii-imobiliare/din-a1-pe-a2-a3-sau-dn1-fara-sa-mai-treci-prin-bucuresti-centura-a0-ajunge-la-80-de-km-ultima-bucata-risca-sa-ramana-pentru-2027-23262480",
-     "t": "Din A1 pe A2, A3 sau DN1 fără să mai treci prin Bucureşti: centura A0 ajunge la 80 de km. Ultima bucată riscă să rămână pentru 2027",
+     "u": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNSjducERVY3h2TGFWZjhuNFZTYUtaaFFPVkstbW9kYnEwMkpjX3NKWUZTLVM5cE1mUUNFbU1hbFc2dVRKMWpUZUlCYUQ0QU11UDBzT0hVZF95Yk5sdzBERGtCNmZjRGtDNXJxRUJRQkNFZWtKYnNCUDY3QkMya3lwUHM0Y1dmNWtQOEN2QlB4c1RpQll2X3NVR0J1c21RV2dyODAyX0FKSlpBSHIxcktuZ1oxZEpMajQyVGZJQ2tkM3hVOWlBa0lDdWZXbHFBQWlXalh1VWxWVDdlOEsyNnfSAcwBQVVfeXFMTmctaWpEYzN2TzZVcDFyRDJhU1JDakNNYW1iU0dVbmJWckI1RVVDRHVUTnVHU19DcG0yLXF2d05YVmprZzhCbGFwX1JERU1GZHd4aHlGY3p4dFNqeU52ZXBrczgwR1Ztd056TDk5VjFfbGNmaW9GTUUzVUFTSVdOMkRzaFBXcVo1eTVOOFluLU1YTl8tOUVKZ0Y5TmFueDlKS1VhRE5uWEtFM2JMZzhqbWtxSFFQZnFZMXVhMDdVWDRiYVQ5MGZaQlA4bVRo?oc=5",
+     "t": "A0 Nord, gata de marea inaugurare: luni se deschid încă 13 kilometri și se leagă A1, A2, A3 și DN1 în jurul Capitalei",
+     "s": "Jurnalul",
+     "d": "2026-10-20"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOODNPREllTU1OR1dwOVFnbDlfM0pmTWFUUXhRdVduemVQbU9KUk8tV25MUHhVVVZKajNRZGxiMTItZkpiTHpnaVg0YjlRQTZZbmtjNkQ4N2tqdGplcVdibWdvek5tRlphdG1HU19lY1dzRzFYblI0N3hWejJnWUVjRjFjelA4TEp3Y0dmNHY5cVlyLWlNRXNuTzdvVU5zVjlWanFFS0ZDZGZHSzAyeFlqZ0NpVHA3U1dRYjdsbnBnTlViZ0JQQVR0VjNKaUxMbi02Uy14V0tMWGdyS09MZy0wZkxmR3hsVTlWdlI3dVhGOE15UGVsYkM4dU5hUEZjUUtldDNoeUw5bXRCd9IBjAJBVV95cUxOcXFpenBva1NHVWJWSElNZjVPOC1CZlpPc1hIX0x5X2lxakIzOWpWM1VtY2hIa3FKczNlN0F2NHUyMkNWZ0FyS3VBMFZuMS1JWHFjV0liN0hhVzh2VUkzUDdiblc4ZExZa25UQnpoTGFvMHpDVlJEOG5zX0E1Nk9vemJyWUY1LUw1Y3FCMWpJMlFsU2UxOEUtYlU0VEtaZ3Rpd3BhbkgwZ3BrdV85b3ZEMGtZYlVic2FHZElNTVg0dDRza05ZSm1fUy1fWndNWVRCRDRYS2M5LWJ0QkZ4Y2Z6RHBlVEZyQWhibUctMUFTNEpfUXFWVHpQVzVsaHJWcWtRV1BkUXcxZXQ2TDBH?oc=5",
+     "t": "Din A1 pe A2, A3 sau DN1 fără să mai treci prin Bucureşti: centura A0 ajunge la 80 de km. Ultima bucată",
      "s": "Ziarul Financiar",
      "d": "2026-10-18"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-26",
     "f": 65.85,
@@ -52,6 +65,143 @@
     "q": "",
     "s": "CESTRIN",
     "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
+   }
+  },
+  "a0-l3": {
+   "videos": [
+    {
+     "v": "194FrqDUk4U",
+     "t": "[24 OCT 2026] AUTOSTRADA A0 NORD LOT 3 COMPLET FILMARE DIN MASINA!!",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-10-25"
+    },
+    {
+     "v": "Gel93whgZ8g",
+     "t": "AMR 2 Zile | Pasajele DN2, CFR si DN3 - A0 Nord Lot3 | 24.10.2026",
+     "c": "GeorgeDinAer",
+     "h": "",
+     "d": "2026-10-24"
+    },
+    {
+     "v": "sfmZYeEkUDM",
+     "t": "[24 OCT 2026] AUTOSTRADA A0 NORD LOT 3 COMPLET!!",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-10-24"
+    },
+    {
+     "v": "F2PbkZNEdxQ",
+     "t": "[23 OCT 2026] AUTOSTRADA A0 NORD LOT 3 COMPLET!!",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-10-23"
+    },
+    {
+     "v": "AkgN4GJtcGA",
+     "t": "Autostrada de Centură București #A0 Nord Lot 3 · #CCECC · Complet Tur-Retur · 2026.10.22",
+     "c": "Construim Romania",
+     "h": "",
+     "d": "2026-10-22"
+    },
+    {
+     "v": "rSg3oftrmU8",
+     "t": "A0 Nord Lot 3 - Pasajele DN3, CFR si DN2(E85) | 22.10.2026",
+     "c": "GeorgeDinAer",
+     "h": "",
+     "d": "2026-10-22"
+    }
+   ],
+   "news": [
+    {
+     "u": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOd2RzRUlqb1loUkd3aW1xbm9vdTFBNmxjRElfSU12aldORWpENGg2V3hXZEZlZXBOUW9BNDhWSDhoMG1MdmlPdEQtZVJwdUlUNHJ2dng5ektMUkwza0YxZ1lSeThobVZDS0NLa1JDNGJCU2tPVGtZN1VSMGdVTEQ1dC12dmFDOTBlZGswakNGQlQ3bXBLVEcyV3A0YjY2dHEteUhjd09IRTZJM3ZtYWdqZTV4NUJZTm13czV6SEw3N3RpYnBlODBBUGEzRWw4LXd4Zy0tVVNmaVZKR1pOVnNyemptdVVKdV9JN3VRVmRJV0lRUWs?oc=5",
+     "t": "CNAIR dezminte deschiderea traficului pe 13 km din A0 Nord: Lotul 3 nu este gata, în ciuda anunțului făcut de Horațiu Cosma",
+     "s": "Libertatea",
+     "d": "2026-10-26"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPOUlhdjJ5OUpJbFFYdndQS21uLUI0MEJLSTJCeGtwZVRPMUNoa256Nmt2V1p4MWZVZXFaWmpvTWhncHJKNU9nNS14U1MyX2ZTZWVwQ0pSWV92Q0Jkd29YV3lFbUNXS3dLRG1NT2VYakNQeHZuNEM4ODhqazRRSFdlXy1YcmhJS2pCMkU5akZJWUdaenBBWlE?oc=5",
+     "t": "Deschiderea circulației pe A0 Nord, între Afumați și Cernica, a fost amânată spre finalul anului",
+     "s": "Newsweek România",
+     "d": "2026-10-26"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNa0FUOUE2c05WSEYtWEhVSzlBR0xtcmNzZGVGcnRVVENxZVB6U21EZjZmQktSVUhBRkhGeHF1elQ2ZVVDeHBIek1xMjhuaUc3U29iZnIwOGJ6eHBKZUhHU2M0Q2FWZjh4X0p3aEhranoxUmRIQmJTSXhldkhQODZEVFJtWEJCRkFIZlhicktnVi1CRFVLMHN5Q2UzbEdiX2llZU9zQUlTTjU2bVAtaWM2SlZ4UWJzTjE1TUZ1blcxcTNhTHdkTUh3OTF1NXoxeHEycGZna1lEaVh4THY2dEpUQ0JqdEM0SUgtWHhQREYzMWtxbFc3TnI2TmUxTFBzNThraXJVLS14RG1oTm5SS2NtMnZSNUZ6T29WdUZj?oc=5",
+     "t": "BREAKING | Marea deschidere de pe A0 Nord, marea închidere: cei 13 km Afumați–Pantelimon–A2 nu se deschid, după 5 termene în 3 săptămâni. CNAIR vrea scuze pentru șoferii „dezinformați” • Infrastructură București",
+     "s": "B365.ro",
+     "d": "2026-10-26"
+    }
+   ],
+   "checkedAt": "2026-10-28T19:40:45.287Z",
+   "progress": {
+    "p": 98.1,
+    "q": "",
+    "faza": "",
+    "d": "2026-10-26",
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 76.63,
+    "fd": "2026-10-26",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
+   }
+  },
+  "a0-l4": {
+   "videos": [
+    {
+     "v": "GjsZRpxdzV8",
+     "t": "A0 Nord Lot 3 | Pasajul DN3 si Frezare Lot 4 | 16.10.2026",
+     "c": "GeorgeDinAer",
+     "h": "",
+     "d": "2026-10-16"
+    },
+    {
+     "v": "TTd1Xp6Zuoo",
+     "t": "UP-DATE PASAJUL DN3 PESTE A0.",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-10-13"
+    },
+    {
+     "v": "A8SKz3OnvnA",
+     "t": "Pasajul DN3 peste A0 dat in trafic!!",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-10-12"
+    }
+   ],
+   "news": [
+    {
+     "u": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOQzNmU2VLbkJ5TFNzMFNuQnB3YzdOTlVzdXNtTG93LVV1Z1BYdUNURmtqX2dNaFE3SHFVLVNjVWFjaXpZaDhPM2J3S2JKOE1rRVZaajdSQ25MRVZDNXBMUFBjWEdRV3dzRlB6Y1B5S2xubHpPLW80SDh6Sms1YVpiZ2NyV1NtS2dVZGxmcnBEdXNUVjhUU2h6RTVDVVBObE9WTGdYQVFfRDJ6dGNGeDNQb0xBdjJkak1VM25fWVhlemRHSXVJQl9ldDM4SkZ6WVE?oc=5",
+     "t": "Deschiderea A0 Nord, amânată. Cei 13 kilometri care vor asigura legătura cu A2, spre Constanța, nu sunt gata",
+     "s": "telegrafonline.ro",
+     "d": "2026-10-26"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcEZONmNMaEJzWkFZQ01ZTC00RzhYYTd0VERMdVhxUVVTb3ZZb25FSVJ1YVE4OWx3WHBDMDVuT0pkUzBEQ1h5Y05VQ0xVRjJrQzhqOHpFMUtoTnBSdW5QNUpvakM5ay1xU0llUU14UU5pQTdITjdrWWxocFE2ZGR4emJQN2E2aFpwTmtoWGVTZnhEY09FdjQ1OQ?oc=5",
+     "t": "Încă 13 km din Autostrada A0 Nord se deschid luni, între Afumați și A2",
+     "s": "Substantial.ro",
+     "d": "2026-10-26"
+    },
+    {
+     "u": "https://www.bucurestifm.ro/2026/10/26/cnair-traficul-pe-loturile-3-si-4-ale-a0-nord-nu-se-deschide-astazi/",
+     "t": "CNAIR: Traficul pe loturile 3 și 4 ale A0 Nord NU se deschide astăzi, 26 octombrie!",
+     "s": "Radio București FM",
+     "d": "2026-10-26"
+    }
+   ],
+   "checkedAt": "2026-10-28T19:40:45.287Z",
+   "progress": {
+    "p": 100,
+    "q": "",
+    "faza": "",
+    "d": "2026-10-26",
+    "s": "CESTRIN",
+    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
+    "f": 99.91,
+    "fd": "2026-10-26",
+    "fs": "CESTRIN",
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a1-s2": {
@@ -76,6 +226,27 @@
      "c": "GeorgeDinAer",
      "h": "",
      "d": "2026-10-11"
+    },
+    {
+     "v": "G_XU7nYZUko",
+     "t": "Viaductul Boița prinde contur! Lucrări complexe pe A1 Sibiu–Pitești",
+     "c": "Zetu Harrys",
+     "h": "",
+     "d": "2026-10-11"
+    },
+    {
+     "v": "kOOB_hOEPRQ",
+     "t": "Autostrada Sibiu - Pitești (#A1): A fost străpunsă și cea de-a doua galerie a tunelului Boița 1",
+     "c": "Euro24Info",
+     "h": "",
+     "d": "2026-10-11"
+    },
+    {
+     "v": "CEPxKgkR4RQ",
+     "t": "A1 Sibiu–Pitești: ambele galerii ale tunelului Boița 1 au fost străpunse!",
+     "c": "Zetu Harrys",
+     "h": "",
+     "d": "2026-10-11"
     }
    ],
    "news": [
@@ -98,7 +269,7 @@
      "d": "2026-10-19"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-26",
     "f": 13.18,
@@ -134,6 +305,27 @@
      "c": "IOAN ADRIAN GICA",
      "h": "",
      "d": "2026-10-15"
+    },
+    {
+     "v": "_Fi_6Mr6_GE",
+     "t": "AUTOSTRADA A1 SIBIU  PITESTI LOT3 CONET TIGVENI ECODUCT CORNET+TUNEL POIANA 14 10 2026",
+     "c": "IOAN ADRIAN GICA",
+     "h": "",
+     "d": "2026-10-15"
+    },
+    {
+     "v": "R7RXMcYsm-Y",
+     "t": "CNAIR- Tronson 4 Tigveni-C. de Arges- A1- sistem de iluminat in teste !",
+     "c": "MEDIACONSTRUCT",
+     "h": "",
+     "d": "2026-10-15"
+    },
+    {
+     "v": "CfwsI_6U3oQ",
+     "t": "STADIUL FIZIC AL SECȚIUNII 3, CORNETU-TIGVENI (A1), PESTE 18%",
+     "c": "VTVRomania",
+     "h": "",
+     "d": "2026-10-08"
     }
    ],
    "news": [
@@ -156,7 +348,7 @@
      "d": "2026-10-24"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-06",
     "f": 21.76,
@@ -192,6 +384,27 @@
      "c": "MEDIACONSTRUCT",
      "h": "",
      "d": "2026-10-15"
+    },
+    {
+     "v": "PN_8r1YWwok",
+     "t": "A1 - Curtea de arges-Tigveni 03.10.2026",
+     "c": "OL10X",
+     "h": "",
+     "d": "2026-10-04"
+    },
+    {
+     "v": "G2qsD13fcoY",
+     "t": "Nod rutier Tigveni A1 - 26.09.2026",
+     "c": "OL10X",
+     "h": "",
+     "d": "2026-09-26"
+    },
+    {
+     "v": "sK0YY3RI3_Y",
+     "t": "Se deschide tronsonul Tigveni – Curtea de Argeș de pe Autostrada A1 | Pamflet muzical",
+     "c": "Cântece de dragoste AI",
+     "h": "",
+     "d": "2026-09-23"
     }
    ],
    "news": [
@@ -214,7 +427,7 @@
      "d": "2026-10-27"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-27",
     "faza": "",
@@ -246,6 +459,27 @@
      "c": "Hunedoara1",
      "h": "",
      "d": "2026-10-15"
+    },
+    {
+     "v": "s5XKW9T5hpQ",
+     "t": "A1 Margina–Holdea a ajuns la 70%! Avans important la pasaje și viaducte",
+     "c": "Zetu Harrys",
+     "h": "",
+     "d": "2026-10-15"
+    },
+    {
+     "v": "jedfUk_LYGk",
+     "t": "Progres pe șantierul A1 Margina-Holdea",
+     "c": "Tele Europa Nova Timișoara",
+     "h": "",
+     "d": "2026-10-15"
+    },
+    {
+     "v": "rWQ4XxObj_8",
+     "t": "Șantier A1 Margina - Holdea. Stadiu pasaje și viaducte, octombrie 2026",
+     "c": "DRDP Timisoara",
+     "h": "",
+     "d": "2026-10-15"
     }
    ],
    "news": [
@@ -268,7 +502,7 @@
      "d": "2026-10-28"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-17",
     "f": 69.81,
@@ -304,6 +538,27 @@
      "c": "Raul Pristopan",
      "h": "",
      "d": "2026-10-16"
+    },
+    {
+     "v": "qvK2Y7CHPfY",
+     "t": "Autostrada A3 – Se betonează plăcile Viaductului imens de la Nădășelu🚧🦺",
+     "c": "TOPO TERRA",
+     "h": "",
+     "d": "2026-10-13"
+    },
+    {
+     "v": "MPc_tz4QIKk",
+     "t": "Autostrada A3 Nădășelu 🏗️ Avansează lucrările la viaductul de 1,2 km construit de Özaltin!🚧 👷‍♂",
+     "c": "TOPO TERRA",
+     "h": "",
+     "d": "2026-10-10"
+    },
+    {
+     "v": "0QDMXVXzcXY",
+     "t": "Autostrada A3 – Nădășelu | Constructor UMB | Viaductul și lucrările de consolidare 🚧",
+     "c": "TOPO TERRA",
+     "h": "",
+     "d": "2026-10-09"
     }
    ],
    "news": [
@@ -326,7 +581,7 @@
      "d": "2026-10-25"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-22",
     "f": 91,
@@ -362,6 +617,27 @@
      "c": "TOPO TERRA",
      "h": "",
      "d": "2026-10-12"
+    },
+    {
+     "v": "dOfh2ypkT_M",
+     "t": "Autostrada A3 Topa Mică 🚧 Asfaltare pe ultima sută de metri! Özaltin și Viarom accelerează lucrările",
+     "c": "TOPO TERRA",
+     "h": "",
+     "d": "2026-10-08"
+    },
+    {
+     "v": "ytCvsg2kld4",
+     "t": "Autostrada A3 Ozaltin | Topa Mică | Evoluția lucrărilor la 01.10.2026",
+     "c": "TOPO TERRA",
+     "h": "",
+     "d": "2026-10-04"
+    },
+    {
+     "v": "SOMpECAYIbw",
+     "t": "A3 Transilvania: Viaductele Nădășelu și Topa Mică au ajuns la 86%",
+     "c": "Zetu Harrys",
+     "h": "",
+     "d": "2026-10-02"
     }
    ],
    "news": [
@@ -384,7 +660,7 @@
      "d": "2026-10-22"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-22",
     "f": 59.18,
@@ -420,6 +696,27 @@
      "c": "On The Road AK",
      "h": "",
      "d": "2026-10-06"
+    },
+    {
+     "v": "BFJhq-ou0lA",
+     "t": "CNAIR-  (#A3): lucrările la viaductele de pe secțiunile Nădășelu - Mihăiești și Mihăiești-Zimbor",
+     "c": "MEDIACONSTRUCT",
+     "h": "",
+     "d": "2026-10-02"
+    },
+    {
+     "v": "vbbJz2PWj1g",
+     "t": "Autostrada Transilvania A3 - Stadiul lucrărilor zona Șardu - Sânpaul , Lot Nădășelu - Zimbor UMB",
+     "c": "On The Road AK",
+     "h": "",
+     "d": "2026-09-29"
+    },
+    {
+     "v": "gesujoX3BRA",
+     "t": "Autostrada A3, filmare integrală Nădășelu-Zimbor, 26 septembrie 2026",
+     "c": "Cristian Marius Man",
+     "h": "",
+     "d": "2026-09-28"
     }
    ],
    "news": [
@@ -442,7 +739,7 @@
      "d": "2026-10-22"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-22",
     "f": 91,
@@ -478,6 +775,27 @@
      "c": "On The Road AK",
      "h": "",
      "d": "2026-10-12"
+    },
+    {
+     "v": "EYgSfCQPTy4",
+     "t": "Autostrada A3, filmare integrală Zalău-Poarta Sălajului, 9 octombrie 2026",
+     "c": "Cristian Marius Man",
+     "h": "",
+     "d": "2026-10-10"
+    },
+    {
+     "v": "EPmA8BB1VP4",
+     "t": "Autostrada Transilvania A3 - Cele 3 viaducte mari între Zimbor si Poarta Sălajului, Zona Sântă Măria",
+     "c": "On The Road AK",
+     "h": "",
+     "d": "2026-10-06"
+    },
+    {
+     "v": "oWM8O_6EQ9c",
+     "t": "Premieră din avion! Autostrada A3 Nușfalău-Poarta Sălajului - final septembrie 2026",
+     "c": "Asociația Pro Infrastructură",
+     "h": "",
+     "d": "2026-10-04"
     }
    ],
    "news": [
@@ -500,7 +818,7 @@
      "d": "2026-10-13"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-05",
     "faza": "proiectare (fără autorizație de construire)",
@@ -532,6 +850,27 @@
      "c": "On The Road AK",
      "h": "",
      "d": "2026-10-12"
+    },
+    {
+     "v": "oWM8O_6EQ9c",
+     "t": "Premieră din avion! Autostrada A3 Nușfalău-Poarta Sălajului - final septembrie 2026",
+     "c": "Asociația Pro Infrastructură",
+     "h": "",
+     "d": "2026-10-04"
+    },
+    {
+     "v": "ZaH11bVXVaY",
+     "t": "Centura Zalău va prelua traficul de pe Autostrada Transilvania A3 intre Poarta Sălajului și Nușfalău",
+     "c": "On The Road AK",
+     "h": "",
+     "d": "2026-10-04"
+    },
+    {
+     "v": "jpkxnzDgpn0",
+     "t": "A3 Autostrada Transilvania - Terenul este pregătit! Să înceapă lucrările! Poarta SJ- Zalău- Nușfalău",
+     "c": "On The Road AK",
+     "h": "",
+     "d": "2026-10-02"
     }
    ],
    "news": [
@@ -554,7 +893,7 @@
      "d": "2026-10-13"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-05",
     "faza": "proiectare (fără autorizație de construire)",
@@ -586,6 +925,27 @@
      "c": "On The Road AK",
      "h": "",
      "d": "2026-10-16"
+    },
+    {
+     "v": "Tg4u2ft7C40",
+     "t": "A3 Autostrada Transilvania - Nodul rutier Chiribiș de pe lotul Suplacu de Barcău – Chiribiș , Erbașu",
+     "c": "On The Road AK",
+     "h": "",
+     "d": "2026-10-11"
+    },
+    {
+     "v": "zGIjgLDqVs4",
+     "t": "A3 Autostrada Transilvania - Deschidere in decembrie pe ambele loturi ? Suplacu - Chiribis -Biharia",
+     "c": "On The Road AK",
+     "h": "",
+     "d": "2026-10-10"
+    },
+    {
+     "v": "foGIVDNQPSI",
+     "t": "Autostrada Transilvania A3 - Asfaltări pe Viaductul de 1,8 km de pe lac  la Suplacu de Barcău ERBAȘU",
+     "c": "On The Road AK",
+     "h": "",
+     "d": "2026-10-09"
     }
    ],
    "news": [
@@ -608,7 +968,7 @@
      "d": "2026-10-21"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-22",
     "f": 63.09,
@@ -644,6 +1004,27 @@
      "c": "Infrastructura Romania",
      "h": "",
      "d": "2026-10-19"
+    },
+    {
+     "v": "Kqh_CthlhcM",
+     "t": "A3 Autostrada Transilvania, Lot 3C2 Chiribis-Biharia, filmat complet 17.10.2026",
+     "c": "marin marian",
+     "h": "",
+     "d": "2026-10-18"
+    },
+    {
+     "v": "FF1vQ0YqT-M",
+     "t": "A3 Autostrada Transilvania, Lot 3C2 Chiribis-Biharia, văzut de jos intre KM 38 si KM59.   09.10.2026",
+     "c": "marin marian",
+     "h": "",
+     "d": "2026-10-10"
+    },
+    {
+     "v": "zGIjgLDqVs4",
+     "t": "A3 Autostrada Transilvania - Deschidere in decembrie pe ambele loturi ? Suplacu - Chiribis -Biharia",
+     "c": "On The Road AK",
+     "h": "",
+     "d": "2026-10-10"
     }
    ],
    "news": [
@@ -666,7 +1047,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-22",
     "f": 70,
@@ -702,7 +1083,7 @@
      "d": "2026-07-08"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a6-l1": {
    "videos": [],
@@ -726,7 +1107,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a6-l2": {
    "videos": [],
@@ -750,7 +1131,7 @@
      "d": "2026-02-26"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a6-l3": {
    "videos": [],
@@ -768,7 +1149,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a6-l4": {
    "videos": [],
@@ -780,7 +1161,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a6-l5": {
    "videos": [],
@@ -798,7 +1179,7 @@
      "d": "2025-07-08"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a6-l6": {
    "videos": [],
@@ -822,7 +1203,7 @@
      "d": "2026-10-19"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a7-bp1": {
    "videos": [
@@ -846,6 +1227,27 @@
      "c": "Infrastructura Romania",
      "h": "",
      "d": "2026-10-23"
+    },
+    {
+     "v": "nAPHV9zk43Y",
+     "t": "A7 Bacău – Pașcani, Lot 1, Săucești – Trifești, stadiu fizic 71,70%",
+     "c": "GeorgeDinAer",
+     "h": "",
+     "d": "2026-10-23"
+    },
+    {
+     "v": "3MSJUUh5on8",
+     "t": "A7 Bacău–Pașcani: Lotul 1 se apropie de 70%! UMB lucrează cu 350 de utilaje",
+     "c": "Zetu Harrys",
+     "h": "",
+     "d": "2026-10-15"
+    },
+    {
+     "v": "INhtALnZDFE",
+     "t": "A7, LUCRĂRILE PE LOTUL SĂUCEȘTI-TRIFEȘTI AU AJUNS LA 70%",
+     "c": "Actualitatea TV",
+     "h": "",
+     "d": "2026-10-15"
     }
    ],
    "news": [
@@ -868,7 +1270,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "p": 77,
     "q": "",
@@ -904,6 +1306,27 @@
      "c": "Zetu Harrys",
      "h": "",
      "d": "2026-10-15"
+    },
+    {
+     "v": "iikNklVatG0",
+     "t": "CNAIR-Avansează lucrările și pe lotul 2 al Autostrăzii Bacău – Pașcani #A7! Trifesti-Gheraiesti",
+     "c": "MEDIACONSTRUCT",
+     "h": "",
+     "d": "2026-10-15"
+    },
+    {
+     "v": "LjdIbJSw-Qs",
+     "t": "A7 avansează spre județul Iași: lucrările de pe Bacău–Pașcani au intrat într-o etapă avansată",
+     "c": "Iasi Breaking News",
+     "h": "",
+     "d": "2026-09-29"
+    },
+    {
+     "v": "Aq7OrANq6gY",
+     "t": "CNAIR-Lucrări în forță pe tronsonul Bacău – Pașcani al A7! Constructorul român (UMB) înregistrează",
+     "c": "MEDIACONSTRUCT",
+     "h": "",
+     "d": "2026-09-17"
     }
    ],
    "news": [
@@ -926,7 +1349,7 @@
      "d": "2026-10-24"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "p": 71,
     "q": "",
@@ -962,6 +1385,27 @@
      "c": "Infrastructura Romania",
      "h": "",
      "d": "2026-10-16"
+    },
+    {
+     "v": "zWqNxB5LoLU",
+     "t": "CNAIR-Lotul 3 al Autostrăzii Bacău – Pașcani #A7 Mircești – Pașcani, a depășit stadiul fizic de 55%!",
+     "c": "MEDIACONSTRUCT",
+     "h": "",
+     "d": "2026-10-16"
+    },
+    {
+     "v": "_5X-kJY1rIM",
+     "t": "Imagini noi arată stadiul lucrărilor pe lotul Mirceşti - Paşcani din Autostrada A7.",
+     "c": "Pulsul Moldovei",
+     "h": "",
+     "d": "2026-10-03"
+    },
+    {
+     "v": "5vcZwcKmYZ4",
+     "t": "#A7 Bacău Pașcani #autostradaa7 LOT 3 - Stadiul lucrarilor 2 octombrie 2026",
+     "c": "NS - FLIGHT MODE \"ON\"",
+     "h": "",
+     "d": "2026-10-02"
     }
    ],
    "news": [
@@ -984,7 +1428,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-26",
     "f": 36.78,
@@ -1020,7 +1464,7 @@
      "u": "https://www.economica.net/autostrazile-safe_977342.html"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-18",
     "f": 0,
@@ -1056,7 +1500,7 @@
      "u": "https://www.ziarulevenimentul.ro/stiri/moldova/safe-in-impas-a7-pa-cani-suceava-i-dex-suceava-siret-blocate-la-start--217601352.html"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-18",
     "f": 0,
@@ -1092,7 +1536,7 @@
      "u": "https://www.botosaneanul.ro/lovitura-pentru-drumul-expres-suceava-siret-curtea-de-apel-a-anulat-atribuirea-primelor-doua-loturi"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-19",
     "faza": "atribuire anulată în instanță, ofertele se reevaluează",
@@ -1124,7 +1568,7 @@
      "u": "https://www.botosaneanul.ro/lovitura-pentru-drumul-expres-suceava-siret-curtea-de-apel-a-anulat-atribuirea-primelor-doua-loturi"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-19",
     "faza": "atribuire anulată în instanță, ofertele se reevaluează",
@@ -1156,7 +1600,7 @@
      "u": "https://cineconstruieste.ro/drumul-expres-suceava-siret-este-deblocat-complet-cine-a-ramas-castigator-pe-lotul-3/"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a8-s1": {
    "videos": [
@@ -1190,19 +1634,19 @@
      "d": "2026-10-20"
     },
     {
-     "u": "https://punctul.ro/autostrada-a8-intre-progrese-si-intarzieri-lucrarile-avanseaza-spre-miercurea-nirajului-dar-apar-blocaje-pe-tronsoanele-montane",
+     "u": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNmxDVlJCX3ppRjRQYkQyX3kxdkZPcXZEZWw4dlN0VHFMLXJmSXBleWlSbHFIMzBORDJmdDRVdTJKdGZxdWVibE9UaWswVXoycnhtcFByNk14MFhMbDdoMFNMS1g3bFp2V1owOXFYTDBnRkxnTWpST1d3SHphcmRWSlZEOU53UXNRNXR4eW12UW1OT2FlWWwtME5XT0NQUVJsTnJjT0tqMjV4Sk9rS1VocllxWmZ1SG5Oc1RpVFBPdk9EOHVfNlRnSTU0WWVxYWk2YzBkcFc5b2JUOUVsQ3gzUg?oc=5",
      "t": "Autostrada A8, între progrese și întârzieri: lucrările avansează spre Miercurea Nirajului, dar apar blocaje pe tronsoanele montane",
      "s": "Punctul",
      "d": "2026-10-20"
     },
     {
-     "u": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcXdGSTI1RUdDd1FybU9sTERpV3E2UzJ3UG90XzlldE9HSVVqSVdVQTR5MzdQdUdWTjlUdHFlSTBjS2ZRcUVybkpRU3NrX3pLeURYbklRbGVkUjRiMFZoOU0wTlNSejRmdldNTEp6UE9sa0poNE5qdjM3VmpJWEY1ZnZzWTBhcnlGd2pWRmdmbnpxak9adDZMZWhiMzdjdGtFZ19qTnpmczBkbk4zd09XWGJhT3dESjhheGFyT3ZWaWVOdWs?oc=5",
-     "t": "Autostrada A8 Targu Mures – Miercurea Nirajului: Primii km vor fi deschisi in primavara anului viitor",
-     "s": "ARENA Constructiilor",
-     "d": "2026-10-02"
+     "u": "https://punctul.ro/autostrada-a8-intre-progrese-si-intarzieri-lucrarile-avanseaza-spre-miercurea-nirajului-dar-apar-blocaje-pe-tronsoanele-montane",
+     "t": "Autostrada A8, între progrese și întârzieri: lucrările avansează spre Miercurea Nirajului, dar apar blocaje pe tronsoanele montane",
+     "s": "Punctul",
+     "d": "2026-10-20"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-02",
     "f": 41.92,
@@ -1226,19 +1670,19 @@
      "d": "2026-10-20"
     },
     {
-     "u": "https://punctul.ro/autostrada-a8-intre-progrese-si-intarzieri-lucrarile-avanseaza-spre-miercurea-nirajului-dar-apar-blocaje-pe-tronsoanele-montane",
+     "u": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNNmxDVlJCX3ppRjRQYkQyX3kxdkZPcXZEZWw4dlN0VHFMLXJmSXBleWlSbHFIMzBORDJmdDRVdTJKdGZxdWVibE9UaWswVXoycnhtcFByNk14MFhMbDdoMFNMS1g3bFp2V1owOXFYTDBnRkxnTWpST1d3SHphcmRWSlZEOU53UXNRNXR4eW12UW1OT2FlWWwtME5XT0NQUVJsTnJjT0tqMjV4Sk9rS1VocllxWmZ1SG5Oc1RpVFBPdk9EOHVfNlRnSTU0WWVxYWk2YzBkcFc5b2JUOUVsQ3gzUg?oc=5",
      "t": "Autostrada A8, între progrese și întârzieri: lucrările avansează spre Miercurea Nirajului, dar apar blocaje pe tronsoanele montane",
      "s": "Punctul",
      "d": "2026-10-20"
     },
     {
-     "u": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWmxHTUpDR2lzLVZBTUREMEpJOU1Jc2FSZ3FxRG5reXJMUmlrNFlocnY5NjB6SGxkTnRpbmxqcVQxa2ZDVUh1cmMxZ1pZTE1oUUdEMWRfSE1qR1R0bUtyZ2loT3VtMlhscjN4SVNvRFB2NVlsdmNHaGcwWXROblRtUmtXVnA0UV9sQ001bzdQdHZnZDhUbjVNRA?oc=5",
-     "t": "A8 Miercurea Nirajului – Sărățeni: Constructorul așteaptă autorizația",
-     "s": "Economedia",
-     "d": "2026-10-19"
+     "u": "https://punctul.ro/autostrada-a8-intre-progrese-si-intarzieri-lucrarile-avanseaza-spre-miercurea-nirajului-dar-apar-blocaje-pe-tronsoanele-montane",
+     "t": "Autostrada A8, între progrese și întârzieri: lucrările avansează spre Miercurea Nirajului, dar apar blocaje pe tronsoanele montane",
+     "s": "Punctul",
+     "d": "2026-10-20"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-19",
     "faza": "proiectare nefinalizată (CNAIR: finalizare până la sfârșitul anului); se așteaptă autorizația de construire, fără ordin de începere a lucrărilor",
@@ -1270,7 +1714,7 @@
      "d": "2026-10-22"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-22",
     "faza": "proiectare – 22% (raport supervizor 9 oct. 2026); certificat constatator pozitiv CNIR (25 mai–23 aug. 2026), întârziere 126 zile la un termen intermediar",
@@ -1302,6 +1746,27 @@
      "c": "Ștef",
      "h": "",
      "d": "2026-10-01"
+    },
+    {
+     "v": "o1z1KEQGgQ0",
+     "t": "DRUMURILE NOASTRE. Cum arată ȘANTIERUL de pe A8 Joseni-Ditrău. P2/2",
+     "c": "B1",
+     "h": "",
+     "d": "2026-09-27"
+    },
+    {
+     "v": "4j0yGKAWGtE",
+     "t": "Autostrada A8 Targu-Mures Targu-Neamt, lot 1D Joseni Ditrau.",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-09-22"
+    },
+    {
+     "v": "iUq0OqqSgMs",
+     "t": "Lucrările pe lotul 1D Joseni-Ditrău al A8 au atins un progres de 10% după o lună.",
+     "c": "Pulsul Moldovei",
+     "h": "",
+     "d": "2026-09-22"
     }
    ],
    "news": [
@@ -1324,7 +1789,7 @@
      "d": "2026-10-20"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-12",
     "faza": "",
@@ -1356,7 +1821,7 @@
      "d": "2026-10-20"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-19",
     "faza": "proiectare întârziată: perioada de proiectare (14 luni) expirată la 31 aug. 2026, PTE neaprobat, întârzieri de până la 278 zile; certificat constatator negativ CNIR (retras din SEAP, constatările rămân valabile)",
@@ -1388,7 +1853,7 @@
      "d": "2026-03-31"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-03-30",
     "faza": "proiectare",
@@ -1420,7 +1885,7 @@
      "d": "2026-02-19"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-21",
     "faza": "contract semnat (30 apr. 2025); ordinul de începere a proiectării încă neemis",
@@ -1452,6 +1917,13 @@
      "c": "Raducu P Drum",
      "h": "",
      "d": "2026-09-30"
+    },
+    {
+     "v": "DArUQrpZCtI",
+     "t": "AUTOSTRADA A8 Moțca - Leghin #12 Lucrări zona Săcălușești - Agapia 19.09.2026",
+     "c": "Raducu P Drum",
+     "h": "",
+     "d": "2026-09-20"
     }
    ],
    "news": [
@@ -1474,7 +1946,7 @@
      "d": "2026-10-19"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-01",
     "f": 4.26,
@@ -1525,7 +1997,7 @@
      "d": "2026-10-09"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-09",
     "faza": "proiectare (diagnostic arheologic; pregătire șantier pe primii 5,5 km, legătura A8–A7)",
@@ -1557,7 +2029,7 @@
      "d": "2026-10-13"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a8-l3": {
    "videos": [
@@ -1585,6 +2057,12 @@
    ],
    "news": [
     {
+     "u": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOc2RLOWx6dDJmaUktRDd4LWhoVHBSUXFZRGUxWjg4QlZHdVVNQ3EzOEllaVowRFcyTDFBRjZMeXFUbl9sRXh3bjBDV25zOURnZWd5LTMwZ1FrY2FqS3ZnZkZLUjFVa0t0TlZzRU9OY2RyTzVjbzdsaks5blZfeS1lVkpIaUVsOVhadWEwZGprSzgyb21EMXNONG1IZzRDWk5FUE8xM0hNbEJkNFdzam9iakMxMEFCcHNjcXpHZnZjRzFpY25KNzNhT1VIOVlUa1RJN05Ldnp5QTBlc21GQ2EtXzBUczhlNDBkOV95bUVFdHJVcE4x?oc=5",
+     "t": "Încă un lot al A8 din județul Iași a fost „tras pe dreapta”. Proiectarea a fost oprită de judecătorii de la București",
+     "s": "Ziarul de Iaşi",
+     "d": "2026-10-28"
+    },
+    {
      "u": "https://economedia.ro/breaking-rasturnare-de-situatie-si-pe-lotul-3-de-pe-autostrada-unirii-curtea-de-apel-suspenda-contractul-deja-semnat-cu-spaniolii-de-la-fcc-dupa-contestatia-concelex.html",
      "t": "Răsturnare de situație și pe lotul 3 de pe Autostrada Unirii. Curtea de Apel suspendă contractul deja semnat cu spaniolii de la FCC",
      "s": "Economedia",
@@ -1595,15 +2073,9 @@
      "t": "Premieră: instanța suspendă contractul pentru autostrada Lețcani-Iași, după o cale extraordinară de atac",
      "s": "Apix.ro",
      "d": "2026-10-28"
-    },
-    {
-     "u": "https://business24.ro/autostrada-a8/suspendare-executare-contract-cnir-lot-autostrada-unire-1672862",
-     "t": "Curtea de Apel București suspendă executarea contractului CNIR pentru Lotul 3 al Autostrăzii Unirii A8",
-     "s": "Business24",
-     "d": "2026-10-28"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-28",
     "faza": "proiectare; executarea contractului cu FCC suspendată de Curtea de Apel București (28 oct. 2026, definitiv) până la soluționarea cauzei; nou termen 18 nov. 2026",
@@ -1657,7 +2129,7 @@
      "d": "2026-10-20"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-13",
     "faza": "contract suspendat; CAB a dispus (13 oct. 2026, definitiv) reevaluarea ofertei Itinera în 20 de zile",
@@ -1689,6 +2161,27 @@
      "c": "marin bodrug",
      "h": "",
      "d": "2026-10-20"
+    },
+    {
+     "v": "kP9psykntNg",
+     "t": "A8 | Podul peste Prut de la Ungheni a ajuns la un stadiu fizic de 56%!",
+     "c": "GeorgeDinAer",
+     "h": "",
+     "d": "2026-10-20"
+    },
+    {
+     "v": "SsvaL181dqY",
+     "t": "Podul peste Prut de la Ungheni a ajuns la 56%! Lucrările continuă pe ambele maluri",
+     "c": "Zetu Harrys",
+     "h": "",
+     "d": "2026-10-20"
+    },
+    {
+     "v": "1Kg873TceVY",
+     "t": "Podul peste Prut de la Ungheni-Zagarancea a ajuns la un stadiu fizic de 56%",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-10-20"
     }
    ],
    "news": [
@@ -1711,7 +2204,7 @@
      "d": "2026-09-30"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-01",
     "f": 45,
@@ -1741,7 +2234,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a9-jm": {
    "videos": [],
@@ -1759,7 +2252,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "a13-l1": {
    "videos": [
@@ -1783,6 +2276,27 @@
      "c": "MAKYOL Sibiu-Făgăraș Highway Project Lot-1",
      "h": "@ErayBARIN",
      "d": "2026-10-15"
+    },
+    {
+     "v": "jc6qGwLU6j4",
+     "t": "Autostrada A13 Sibiu Făgăraș lot1 Boița Avrig lucrari nod Boița 30 09 2026",
+     "c": "IOAN ADRIAN GICA",
+     "h": "",
+     "d": "2026-10-01"
+    },
+    {
+     "v": "JkN_9-JNKVM",
+     "t": "Autostrada #A13 Sibiu - Făgăraș: Noi imagini de pe tronsoanele dintre Boița și Arpașu de Jos",
+     "c": "Euro24Info",
+     "h": "",
+     "d": "2026-09-24"
+    },
+    {
+     "v": "5IEz5t9ueUQ",
+     "t": "Autostrada A13 - Zona  Boita - Turnu Rosu",
+     "c": "Radu Ignat",
+     "h": "",
+     "d": "2026-09-06"
     }
    ],
    "news": [
@@ -1805,7 +2319,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-23",
     "f": 31.81,
@@ -1841,6 +2355,27 @@
      "c": "AutoInfraHUB",
      "h": "",
      "d": "2026-10-17"
+    },
+    {
+     "v": "JkN_9-JNKVM",
+     "t": "Autostrada #A13 Sibiu - Făgăraș: Noi imagini de pe tronsoanele dintre Boița și Arpașu de Jos",
+     "c": "Euro24Info",
+     "h": "",
+     "d": "2026-09-24"
+    },
+    {
+     "v": "QN-AJBmamU4",
+     "t": "A13 Sibiu–Făgăraș: progres important pe tronsoanele Arpașu de Jos–Făgăraș",
+     "c": "Zetu Harrys",
+     "h": "",
+     "d": "2026-09-24"
+    },
+    {
+     "v": "8IheMKu2Ccw",
+     "t": "Autostrada Sibiu–Făgăraș schimbă Valea Avrigului  Cum arată șantierul A13 sub Făgăraș",
+     "c": "Virtual Press",
+     "h": "",
+     "d": "2026-08-30"
     }
    ],
    "news": [
@@ -1863,7 +2398,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-23",
     "f": 47.84,
@@ -1899,6 +2434,27 @@
      "c": "Infrastructura Romania",
      "h": "",
      "d": "2026-10-23"
+    },
+    {
+     "v": "Gm72FoeL8Kg",
+     "t": "CNAIR -Autostrada A13 , Sibiu-Fagaras, se monteaza ultimul segment metalic al podului in arc Trons3",
+     "c": "MEDIACONSTRUCT",
+     "h": "",
+     "d": "2026-10-23"
+    },
+    {
+     "v": "neScJIx6-gw",
+     "t": "CNAIR- Autostrada A13 Sibiu-Fagaras-Trons.3 (Arpașu de Jos - Sâmbăta de Sus), în lungime de 17,61 km",
+     "c": "MEDIACONSTRUCT",
+     "h": "",
+     "d": "2026-09-25"
+    },
+    {
+     "v": "JkN_9-JNKVM",
+     "t": "Autostrada #A13 Sibiu - Făgăraș: Noi imagini de pe tronsoanele dintre Boița și Arpașu de Jos",
+     "c": "Euro24Info",
+     "h": "",
+     "d": "2026-09-24"
     }
    ],
    "news": [
@@ -1921,7 +2477,7 @@
      "d": "2026-10-24"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-26",
     "f": 48.62,
@@ -1957,6 +2513,13 @@
      "c": "Euro24Info",
      "h": "@euro24info",
      "d": "2026-09-24"
+    },
+    {
+     "v": "8IheMKu2Ccw",
+     "t": "Autostrada Sibiu–Făgăraș schimbă Valea Avrigului  Cum arată șantierul A13 sub Făgăraș",
+     "c": "Virtual Press",
+     "h": "",
+     "d": "2026-08-30"
     }
    ],
    "news": [
@@ -1979,7 +2542,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-23",
     "f": 43.3,
@@ -2015,7 +2578,7 @@
      "d": "2026-03-04"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-02",
     "f": 0,
@@ -2051,7 +2614,7 @@
      "u": "https://www.bacau.net/decizie-definitiva-pentru-drumul-expres-bacau-piatra-neamt-danlin-xxl-pierde-procesul-cnir-reevalueaza-oferta-precon/"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z"
+   "checkedAt": "2026-10-28T19:40:45.287Z"
   },
   "dex6-bg": {
    "videos": [
@@ -2075,6 +2638,27 @@
      "c": "Radu Aramă",
      "h": "",
      "d": "2026-09-25"
+    },
+    {
+     "v": "mKv-u4C3Mi8",
+     "t": "DEx6 Braila - Galati 17 septembrie 2026 | Primele dale pe tablier, asfaltare parcare, reparații.",
+     "c": "Radu Aramă",
+     "h": "",
+     "d": "2026-09-17"
+    },
+    {
+     "v": "vwSXfs9bNTY",
+     "t": "DEX 6 Brăila - Galaţi  - Siret River",
+     "c": "Charly",
+     "h": "",
+     "d": "2026-09-15"
+    },
+    {
+     "v": "BNLoI7um7O8",
+     "t": "A început asfaltarea pasajului și viaductului pe DEx6 Brăila-Galați.",
+     "c": "Pulsul Moldovei",
+     "h": "",
+     "d": "2026-09-13"
     }
    ],
    "news": [
@@ -2097,7 +2681,7 @@
      "d": "2026-10-21"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-18",
     "f": 86.27,
@@ -2112,7 +2696,15 @@
    }
   },
   "dex6-l1": {
-   "videos": [],
+   "videos": [
+    {
+     "v": "TrDNQtQxxcI",
+     "t": "Drumul Expres Focșani–Brăila: începe exproprierea pentru DEx 6 Milcovia Expres",
+     "c": "Zetu Harrys",
+     "h": "",
+     "d": "2026-09-02"
+    }
+   ],
    "news": [
     {
      "d": "2026-10-16",
@@ -2133,7 +2725,7 @@
      "d": "2026-09-10"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2165,7 +2757,7 @@
      "u": "https://economedia.ro/foto-focsani-braila-va-fi-primul-drum-expres-din-romania-construit-cu-benzi-de-urgenta-ca-pe-autostrazi-platforma-va-fi-largita-la-23-de-metri.html"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2197,7 +2789,7 @@
      "d": "2026-09-10"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2229,7 +2821,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-16",
     "f": 0,
@@ -2265,7 +2857,7 @@
      "d": "2026-10-07"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-07",
     "f": 0,
@@ -2301,7 +2893,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-10-28T19:28:28.131Z",
+   "checkedAt": "2026-10-28T19:40:45.287Z",
    "progress": {
     "d": "2026-10-17",
     "f": 0,
@@ -2313,64 +2905,6 @@
     "q": "",
     "s": "Adevărul",
     "u": "https://adevarul.ro/stiri-locale/oradea/marile-proiecte-de-infrastructura-care-transforma-2564210.html"
-   }
-  },
-  "a0-l4": {
-   "videos": [],
-   "news": [
-    {
-     "u": "https://www.bucurestifm.ro/2026/10/26/cnair-traficul-pe-loturile-3-si-4-ale-a0-nord-nu-se-deschide-astazi/",
-     "t": "CNAIR: Traficul pe loturile 3 și 4 ale A0 Nord NU se deschide astăzi, 26 octombrie!",
-     "s": "Radio București FM",
-     "d": "2026-10-26"
-    },
-    {
-     "u": "https://economedia.ro/loturile-3-si-4-ale-a0-nord-ar-urma-sa-fie-deschise-pana-la-sfarsitul-anului-anunta-cj-ilfov-cnair-nu-confirma-inca-un-termen.html",
-     "t": "A0 Nord: Deschidere până la finalul anului pentru loturile 3 și 4",
-     "s": "Economedia",
-     "d": "2026-10-26"
-    }
-   ],
-   "progress": {
-    "p": 100,
-    "q": "",
-    "faza": "",
-    "d": "2026-10-26",
-    "s": "CESTRIN",
-    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
-    "f": 99.91,
-    "fd": "2026-10-26",
-    "fs": "CESTRIN",
-    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
-   }
-  },
-  "a0-l3": {
-   "videos": [],
-   "news": [
-    {
-     "u": "https://www.bucurestifm.ro/2026/10/26/cnair-traficul-pe-loturile-3-si-4-ale-a0-nord-nu-se-deschide-astazi/",
-     "t": "CNAIR: Traficul pe loturile 3 și 4 ale A0 Nord NU se deschide astăzi, 26 octombrie!",
-     "s": "Radio București FM",
-     "d": "2026-10-26"
-    },
-    {
-     "u": "https://economedia.ro/loturile-3-si-4-ale-a0-nord-ar-urma-sa-fie-deschise-pana-la-sfarsitul-anului-anunta-cj-ilfov-cnair-nu-confirma-inca-un-termen.html",
-     "t": "A0 Nord: Deschidere până la finalul anului pentru loturile 3 și 4",
-     "s": "Economedia",
-     "d": "2026-10-26"
-    }
-   ],
-   "progress": {
-    "p": 98.1,
-    "q": "",
-    "faza": "",
-    "d": "2026-10-26",
-    "s": "CESTRIN",
-    "u": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
-    "f": 76.63,
-    "fd": "2026-10-26",
-    "fs": "CESTRIN",
-    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   }
  }
