@@ -212,9 +212,14 @@ try {
     }
   }
 } catch (e) { if (e.code !== 'ENOENT') errors.push('filmări manuale: ' + e.message); }
-const vAssigned = assign(uniq(allVideos, 'v'), x => x.t);
+// elemente marcate greșit pentru un lot (data/wrong.json: {lot:[{k:"ID sau URL", t:"titlu"}]}) — nu mai sunt atribuite acelui lot
+let WRONG = {};
+try { WRONG = JSON.parse(fs.readFileSync(new URL('data/wrong.json', ROOT), 'utf8')); } catch (e) { if (e.code !== 'ENOENT') errors.push('wrong.json: ' + e.message); }
+const isWrong = (id, x) => (WRONG[id] || []).some(w => w.k === (x.v || x.u) || (w.t && norm(x.t).startsWith(norm(w.t))));
+const dropWrong = m => { for (const id of Object.keys(m)) m[id] = m[id].filter(x => !isWrong(id, x)); return m; };
+const vAssigned = dropWrong(assign(uniq(allVideos, 'v'), x => x.t));
 for (const [id, list] of Object.entries(forced)) (vAssigned[id] ||= []).push(...list);
-const nAssigned = assign(uniq(allNews, 'u'), x => x.t);
+const nAssigned = dropWrong(assign(uniq(allNews, 'u'), x => x.t));
 const now = new Date().toISOString();
 const lots = {};
 let newV = 0, newN = 0, newP = 0;
