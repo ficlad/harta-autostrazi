@@ -3,9 +3,7 @@
 const P130 = r => 'https://www.130km.ro/' + r;
 const SEGMENTS = [
 // ---------- A0
-{id:'a0-l1',road:'A0',name:'A0 Nord lot 1: DJ601 – DN1',status:'c',km:17.5,term:'aprilie 2027 (parțial DN1–DN1A posibil la final de 2026)',note:'Nu se deschide integral în 2026; ieșirea spre DN1A depinde de legătura cu centura Buftea (decembrie), altfel aprilie–mai 2027.',src:P130('a0.html'),pts:[[44.43,25.93],[44.50,25.96],[44.56,26.01],[44.59,26.05]]},
-{id:'a0-l3',road:'A0',name:'A0 Nord lot 3: Afumați – Cernica (DN2–DN3)',status:'c',km:6.3,term:'până la finalul anului (CJ Ilfov; CNAIR nu confirmă)',note:'Deschiderea anunțată pe 26 oct. a fost anulată: lotul 3 nu are încă parapete, semnalizare și canalizare pluvială (CNAIR).',src:P130('a0.html'),pts:[[44.53,26.24],[44.49,26.27],[44.44,26.28]]},
-{id:'a0-l4',road:'A0',name:'A0 Nord lot 4: DN3 – A2',status:'c',km:4.47,term:'odată cu lotul 3',note:'Gata din vară, dar nu se poate deschide singur, fără legătura cu DN3; se deschide odată cu lotul 3.',src:P130('a0.html'),pts:[[44.44,26.28],[44.40,26.27]]},
+{id:'a0-l1',road:'A0',name:'A0 Nord lot 1: DJ601 – DN1',status:'c',km:17.5,term:'aprilie 2027 (circa 10 km, cu ieșiri la DN1A și DN7, posibil în decembrie 2026)',note:'CNAIR (5 nov.): circa 10 km cu legături la DN1A și DN7 s-ar putea deschide în decembrie; restul de 7 km spre A1 până în aprilie 2027.',src:P130('a0.html'),pts:[[44.43,25.93],[44.50,25.96],[44.56,26.01],[44.59,26.05]]},
 // ---------- A1
 {id:'a1-s2',road:'A1',name:'A1 Sibiu–Pitești secț. 2: Boița – Cornetu',status:'c',km:31.3,term:'2030',note:'A1 Sibiu–Boița e închisă 5 oct. – 19 dec. 2026 pentru lucrări în nodul Boița.',src:P130('a1.html'),pts:[[45.63,24.26],[45.55,24.27],[45.48,24.28],[45.42,24.31]]},
 {id:'a1-s3',road:'A1',name:'A1 Sibiu–Pitești secț. 3: Cornetu – Tigveni',status:'c',km:37.9,term:'2030',src:P130('a1.html'),pts:[[45.42,24.31],[45.35,24.38],[45.26,24.48],[45.17,24.58]]},
@@ -36,7 +34,7 @@ const SEGMENTS = [
 {id:'a7-ps2',road:'A7',name:'A7 Pașcani–Suceava lot 2: Roșcani – Aeroport Suceava',status:'c',km:29.0,term:'2028',src:P130('a7.html'),pts:[[47.45,26.53],[47.57,26.42],[47.68,26.34]]},
 {id:'a7-ss1',road:'A7',name:'A7 Suceava–Siret lot 1: Suceava – Dărmănești',status:'c',km:18.6,term:'2029',note:'Atribuirea a fost anulată în instanță.',src:P130('a7.html'),pts:[[47.68,26.34],[47.71,26.22],[47.75,26.15]]},
 {id:'a7-ss2',road:'A7',name:'A7 Suceava–Siret lot 2: Dărmănești – Bălcăuți',status:'c',km:24.5,term:'2029',note:'Atribuirea a fost anulată în instanță.',src:P130('a7.html'),pts:[[47.75,26.15],[47.82,26.10],[47.89,26.08]]},
-{id:'a7-ss3',road:'A7',name:'A7 Suceava–Siret lot 3: Bălcăuți – Vama Siret',status:'t',km:12.7,term:'în licitare',owner:'CNAIR',note:'Câștigător desemnat (Far Foundation), contestații respinse la CNSC; contractul nu e semnat.',src:P130('a7.html'),q:'autostrada Suceava Siret lot 3 Balcauti licitatie',pts:[[47.89,26.08],[47.94,26.07],[47.98,26.06]]},
+{id:'a7-ss3',road:'A7',name:'A7 Suceava–Siret lot 3: Bălcăuți – Vama Siret',status:'t',km:12.7,term:'în licitare',owner:'CNAIR',note:'Curtea de Apel (3 nov., definitiv) a anulat atribuirea către Far Foundation; CNAIR trebuie să reevalueze ofertele Concelex, Far Foundation și Frasinul.',src:P130('a7.html'),q:'autostrada Suceava Siret lot 3 Balcauti licitatie',pts:[[47.89,26.08],[47.94,26.07],[47.98,26.06]]},
 // ---------- A8
 {id:'a8-s1',road:'A8',name:'A8 Secț. I: Târgu Mureș – Miercurea Nirajului',status:'c',km:24.4,term:'2027',src:P130('a8.html'),pts:[[46.55,24.60],[46.54,24.70],[46.53,24.80]]},
 {id:'a8-1b',road:'A8',name:'A8 lot 1B: Miercurea Nirajului – Sărățeni',status:'c',km:23.4,term:'2027',src:P130('a8.html'),pts:[[46.53,24.80],[46.55,24.92],[46.58,25.01]]},
@@ -49,7 +47,7 @@ const SEGMENTS = [
 {id:'a8-l1',road:'A8',name:'A8 lot 1: Târgu Neamț/Moțca – Târgu Frumos',status:'c',km:27.0,term:'2030',src:P130('a8.html'),pts:[[47.24,26.62],[47.23,26.80],[47.21,27.00]]},
 {id:'a8-l2',road:'A8',name:'A8 lot 2: Târgu Frumos – Lețcani (DN28)',status:'t',km:28.6,term:'în licitare',owner:'CNIR',note:'Curtea de Apel (13 oct., definitiv): CNIR trebuie să reevalueze oferta Danlin XXL; nou termen pe 11 nov.',src:P130('a8.html'),q:'autostrada A8 Targu Frumos Letcani lot 2 licitatie',pts:[[47.23,27.00],[47.233,27.20],[47.215,27.33],[47.209,27.374]]},
 {id:'a8-l3',road:'A8',name:'A8 lot 3: Lețcani (DN28) – Iași (DN24)',status:'c',km:17.7,term:'2030',note:'Curtea de Apel (28 oct., definitiv) a admis contestația în anulare a Concelex și a suspendat executarea contractului cu FCC; următorul termen pe 18 nov. Pe 26 oct. un creditor a cerut la Tribunalul București insolvența FCC (cererea nu înseamnă deschiderea procedurii).',src:P130('a8.html'),pts:[[47.209,27.374],[47.206,27.41],[47.234,27.434],[47.258,27.49],[47.267,27.53],[47.265,27.553]]},
-{id:'a8-l4',road:'A8',name:'A8 lot 4: Iași (DN24) – Vama/Pod Ungheni',status:'c',km:15.5,term:'2030',note:'Contract suspendat; Curtea de Apel (13 oct., definitiv) a dispus reevaluarea ofertei Itinera – rezultat neanunțat la 1 nov. Itinera a cerut pe 29 oct. revizuirea deciziei CAB din 5 aug.',src:P130('a8.html'),pts:[[47.265,27.553],[47.252,27.59],[47.249,27.63],[47.267,27.68],[47.257,27.714],[47.249,27.757]]},
+{id:'a8-l4',road:'A8',name:'A8 lot 4: Iași (DN24) – Vama/Pod Ungheni',status:'c',km:15.5,term:'2030',note:'Contract suspendat; Curtea de Apel a respins definitiv (5 nov.) contestația în anulare a Itinera, deci reevaluarea ofertei rămâne obligatorie; cererea de revizuire a Itinera se judecă pe 12 nov.',src:P130('a8.html'),pts:[[47.265,27.553],[47.252,27.59],[47.249,27.63],[47.267,27.68],[47.257,27.714],[47.249,27.757]]},
 {id:'a8-pod',road:'A8',name:'A8 Pod peste Prut la Ungheni',status:'c',km:1.1,term:'2027 (contract: decembrie 2027)',note:'Constructorul Ness Proiect Europe a cerut concordat preventiv (26 oct.); primul termen pe 5 nov.',src:P130('a8.html'),pts:[[47.249,27.752],[47.249,27.765]]},
 // ---------- A9
 {id:'a9-rj',road:'A9',name:'A9 Remetea Mare – Jebel',status:'t',km:35.7,term:'în licitare',owner:'CNAIR',src:P130('a9.html'),q:'autostrada Timisoara Moravita Remetea Mare Jebel licitatie',pts:[[45.78,21.38],[45.68,21.33],[45.56,21.24]]},
@@ -91,6 +89,8 @@ const OPEN = [
  ['DEx12',[[44.38,23.92],[44.43,24.36],[44.85,24.88]]],
  ['A0',[[44.43,25.93],[44.36,25.98],[44.33,26.10],[44.38,26.27],[44.40,26.27]]],
  ['A0',[[44.59,26.05],[44.57,26.15],[44.53,26.24]]],
+ ['A0',[[44.53,26.24],[44.49,26.27],[44.44,26.28]],'a0-l3'], // deschis 04.11.2026
+ ['A0',[[44.44,26.28],[44.40,26.27]],'a0-l4'], // deschis 04.11.2026
  ['DEx16',[[47.11,21.81],[47.01,21.93]]],
 ];
 
