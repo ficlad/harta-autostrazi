@@ -1,9 +1,16 @@
 {
- "lastRun": "2026-11-14T11:45:54.184Z",
- "summary": "4 filmări noi, 5 știri noi, 4 grade de execuție actualizate",
+ "lastRun": "2026-11-15T12:23:26.208Z",
+ "summary": "3 filmări noi, 0 știri noi, 4 grade de execuție actualizate",
  "lots": {
   "a0-l1": {
    "videos": [
+    {
+     "v": "3VRnkIGh9Jk",
+     "t": "Autostrada A0 Nord si Sud | DN1 - A1 | Noiembrie 2026",
+     "c": "Alin Alecu",
+     "h": "",
+     "d": "2026-11-15"
+    },
     {
      "v": "zlJ2z8zuvHc",
      "t": "Autostrada A0 Sud si Nord | A1 - DN1 | Noiembrie 2026",
@@ -38,13 +45,6 @@
      "c": "Infrastructura Romania",
      "h": "",
      "d": "2026-11-09"
-    },
-    {
-     "v": "Vi2gzSnKtVU",
-     "t": "Autostrada A0 Nord Lot 4, 3 si 2 | A2 - DN1 | Noiembrie 2026",
-     "c": "Alin Alecu",
-     "h": "",
-     "d": "2026-11-09"
     }
    ],
    "news": [
@@ -67,7 +67,7 @@
      "d": "2026-11-05"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 85,
     "q": "",
@@ -146,7 +146,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-26",
     "f": 13.18,
@@ -225,7 +225,7 @@
      "d": "2026-10-28"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-06",
     "f": 21.76,
@@ -304,7 +304,7 @@
      "d": "2026-11-11"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-27",
     "faza": "",
@@ -379,7 +379,7 @@
      "d": "2026-11-11"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 80,
     "q": "",
@@ -410,15 +410,15 @@
      "d": "2026-11-09"
     },
     {
-     "v": "733yVKNH3aw",
-     "t": "Autostrada A3 Nãdãșelu - Mihãiești | Ep. 16 | Modificare traseu Nãdãșelu - 07.11.2026",
+     "v": "CgJA4xyOKmA",
+     "t": "Autostrada A3 Nãdãșelu - Mihãiești | Ep. 26 | Modificare traseu Mihãiești - Topa Micã - 07.11.2026",
      "c": "Raul Pristopan",
      "h": "",
      "d": "2026-11-08"
     },
     {
-     "v": "CgJA4xyOKmA",
-     "t": "Autostrada A3 Nãdãșelu - Mihãiești | Ep. 26 | Modificare traseu Mihãiești - Topa Micã - 07.11.2026",
+     "v": "733yVKNH3aw",
+     "t": "Autostrada A3 Nãdãșelu - Mihãiești | Ep. 16 | Modificare traseu Nãdãșelu - 07.11.2026",
      "c": "Raul Pristopan",
      "h": "",
      "d": "2026-11-08"
@@ -458,7 +458,7 @@
      "d": "2026-11-02"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-22",
     "f": 91,
@@ -537,7 +537,7 @@
      "d": "2026-10-29"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-22",
     "f": 59.18,
@@ -616,7 +616,7 @@
      "d": "2026-11-02"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-22",
     "f": 91,
@@ -695,7 +695,7 @@
      "d": "2026-10-05"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-05",
     "faza": "proiectare (fără autorizație de construire)",
@@ -770,7 +770,7 @@
      "d": "2026-10-05"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-05",
     "faza": "proiectare (fără autorizație de construire)",
@@ -782,6 +782,13 @@
   },
   "a3-sc": {
    "videos": [
+    {
+     "v": "TSzOs1nV4oY",
+     "t": "A3 Lot 3C1 Suplacu de Barcău -Chiribiș, 2 noduri si jumatate | stadiu noiembrie 2026",
+     "c": "marin marian",
+     "h": "",
+     "d": "2026-11-14"
+    },
     {
      "v": "wwxAWmL1_hc",
      "t": "Autostrada A3, filmare integrală Chiribiș-Suplacu de Barcău, 29 octombrie 2026",
@@ -816,13 +823,6 @@
      "c": "On The Road AK",
      "h": "",
      "d": "2026-10-11"
-    },
-    {
-     "v": "zGIjgLDqVs4",
-     "t": "A3 Autostrada Transilvania - Deschidere in decembrie pe ambele loturi ? Suplacu - Chiribis -Biharia",
-     "c": "On The Road AK",
-     "h": "",
-     "d": "2026-10-10"
     }
    ],
    "news": [
@@ -845,7 +845,7 @@
      "d": "2026-11-01"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-22",
     "f": 63.09,
@@ -924,7 +924,7 @@
      "d": "2026-11-03"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 87,
     "q": "",
@@ -960,7 +960,7 @@
      "d": "2026-07-08"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a6-l1": {
    "videos": [],
@@ -984,7 +984,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a6-l2": {
    "videos": [],
@@ -1008,7 +1008,7 @@
      "d": "2026-02-26"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a6-l3": {
    "videos": [],
@@ -1026,7 +1026,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a6-l4": {
    "videos": [],
@@ -1038,7 +1038,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a6-l5": {
    "videos": [],
@@ -1056,7 +1056,7 @@
      "d": "2025-07-08"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a6-l6": {
    "videos": [],
@@ -1080,7 +1080,7 @@
      "d": "2026-10-22"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a7-bp1": {
    "videos": [
@@ -1147,7 +1147,7 @@
      "d": "2026-11-11"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 80,
     "q": "",
@@ -1226,7 +1226,7 @@
      "d": "2026-11-11"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 63,
     "q": "",
@@ -1242,6 +1242,13 @@
   },
   "a7-bp3": {
    "videos": [
+    {
+     "v": "4AnmgZRTXIU",
+     "t": "#A7 Bacău Pașcani #autostradaa7 LOT 3 - Stadiul lucrarilor NOD TURBION A7-A8 13 noiembrie 2026",
+     "c": "NS - FLIGHT MODE \"ON\"",
+     "h": "",
+     "d": "2026-11-14"
+    },
     {
      "v": "2N7xY_SgCNA",
      "t": "#A7 Bacău Pașcani #autostradaa7 LOT 3 - Stadiul lucrarilor NOD TURBION A7-A8 13 noiembrie 2026",
@@ -1276,13 +1283,6 @@
      "c": "Ora de Iasi",
      "h": "",
      "d": "2026-11-07"
-    },
-    {
-     "v": "re1HyElierw",
-     "t": "Imagini de pe lotul Mircești - Pașcani din A7: Progresul raportat pe 22 octombrie era de 56,8%.",
-     "c": "Pulsul Moldovei",
-     "h": "",
-     "d": "2026-11-01"
     }
    ],
    "news": [
@@ -1305,7 +1305,7 @@
      "d": "2026-11-11"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-26",
     "f": 36.78,
@@ -1356,7 +1356,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-09-18",
     "f": 0,
@@ -1392,7 +1392,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-09-18",
     "f": 0,
@@ -1443,7 +1443,7 @@
      "d": "2026-10-06"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-09-19",
     "faza": "atribuire anulată în instanță, ofertele se reevaluează",
@@ -1475,7 +1475,7 @@
      "d": "2026-10-06"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-09-19",
     "faza": "atribuire anulată în instanță, ofertele se reevaluează",
@@ -1507,7 +1507,7 @@
      "d": "2026-11-01"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": null,
     "q": "",
@@ -1575,7 +1575,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-02",
     "f": 41.92,
@@ -1611,7 +1611,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-19",
     "faza": "proiectare nefinalizată (CNAIR: finalizare până la sfârșitul anului); se așteaptă autorizația de construire, fără ordin de începere a lucrărilor",
@@ -1643,7 +1643,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-22",
     "faza": "proiectare – 22% (raport supervizor 9 oct. 2026); certificat constatator pozitiv CNIR (25 mai–23 aug. 2026), întârziere 126 zile la un termen intermediar",
@@ -1718,7 +1718,7 @@
      "d": "2026-11-06"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 16,
     "q": "",
@@ -1750,7 +1750,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-19",
     "faza": "proiectare întârziată: perioada de proiectare (14 luni) expirată la 31 aug. 2026, PTE neaprobat, întârzieri de până la 278 zile; certificat constatator negativ CNIR (retras din SEAP, constatările rămân valabile)",
@@ -1782,7 +1782,7 @@
      "d": "2026-11-01"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-03-30",
     "faza": "proiectare",
@@ -1814,7 +1814,7 @@
      "d": "2026-07-24"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-09-21",
     "faza": "contract semnat (30 apr. 2025); ordinul de începere a proiectării încă neemis",
@@ -1882,7 +1882,7 @@
      "d": "2026-10-20"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-01",
     "f": 4.26,
@@ -1933,7 +1933,7 @@
      "d": "2026-10-31"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-09",
     "faza": "proiectare (diagnostic arheologic; pregătire șantier pe primii 5,5 km, legătura A8–A7)",
@@ -1965,7 +1965,7 @@
      "d": "2026-11-12"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a8-l3": {
    "videos": [
@@ -2025,7 +2025,7 @@
      "d": "2026-11-04"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-28",
     "faza": "proiectare; executarea contractului cu FCC suspendată de Curtea de Apel București (28 oct. 2026, definitiv) până la soluționarea cauzei; nou termen 18 nov. 2026",
@@ -2086,7 +2086,7 @@
      "d": "2026-11-12"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": null,
     "q": "",
@@ -2161,7 +2161,7 @@
      "d": "2026-10-28"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 80,
     "q": "",
@@ -2191,7 +2191,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a9-jm": {
    "videos": [],
@@ -2209,7 +2209,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "a13-l1": {
    "videos": [
@@ -2276,7 +2276,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-23",
     "f": 31.81,
@@ -2348,7 +2348,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-23",
     "f": 47.84,
@@ -2427,7 +2427,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-26",
     "f": 48.62,
@@ -2492,7 +2492,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 45,
     "q": "",
@@ -2528,7 +2528,7 @@
      "d": "2026-10-27"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-02",
     "f": 0,
@@ -2564,7 +2564,7 @@
      "d": "2026-10-05"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z"
+   "checkedAt": "2026-11-15T12:23:26.208Z"
   },
   "dex6-bg": {
    "videos": [
@@ -2631,7 +2631,7 @@
      "d": "2026-10-31"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "p": 98,
     "q": "",
@@ -2675,7 +2675,7 @@
      "d": "2026-09-30"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2707,7 +2707,7 @@
      "d": "2026-09-10"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2739,7 +2739,7 @@
      "d": "2026-09-10"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2771,7 +2771,7 @@
      "d": "2026-11-07"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-16",
     "f": 0,
@@ -2807,7 +2807,7 @@
      "d": "2026-10-07"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-07",
     "f": 0,
@@ -2837,7 +2837,7 @@
      "d": "2026-05-30"
     }
    ],
-   "checkedAt": "2026-11-14T11:45:54.184Z",
+   "checkedAt": "2026-11-15T12:23:26.208Z",
    "progress": {
     "d": "2026-10-17",
     "f": 0,
