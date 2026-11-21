@@ -1,9 +1,23 @@
 {
- "lastRun": "2026-11-20T13:37:20.587Z",
- "summary": "12 filmări noi, 11 știri noi, 5 grade de execuție actualizate",
+ "lastRun": "2026-11-21T13:01:00.774Z",
+ "summary": "16 filmări noi, 18 știri noi, 5 grade de execuție actualizate",
  "lots": {
   "a0-l1": {
    "videos": [
+    {
+     "v": "TkN1H4PHz2Y",
+     "t": "Autostrada A0 Nord, Lotul 1 | Stadiul lucrărilor la 19.11.2026 (Filmare Dronă & Sol)",
+     "c": "Presshouse",
+     "h": "",
+     "d": "2026-11-20"
+    },
+    {
+     "v": "x79zRvjcpUo",
+     "t": "Autostrada A0 NORD LOT 1 progres fizic 90%!!",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-11-20"
+    },
     {
      "v": "E_GiKPhHid8",
      "t": "Progres pe A0 Nord, Lot 1 | Bâcu la DN7 | 19 Noiembrie 2026",
@@ -31,20 +45,6 @@
      "c": "GeorgeDinAer",
      "h": "",
      "d": "2026-11-17"
-    },
-    {
-     "v": "xx8nzxbzfeo",
-     "t": "A0 Nord Lot 1 între DJ601A și DN1A | 15.11.2026 | 4K",
-     "c": "GeorgeDinAer",
-     "h": "",
-     "d": "2026-11-15"
-    },
-    {
-     "v": "3VRnkIGh9Jk",
-     "t": "Autostrada A0 Nord si Sud | DN1 - A1 | Noiembrie 2026",
-     "c": "Alin Alecu",
-     "h": "",
-     "d": "2026-11-15"
     }
    ],
    "news": [
@@ -67,7 +67,7 @@
      "d": "2026-11-05"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 85,
     "q": "",
@@ -146,7 +146,7 @@
      "d": "2026-11-18"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-26",
     "f": 13.18,
@@ -225,7 +225,7 @@
      "d": "2026-10-26"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-06",
     "f": 21.76,
@@ -243,7 +243,7 @@
    "videos": [
     {
      "v": "UgrXmoIggyg",
-     "t": "CUM s-a construit TUNELUL Curtea de Argeș | Documentar | A1 Sibiu-Pitești Sectiunea 4 CdA-Tigveni",
+     "t": "CUM s-a construit TUNELUL Curtea de Argeș | Documentar | A1 Sibiu-Pitești Sectiunea 4 NATM",
      "c": "Raducu P Drum",
      "h": "",
      "d": "2026-11-19"
@@ -286,7 +286,7 @@
    ],
    "news": [
     {
-     "u": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOdEktSXM4clRNYWVvMFF5TndUTHMwRVBjcTY2dExhSUMtYzBNWEJZd3NsR2diWXdHMU1PQjRfN3FoOVMwNkhVaDZFZFR6X3U3bmVGeXltYUJmWDdOLTBEZnp1NjVhYWU3eFdQekU1TzdUM1A5aGFXdDZMRDN1N1JSYVY2V001b2J2QlBEYU11QTY5UVlPWkp0SUIwNm5LSk5UTDEyemN5aV9icU1hOURJOERZTnpDdlA5SnEzdkxtVjNCX0dVbFdsWFFKNG1uRWE4Sms1X1JrV2JLdF9vclc2N3huT0V3R2tKWnBROEtWcms3d053a25MOG1YV2FVc2JIbjBv?oc=5",
+     "u": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOa2J0cTMwVDNRTldoWHBEcHRfSUtlVWc3WHdVY2ZDLVM4Y3JwclBHb2p0eEVRM3BIdEhyWmtqbXgtbVFXTDdsQUlDYWpFbFVyVGUtU1FwdzJBSmhvNF9KMG9BV2I4RDRWLXFqcVdtaG5FS0xtSjVZTjhCTWstVVBBWDE4X3g4MjRyMWZCQ3FMZk52TEh6WDhmaHl6Zl96c3ZaRGQ2Q0syWXY0VDZQdXR5eWhZMC1udUxxRzdPaWFQcU03dHRHWGhDdEdiQVI3MGZvNVVvVFpvcUZmSXhKSE83SDBCd18xeUZoMUViTXZoQi1WczBsSDBFMTNZRS1Yd1dRbE5V?oc=5",
      "t": "Se deschide traficul prin tunelul Momaia de pe A1 Sibiu-Pitești. Când vor fi inaugurați cei 10 km între Tigveni și Curtea de Argeș",
      "s": "Antena 3",
      "d": "2026-11-18"
@@ -304,7 +304,7 @@
      "d": "2026-11-18"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-27",
     "faza": "",
@@ -379,7 +379,7 @@
      "d": "2026-11-13"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 82,
     "q": "",
@@ -417,6 +417,13 @@
      "d": "2026-11-16"
     },
     {
+     "v": "aNOSeBI0r4U",
+     "t": "Autostrada A3, spații servicii și viaducte Ozaltin între Nădășelu și Zimbor, 14 noiembrie 2026",
+     "c": "Cristian Marius Man",
+     "h": "",
+     "d": "2026-11-15"
+    },
+    {
      "v": "RiY8koBGzzg",
      "t": "Autostrada A3 Nãdãșelu - Mihãiești | Ep. 17 | Modificare traseu Nãdãșelu - 14.11.2026",
      "c": "Raul Pristopan",
@@ -427,13 +434,6 @@
      "v": "Deaiu7xuVTc",
      "t": "A3 - 09.11.2026 Viaductele ÖZALTIN de la Nădășelu și Topa Mică",
      "c": "AutoInfraHUB",
-     "h": "",
-     "d": "2026-11-09"
-    },
-    {
-     "v": "_RjZj12qjGQ",
-     "t": "Autostrada A3, filmare integrală Nădășelu-Zimbor, 7 noiembrie 2026",
-     "c": "Cristian Marius Man",
      "h": "",
      "d": "2026-11-09"
     }
@@ -458,7 +458,7 @@
      "d": "2026-11-14"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-22",
     "f": 91,
@@ -537,7 +537,7 @@
      "d": "2026-11-14"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-22",
     "f": 59.18,
@@ -553,6 +553,13 @@
   },
   "a3-mz": {
    "videos": [
+    {
+     "v": "aNOSeBI0r4U",
+     "t": "Autostrada A3, spații servicii și viaducte Ozaltin între Nădășelu și Zimbor, 14 noiembrie 2026",
+     "c": "Cristian Marius Man",
+     "h": "",
+     "d": "2026-11-15"
+    },
     {
      "v": "UJ8FljSHdRc",
      "t": "A3 Autostrada Transilvania , Zimbor - Poarta Sălajului pe asflat , constructor UMB",
@@ -587,13 +594,6 @@
      "c": "Cristian Marius Man",
      "h": "",
      "d": "2026-10-25"
-    },
-    {
-     "v": "QujRy-BXQeY",
-     "t": "Autostrada A3, filmare integrală aer-sol Nădășelu-Zimbor, 17 octombrie 2026",
-     "c": "",
-     "h": "",
-     "d": "2026-10-17"
     }
    ],
    "news": [
@@ -616,7 +616,7 @@
      "d": "2026-11-12"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-22",
     "f": 91,
@@ -683,19 +683,19 @@
      "d": "2026-10-20"
     },
     {
+     "u": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8yQ1Uwak4zY1BlMTh2dVYzeDdhZFNOZ3g4d09CT0FfSUhzZzBFejV5QmJXcHBnWFB0bDRVSTdDTFN3T2s4eHBRR3Raa1ctZFg2aFlSUnhrZUtDTW5QU1JWLXFyeUpMZmI2TDduX0JVd1duRjF3QWNn?oc=5",
+     "t": "A3, tot mai aproape de Zalău",
+     "s": "Magazin Sălăjean",
+     "d": "2026-10-13"
+    },
+    {
      "u": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY0FvbnZpMnh1SWZhQ2c3WUxORWZZYWVIUkIxX1B4eC1GU2FKd2ppcDZTd0p4MklOS2dtODJVQ0tRNUNsbEJjR1lYZ2lTcHFRaURMdGFVODg5bG9RTVJXMlQtckdIanVfVnBDOHpaNE5CV3pGTkJxWEhMQkJWQ0x5Y2JsbzJBS3pWYVZVVUdhX2xpaXl1bHctMWNhSVRGbzl3Q0RXeUNoSE1DNE0wbTE4M0tQUW4yX1cyTmR2VzNtZnUtQQ?oc=5",
      "t": "FOTO VIDEO | Cum arată șantierul A3 Nușfalău – Poarta Sălajului, lotul care va avea cel mai lung tunel",
      "s": "Economedia",
      "d": "2026-10-05"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNTTRtZkV2cEtjZUV4QzZXZjhsRHdmR0ljQW9US0RONURwNnM0bDlfUGE4Qm9faEtKdnRiZzhsZUcyRXJ6Z1NkOEZwcm8xMjllVHpSOWc1ZFJoZmpzZDBmbk4wdlBuVElzMWNYNkVvY1E3U3NiT1RaZXpNU3RmXzB4SDV0NTZUY0Jfb29ZbXZMQ0VSUWhITUw0OTRwalN2Y0o3dFFkbnRfeHQ4ZllldGRxamd1cURvUnNkV1hrMVVTZWNEcTJIVUx0MXpvUkdCbS1ZakliZURHaUFpVFQtUEhxYnFSZkpmRktJMXNEX2ZSOV9Vd2dnM1hSdUxhLXlMSm5N0gHoAUFVX3lxTE5QRDBLYXFhdU5VTWpIZEE2ZHlmSjV3SDNtYWNQTE50YnhiazRJcmEtTEF5WTBWbnFCYXZHaERIbUxUd1lMWVBXUjFNR0p1SVVXQzAzdURQQlFDenF4LXdwZHM3Tnk3TFVBanhVa1hSRE9xWVpibmFYYzdKVGgzRURRajBGVHVGT2hQYmFYTjM2WUJ3a0hLaDN4V0VZRmZfcm9HTnFtbHJHVEFUdEU0eFlpay1pRkVfdlQ4SUFWd2wzSlBYTG9FQTN1aUVhMHoyMmFwOUdacjhTYlp4VGRiRUc0LUZkckgydGk?oc=5",
-     "t": "Imagini în premieră, din avion, cu \"perla coroanei\" de pe A3. Cum arată șantierul pe sectorul Nușfalău - Poarta Sălajului",
-     "s": "Antena 3",
-     "d": "2026-10-05"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-05",
     "faza": "proiectare (fără autorizație de construire)",
@@ -758,19 +758,19 @@
      "d": "2026-10-20"
     },
     {
+     "u": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8yQ1Uwak4zY1BlMTh2dVYzeDdhZFNOZ3g4d09CT0FfSUhzZzBFejV5QmJXcHBnWFB0bDRVSTdDTFN3T2s4eHBRR3Raa1ctZFg2aFlSUnhrZUtDTW5QU1JWLXFyeUpMZmI2TDduX0JVd1duRjF3QWNn?oc=5",
+     "t": "A3, tot mai aproape de Zalău",
+     "s": "Magazin Sălăjean",
+     "d": "2026-10-13"
+    },
+    {
      "u": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY0FvbnZpMnh1SWZhQ2c3WUxORWZZYWVIUkIxX1B4eC1GU2FKd2ppcDZTd0p4MklOS2dtODJVQ0tRNUNsbEJjR1lYZ2lTcHFRaURMdGFVODg5bG9RTVJXMlQtckdIanVfVnBDOHpaNE5CV3pGTkJxWEhMQkJWQ0x5Y2JsbzJBS3pWYVZVVUdhX2xpaXl1bHctMWNhSVRGbzl3Q0RXeUNoSE1DNE0wbTE4M0tQUW4yX1cyTmR2VzNtZnUtQQ?oc=5",
      "t": "FOTO VIDEO | Cum arată șantierul A3 Nușfalău – Poarta Sălajului, lotul care va avea cel mai lung tunel",
      "s": "Economedia",
      "d": "2026-10-05"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNTTRtZkV2cEtjZUV4QzZXZjhsRHdmR0ljQW9US0RONURwNnM0bDlfUGE4Qm9faEtKdnRiZzhsZUcyRXJ6Z1NkOEZwcm8xMjllVHpSOWc1ZFJoZmpzZDBmbk4wdlBuVElzMWNYNkVvY1E3U3NiT1RaZXpNU3RmXzB4SDV0NTZUY0Jfb29ZbXZMQ0VSUWhITUw0OTRwalN2Y0o3dFFkbnRfeHQ4ZllldGRxamd1cURvUnNkV1hrMVVTZWNEcTJIVUx0MXpvUkdCbS1ZakliZURHaUFpVFQtUEhxYnFSZkpmRktJMXNEX2ZSOV9Vd2dnM1hSdUxhLXlMSm5N0gHoAUFVX3lxTE5QRDBLYXFhdU5VTWpIZEE2ZHlmSjV3SDNtYWNQTE50YnhiazRJcmEtTEF5WTBWbnFCYXZHaERIbUxUd1lMWVBXUjFNR0p1SVVXQzAzdURQQlFDenF4LXdwZHM3Tnk3TFVBanhVa1hSRE9xWVpibmFYYzdKVGgzRURRajBGVHVGT2hQYmFYTjM2WUJ3a0hLaDN4V0VZRmZfcm9HTnFtbHJHVEFUdEU0eFlpay1pRkVfdlQ4SUFWd2wzSlBYTG9FQTN1aUVhMHoyMmFwOUdacjhTYlp4VGRiRUc0LUZkckgydGk?oc=5",
-     "t": "Imagini în premieră, din avion, cu \"perla coroanei\" de pe A3. Cum arată șantierul pe sectorul Nușfalău - Poarta Sălajului",
-     "s": "Antena 3",
-     "d": "2026-10-05"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-05",
     "faza": "proiectare (fără autorizație de construire)",
@@ -782,6 +782,34 @@
   },
   "a3-sc": {
    "videos": [
+    {
+     "v": "nDfeN8XV59M",
+     "t": "CNAIR-Lucrările pe secțiunea Suplacu de Barcău –Chiribiș a Autostrăzii Transilvania (#A3), în lungim",
+     "c": "MEDIACONSTRUCT",
+     "h": "",
+     "d": "2026-11-21"
+    },
+    {
+     "v": "-Ldl004Ahvk",
+     "t": "Autostrada Transilvania: tronsonul Suplacu–Chiribiș, gata 98% #PaineSiCirc #Paine #A3",
+     "c": "Paine si Circ",
+     "h": "",
+     "d": "2026-11-21"
+    },
+    {
+     "v": "gqYBf5MZbPI",
+     "t": "Secțiunea Suplacu de Barcău – Chiribiș a Autostrăzii Transilvania (#A3), aproape gata! (#Erbasu)",
+     "c": "Euro24Info",
+     "h": "",
+     "d": "2026-11-21"
+    },
+    {
+     "v": "J7WG-XAxWRc",
+     "t": "Lucrările pe sectiunea Suplacu de Barcau - Chiribis  din Autostrada Transilvania A3 au ajuns la 98% ",
+     "c": "Infrastructura Romania",
+     "h": "",
+     "d": "2026-11-21"
+    },
     {
      "v": "tpFMxKFSZ8s",
      "t": "Autostrada A3 Chiribiș-Suplacu de Barcău - 14.11.2026",
@@ -795,68 +823,40 @@
      "c": "marin marian",
      "h": "",
      "d": "2026-11-14"
-    },
-    {
-     "v": "wwxAWmL1_hc",
-     "t": "Autostrada A3, filmare integrală Chiribiș-Suplacu de Barcău, 29 octombrie 2026",
-     "c": "Cristian Marius Man",
-     "h": "",
-     "d": "2026-10-31"
-    },
-    {
-     "v": "wB2Yr7qTr6I",
-     "t": "A3 Autostrada Transilvania, Suplacu de Barcău -Chiribiș, filmat complet 23.10.2026",
-     "c": "marin marian",
-     "h": "",
-     "d": "2026-10-24"
-    },
-    {
-     "v": "ZPXaeSJgUfs",
-     "t": "Autostrada Transilvania (A3) - Suplacu de Barcău-Chiribiș - OCTOMBRIE 2026",
-     "c": "Constructii Erbasu",
-     "h": "",
-     "d": "2026-10-21"
-    },
-    {
-     "v": "eP4P6_onpOw",
-     "t": "A3 Autostrada Transilvania - Pe asfalt între Suplacu de Barcãu și Dolea , Construcții Erbașu",
-     "c": "On The Road AK",
-     "h": "",
-     "d": "2026-10-16"
     }
    ],
    "news": [
     {
-     "u": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPd1FqSHNESFA2N1BXY1pjOWYzNmRXcE94SGNrSV9uN2tkUVRmQ0dyM0EyZ3diSXg2ZzgyaERMWUVwY2wtRU8yeENJZmNETGFpbXFvMGJGQUMtWXpDUlVlN0ZTZV9aa0pSSUJ2dzNITk5HVm56SDAzR0RqV18wbUdxQlh0aVBjSFRaU2NDSC10cE9OMDRaVjNCc2FYU1BFRi1Pa0ZOcUVMTGtMV1hmcVhXTTJnN2RzSXhoTW50bm81enl1cUFaSUR2ak5pcGtNWUFQWmRlMmlGOEFldHMwUktaMEtROFc?oc=5",
-     "t": "Autostrada A3 Transilvania: Suplacu de Barcau – Chiribis s-ar putea deschide in decembrie, iar Chiribis – Biharia ceva mai tarziu",
-     "s": "ARENA Constructiilor",
-     "d": "2026-11-17"
+     "u": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQb19GQ0Z2REc5X29XbVhxVGdHTWxhbjduSEVvWjlYN3lRMHBveERRVXFUcURoakM2Tkg5Y0dxcnNoQkJaNDk2UUN6MkNib0dGOE56YWx1d2VaYVB5MlRjMlZYMThfTlN1LWt6eXpBUVlNX29GTmfSAXtBVV95cUxNWG5oYTB5UUVWYUdjQnRTVzAtRUVvSHN2NkpxaURoMkthbTJCQmZmeFp0R0Z5dUlXT2FER045QVRyam1keDRmdTdERHFfY1MyUFI1M2RYaFZjb1V1YUJuQWtUYWJpenRsdFlqUjNiS095c1NMQ3FCTXJVM0U?oc=5",
+     "t": "VIDEO Autostrada A3 Transilvania: Lucrările la secțiunea Suplacu de Barcău – Chiribiș au ajuns la…",
+     "s": "Economica.net",
+     "d": "2026-11-21"
     },
     {
-     "u": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQZ2kzN0NQTzl4a3FsWTFUX2xPQ3EydUs3NGtWd2Q3VTRpclVRWThQanczS2NjZnpYQzFSd19BRlI4bVA1cEgtcFZlNHc5WVd4R01GakxZYTRNQ3NtN2lfYXl6RkVsZGYySTMwbkhicVJXSkJ5Tm5XYnhiaG9MS0xRMUFFdWZIdw?oc=5",
-     "t": "Autostrada A3 Chiribiș-Suplacu, gata la început de decembrie.",
-     "s": "Punctul.ro",
-     "d": "2026-11-17"
+     "u": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRXhfNHhCaVRkeW1OV3NPSVQyNndDQ2hRMnVtTk1ka2hiQ1hwTHJDYl9BT2lGcUVaWnJMVmxJNmVwRWE1TTd6dDJadmI1ZUYtTUpEbG5sT1o3cTF3d2RQUGdsRXRaa0xaQm5YNDVlQi15Q3BuRU0tY3hpOU9ZclQ5c282Y05DUWlKZVM4WWtiVTJiVXVrMlRqeXVmYnY3anRQR0lWMEtoZw?oc=5",
+     "t": "CNAIR: Tronsonul Suplacu de Barcău–Chiribiș al Autostrăzii A3 ar putea fi deschis circulației până la finalul anului 2026",
+     "s": "Informat.ro",
+     "d": "2026-11-21"
     },
     {
-     "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPb2xYTWItZU1VMHdlMERIOXpxeHNqMkR6RlFaV2NwdGhCWjRyd0daNEROdmxFU0U5bFFFXzRKQU01S1RiakpVaFJSV084TmdDT0pfV0ZOUDBKLW9WM2xiaUVWOTM0Z3EyQ2lMQTRBell0MGxlZEJhNDRQNmVHaHM2Z2g0RE13R3ZVUFpfelZHN1dBbG9DNzhnS21lM3hwc0lnd1NMUVYtMjBwcjNPN2l2c3hQZnpQLWZqZkV2RnZuOVRaYTJhRnFBUGQ4cklkcDhWeXdlbXdWQXo3WkZ3eHEyYkdqdzhRMTlUSGZITGhR?oc=5",
-     "t": "Gata de inaugurare! Sectorul Chiribiș - Suplacu de Barcău de pe A3, la un pas de finalizare: „Dacă se vrea, poți fi dați în trafic”",
-     "s": "Ştiri de Cluj",
-     "d": "2026-11-17"
+     "u": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOa1RpWG9Dc0MzTFlSbWVMaE1yUU5NdENkTExCTmhFT215cXhPUTVsWk82RDE0Ml9NLWhROWZsakdVa3NrMy1KeWJzOVJlVXhqMnRBSThrTnU4Ry1scS1xS1FsQ3M5cERRSExVdDNnV1U0Z19UTk8wZTh6Y0xnSzd3UUt5X1dPRTAwd2dzbFFNSHhLWml0QVVxQmJKZ1p1MnNTaHYtZmVXeW9hRlpEeFJqNmlxSlJha3I3U0lnZDNxd200dnRnelk3cGtHRU1DVFViUXdR?oc=5",
+     "t": "(VIDEO) Cum arată acum prima autostradă construită de Erbașu. Secțiunea Suplacu de Barcău – Chiribiș a A3, aproape gata!",
+     "s": "Euro Oltenia Info",
+     "d": "2026-11-21"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
-    "d": "2026-10-22",
-    "f": 63.09,
+    "p": 98,
+    "q": "",
     "faza": "",
+    "d": "2026-11-21",
+    "s": "Oficiul de Știri",
+    "u": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNTlpCTklraUUzR0xpemMxcWdsLXo3YWpGRGFCaW54TjBCODJ3OWJHN2prTWJoWU1TbGV4T01RQk8xNk5kVEFfYU5wSzIyMlNvSGI5M1hkNHNlQ3N6UkJENXJPdGtoWnhqY0lLQ0xPX2RUUS05S05QZjZQNEphNU1URmRDczIzUndMVEh6V1g5T2hiZGZUdVNNSTViM3hoLVN5YS1ORkV1UGNIQWJvSmhGcU9KMUxIN3h6RGo2LVh3dWZDNDdreElZakRmSllQWkNIbWxPWm5TX2FnenR0UFJ0SjUxWGdrRDVJMDlCcjBmdUJQVjR5WEJQWUo1ZkhsVnBtZFZqdjBZeUNLSFhGWmM2SU1weE1IdkZwc0E?oc=5",
+    "f": 63.09,
     "fd": "2026-10-26",
     "fs": "CESTRIN",
-    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19",
-    "p": 95.39,
-    "q": "",
-    "s": "Economedia (CNAIR, Cristian Pistol)",
-    "u": "https://economedia.ro/autostrada-transilvania-viaducte-ozaltin-stadiu-lucrari.html"
+    "fu": "https://cestrin.maps.arcgis.com/apps/webappviewer/index.html?id=210f9dcdbeaf48349e3ed19e92ee2f19"
    }
   },
   "a3-cb": {
@@ -912,19 +912,19 @@
      "d": "2026-11-17"
     },
     {
+     "u": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObjhZNGppbV9uNV90ZWVSQjBiV2RjeGhVVDBFYUFwdDl0ekUtTHJXOTNOUjgtU1l4b0lENHQtOElyOFVmdjhuUjhPWlAxdllMTldOWll1bWJJLUZoX3oxU0JPa2NwU05FX1laLU1PbXZHVHhndllWR3FvOUNabUsxRU1kTk1BRnloUGc?oc=5",
+     "t": "Autostrada A3 Marca – Chiribiș, gata la început de decembrie",
+     "s": "Salajul liber",
+     "d": "2026-11-17"
+    },
+    {
      "u": "https://news.google.com/rss/articles/CBMivAJBVV95cUxPN3pXNEdxYjB3NmxLRHhwRlhYZmI1bFFORExoWVE0bjdIakVfYWtDV01uczNKcFQteWc4dEhfYkVYbW9vQzd3RWdPTjRabDE5SVRxcXBNbFplUzlCOEJicjhEdlp3bjBHSkR4bVZMTjB3VXUxM1ZDTTNqNHhWOTJjWDVNS3hpNHZiTTJ1TlhoV2Z6RUFkQ2ZvM3R4OXdhQjFlejZzYkJrVV9ZTkJLc0VXZGYtMUg1QmpOenIzR25WYllhWWpXSGdDNFRoY051NWV1R0dRdkdwNEZ1R1U0TlVDNnc5X0g1cmlqVEIzYVBRbnJGaU9GVVZXZF93a0xyTXBOQnpNeG44QjRZV2NWREtYXzJrc29TaWF1eFRoQlVBTmdUYzN1MVlSWlFrZEJxOWhDdFd5YnZuQVBNSjN10gG_AkFVX3lxTE1pd1Q2ODBVSUpIOXJQZDVacVg2VFFwOTVrR2VJaHlVYTA4N0lIZkNYMVhocTZCUTRwaVpBenZISHJQa1Y3Z0FlQVlURHVfVUlCQ0NYREh6MXNkcVZfWWVpRkRBREVBbDQ5SERfdDhqLUlQUmFOcmN5ZFA5ZGxNN05QaTUxWVNlS0RqZ0htb0JBOG1OcWpSWmR0alF3QzUzUDlKOXRMb1JiZDRfdkNPS0REbmFscm5Bd0RoQzd3c3BXUXRGbG1zQUJfRURBb054TG1CSWhiUnlsOXF3ODdwUmlaN2dBYkNCTzBWaHRHT0F1T2Y1Vlp2N2RFbnBjNFNfYlFuSlNQYXo4UGltcFRaaXUtc3h1MzZTSmtzczVYOHBLWGhUeXMtSTd6M1pYUVZFdXNOUDE5TE1DUEhfamxCMkU?oc=5",
      "t": "FOTO – VIDEO | Autostrada A3 Transilvania: S-au montat toate grinzile pe lotul Chiribiș-Biharia, ajuns…",
      "s": "Mediafax",
      "d": "2026-11-11"
-    },
-    {
-     "u": "https://www.napocanews.ro/2026/11/vesti-bune-pentru-soferi-doua-loturi-din-a3-aproape-de-inaugurare-mergem-pe-autostrada-spre-zalau.html",
-     "t": "Vești bune pentru șoferi: două loturi din A3, aproape de inaugurare (Chiribiș – Biharia, cel mai probabil în primăvară)",
-     "s": "NapocaNews",
-     "d": "2026-11-10"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 87,
     "q": "",
@@ -960,7 +960,7 @@
      "d": "2026-07-08"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a6-l1": {
    "videos": [],
@@ -984,7 +984,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a6-l2": {
    "videos": [],
@@ -1008,7 +1008,7 @@
      "d": "2026-02-26"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a6-l3": {
    "videos": [],
@@ -1026,7 +1026,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a6-l4": {
    "videos": [],
@@ -1038,7 +1038,7 @@
      "d": "2026-07-28"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a6-l5": {
    "videos": [],
@@ -1056,7 +1056,7 @@
      "d": "2025-07-08"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a6-l6": {
    "videos": [],
@@ -1080,10 +1080,24 @@
      "d": "2026-10-22"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a7-bp1": {
    "videos": [
+    {
+     "v": "ytZ1Td0M_A8",
+     "t": "Autostrada A7 Bacău – Pașcani: #UMB a montat toate grinzile podului peste râul Moldova",
+     "c": "Euro24Info",
+     "h": "",
+     "d": "2026-11-21"
+    },
+    {
+     "v": "QMVui9k4Ao8",
+     "t": "A7, TRIFEȘTI – GHERĂEȘTI STADIU DE 63%",
+     "c": "Actualitatea TV",
+     "h": "",
+     "d": "2026-11-20"
+    },
     {
      "v": "La93aUej7d4",
      "t": "Autostrada A7 Bacău – Pașcani: lotul Trifești – Gherăești a ajuns la 63%",
@@ -1111,43 +1125,29 @@
      "c": "Infrastructura Romania",
      "h": "",
      "d": "2026-11-10"
-    },
-    {
-     "v": "BUkGyJPrqhs",
-     "t": "A7.Nod Rutier Filipesti/Oniscani.Autostrada Moldovei Bacau-Roman.09.11.2026.UMB",
-     "c": "Ovidiu Imbrea",
-     "h": "",
-     "d": "2026-11-09"
-    },
-    {
-     "v": "WtIuJ2v2UVU",
-     "t": "Lucrari asfaltare in apropierea nodului rutier Roman Sud lot 1 din A7 ",
-     "c": "Infrastructura Romania",
-     "h": "",
-     "d": "2026-11-06"
     }
    ],
    "news": [
+    {
+     "u": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOY0NCc0FvTUxlWlAtN0R1U3Z0NHRfMTF0ZWE0MjNLbEdnSTVoQXpDcHVwcGlHaXlWc29EMzZkZEdibEpnQXMzT0kyZjlzczVGQkY3UlZTX0dKRmg2NU5ucnhnS1FaSG5NWGtjRGFlNGtEeWZ5bGVNWTJZWFFqMXR6Q21vX3FFZW1OSzcxX21SWnlXYVpROGp1OUtfZjFlZzAyOHczbWw2RWtsWFZEREtNZ25OYVNBRlBVOVRFU1VsNHY5akhrVG13Z280Zm9MaWFYN2pnZ0JwUWFMNWN1?oc=5",
+     "t": "Autostrada A7 Bacău - Pașcani: Au fost montate toate grinzile podului peste Moldova. Ce lucrări mai execută Umbrărescu (VIDEO)",
+     "s": "Euro Oltenia Info",
+     "d": "2026-11-21"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPTFJ4OFNPOFNQdk5WMmJfWnZ6bEU2anYzX05OWFFidlp2STJ4QjdWTDFsWTRCc1lDeTFoOUFnR3Q4SHcyaTNWN3VqV2U3UllOeG1IQnRmcDhSd0wtNlhPWTYwWi10eVFjdWtST3hzcTNUQkxIc3JNeUFwT01zY3puRG14bWVIVkE1c2FqQ1NReTBRZXRqSG1KYzRSNS1yT3J0MDI3UU1HNmE4RGdpMnZOcFd3TmhrZzQ?oc=5",
+     "t": "VIDEO | Autostrada A7 Bacău-Pașcani: Umbrărescu a ajuns cu lucrările la un stadiu fizic de 63%",
+     "s": "Ziarul de Bacău",
+     "d": "2026-11-21"
+    },
     {
      "u": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQlIxUk83RHpyX0RYRHphbzVlUEpfdHBuVlpvY05WaTRNbVpEVjJlMzloLWtaZmZYU0NUbEg0MTZkczM4SDQ1R3A4SXZxWWo4RlJqSVpzQVZSVHlYOEJkZTZkejlWUnBsWnN3VGZWeFRvRGh6b3hDWWtzWUlPVzRMUGhBTG83MEd2Y0dISnRvWXhwdmdjVXFfeVdXOE14XzRWNEpCWktSc1VUZHdSZ3hlYURmaFd6WmRTVFJteWVDQjN4Zw?oc=5",
      "t": "Lucrările pe Autostrada A7 Bacău – Pașcani, lotul Trifești – Gherăești, au ajuns la 63% stadiu fizic -Video",
      "s": "News Pascani",
      "d": "2026-11-20"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wcWROX19fY3dEX2xqeno3UkZZR2VfQ3RQSXl5clExRlZONUt1UFptZkE1SmhvRTVJTFd1eVJYcGZlSVdOLUNFcDR5eUJINk5id0lvSEIzSS10SS1zejZpYW9vZ1U1bGNNeWtpYlhaTkNUbEp1WUNN0gF8QVVfeXFMTTVCeVRPN21qbVhTWV90VlRZVEppX3pMUVQ3UF9KNnNMMXB0WmNZZndJRV9yMElPdGo2QjJTSmVfdk9qeV9pU09qODFJMWxvNk4yZnNTZUJ1bkpidGJoUHJQcU5PblNqendDUTlOV0VLY0pDSVRTVkpfb3A3Yw?oc=5",
-     "t": "VIDEO Autostrada A7 Bacău – Pașcani: Au fost montate toate grinzile podului peste Moldova. Ce…",
-     "s": "Economica.net",
-     "d": "2026-11-20"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPRzMySjM2WE5kemtEZGZINDliWUVkNWhPanBQMWNnRTVvN1pJekgtdDJIZ2dXZzNxTFNhUTN1WXp2QkoweWgtUUx4NC1kMEM1bFZOd1F4UlhoTWVlV2NPMGdCZ1lKOUN1Z2o1Vi1vNThrY1VJYUpjb1dzY2I1WnQ1aUVhYkJ4SGRMcU41SGNDTkgyZExLVU9fMmo3TnRtUG5RZDNBUjFweFRGSExrVzNHY01GMFV5NFhtVlhLRE4yQnNGWGt6UTBPOTF5TXBOY3hvWS1ORzMzamM1RkVTTmxnZw?oc=5",
-     "t": "Lucrările pe Autostrada A7 Bacău – Pașcani continuă în ciuda vremii nefavorabile. Ce stadiu a ajuns Lotul 1 Săucești – Trifești",
-     "s": "News Pascani",
-     "d": "2026-11-19"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 80,
     "q": "",
@@ -1164,6 +1164,34 @@
   "a7-bp2": {
    "videos": [
     {
+     "v": "ytZ1Td0M_A8",
+     "t": "Autostrada A7 Bacău – Pașcani: #UMB a montat toate grinzile podului peste râul Moldova",
+     "c": "Euro24Info",
+     "h": "",
+     "d": "2026-11-21"
+    },
+    {
+     "v": "QMVui9k4Ao8",
+     "t": "A7, TRIFEȘTI – GHERĂEȘTI STADIU DE 63%",
+     "c": "Actualitatea TV",
+     "h": "",
+     "d": "2026-11-20"
+    },
+    {
+     "v": "FoGuNO9ipaM",
+     "t": "Imagini de pe șantierul Autostrăzii A7 Bacău – Pașcani, lotul 2 Trifești – Gherăești.",
+     "c": "GeorgeDinAer",
+     "h": "",
+     "d": "2026-11-20"
+    },
+    {
+     "v": "dYllxY7KPh8",
+     "t": "Pod peste Moldova, Pildești, Neamț | A7 Lot 2 Trifești-Gherăești",
+     "c": "GeorgeDinAer",
+     "h": "",
+     "d": "2026-11-20"
+    },
+    {
      "v": "YKcMMx8E0Mc",
      "t": "Imagini santierul Autostrazii A7 Bacau Pascani lot 2 Trifesti Gheraesti.",
      "c": "Infrastructura Romania",
@@ -1176,57 +1204,29 @@
      "c": "Infrastructura Romania",
      "h": "",
      "d": "2026-11-20"
-    },
-    {
-     "v": "La93aUej7d4",
-     "t": "Autostrada A7 Bacău – Pașcani: lotul Trifești – Gherăești a ajuns la 63%",
-     "c": "Jurnalul Regional",
-     "h": "",
-     "d": "2026-11-20"
-    },
-    {
-     "v": "QHR-h7YDZNY",
-     "t": "AUTOSTRADA A7 Bacau-Pascani Nod rutier Sabaoani | LIVE 10.11.2026",
-     "c": "Raducu P Drum",
-     "h": "",
-     "d": "2026-11-10"
-    },
-    {
-     "v": "zkc98lLcGj8",
-     "t": "A7/Nod Rutier Sabaoani integral si in detaliu.Autostrada Moldovei Roman-Pascani.09.11.2026",
-     "c": "Ovidiu Imbrea",
-     "h": "",
-     "d": "2026-11-10"
-    },
-    {
-     "v": "B13JSkN8z4M",
-     "t": "A7/Viaduct Rau Moldova in detaliu/Autostrada Moldovei/Bacau-Pascani/Stadiul in data de 02.11.2026",
-     "c": "Ovidiu Imbrea",
-     "h": "",
-     "d": "2026-11-03"
     }
    ],
    "news": [
+    {
+     "u": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOY0NCc0FvTUxlWlAtN0R1U3Z0NHRfMTF0ZWE0MjNLbEdnSTVoQXpDcHVwcGlHaXlWc29EMzZkZEdibEpnQXMzT0kyZjlzczVGQkY3UlZTX0dKRmg2NU5ucnhnS1FaSG5NWGtjRGFlNGtEeWZ5bGVNWTJZWFFqMXR6Q21vX3FFZW1OSzcxX21SWnlXYVpROGp1OUtfZjFlZzAyOHczbWw2RWtsWFZEREtNZ25OYVNBRlBVOVRFU1VsNHY5akhrVG13Z280Zm9MaWFYN2pnZ0JwUWFMNWN1?oc=5",
+     "t": "Autostrada A7 Bacău - Pașcani: Au fost montate toate grinzile podului peste Moldova. Ce lucrări mai execută Umbrărescu (VIDEO)",
+     "s": "Euro Oltenia Info",
+     "d": "2026-11-21"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPTFJ4OFNPOFNQdk5WMmJfWnZ6bEU2anYzX05OWFFidlp2STJ4QjdWTDFsWTRCc1lDeTFoOUFnR3Q4SHcyaTNWN3VqV2U3UllOeG1IQnRmcDhSd0wtNlhPWTYwWi10eVFjdWtST3hzcTNUQkxIc3JNeUFwT01zY3puRG14bWVIVkE1c2FqQ1NReTBRZXRqSG1KYzRSNS1yT3J0MDI3UU1HNmE4RGdpMnZOcFd3TmhrZzQ?oc=5",
+     "t": "VIDEO | Autostrada A7 Bacău-Pașcani: Umbrărescu a ajuns cu lucrările la un stadiu fizic de 63%",
+     "s": "Ziarul de Bacău",
+     "d": "2026-11-21"
+    },
     {
      "u": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPT3ZZa3Y3RzFPRE5PY0tta1lpV2lWYjB2U2ZqbGNzOUhLN3ZjZ01Td1hfVV9KbDMtS05oV0NyZjMzWHZQdWhFT2Y4T3p1SWZ5RjZGM1RzN1hucHNxNnZ6NkZaZ3d2bmw3MHdfVXlpUUhNUTZWRU01WkU0bG8yR1ZPaFVvTkZubkVuZW1fYlZNZlcxMi1sLTVmdTdjM1hObW85TUsyS1IzMzYycVQ3V1RiTTQxYmFCeHlsVm95TWREamRKODFMMTFaWG9hM2Z1NmdoOWlGLXBVYmZocnQtaThJWTB3bjM?oc=5",
      "t": "VIDEO / Autostrada A7 Bacău – Pașcani: lucrările pe lotul Trifești – Gherăești au ajuns la 63%. Imagini de pe șantier, din zona Roman-Nord",
      "s": "Salut Iași",
      "d": "2026-11-20"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQlIxUk83RHpyX0RYRHphbzVlUEpfdHBuVlpvY05WaTRNbVpEVjJlMzloLWtaZmZYU0NUbEg0MTZkczM4SDQ1R3A4SXZxWWo4RlJqSVpzQVZSVHlYOEJkZTZkejlWUnBsWnN3VGZWeFRvRGh6b3hDWWtzWUlPVzRMUGhBTG83MEd2Y0dISnRvWXhwdmdjVXFfeVdXOE14XzRWNEpCWktSc1VUZHdSZ3hlYURmaFd6WmRTVFJteWVDQjN4Zw?oc=5",
-     "t": "Lucrările pe Autostrada A7 Bacău – Pașcani, lotul Trifești – Gherăești, au ajuns la 63% stadiu fizic -Video",
-     "s": "News Pascani",
-     "d": "2026-11-20"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wcWROX19fY3dEX2xqeno3UkZZR2VfQ3RQSXl5clExRlZONUt1UFptZkE1SmhvRTVJTFd1eVJYcGZlSVdOLUNFcDR5eUJINk5id0lvSEIzSS10SS1zejZpYW9vZ1U1bGNNeWtpYlhaTkNUbEp1WUNN0gF8QVVfeXFMTTVCeVRPN21qbVhTWV90VlRZVEppX3pMUVQ3UF9KNnNMMXB0WmNZZndJRV9yMElPdGo2QjJTSmVfdk9qeV9pU09qODFJMWxvNk4yZnNTZUJ1bkpidGJoUHJQcU5PblNqendDUTlOV0VLY0pDSVRTVkpfb3A3Yw?oc=5",
-     "t": "VIDEO Autostrada A7 Bacău – Pașcani: Au fost montate toate grinzile podului peste Moldova. Ce…",
-     "s": "Economica.net",
-     "d": "2026-11-20"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 63,
     "q": "",
@@ -1242,6 +1242,13 @@
   },
   "a7-bp3": {
    "videos": [
+    {
+     "v": "ytZ1Td0M_A8",
+     "t": "Autostrada A7 Bacău – Pașcani: #UMB a montat toate grinzile podului peste râul Moldova",
+     "c": "Euro24Info",
+     "h": "",
+     "d": "2026-11-21"
+    },
     {
      "v": "4AnmgZRTXIU",
      "t": "#A7 Bacău Pașcani #autostradaa7 LOT 3 - Stadiul lucrarilor NOD TURBION A7-A8 13 noiembrie 2026",
@@ -1276,36 +1283,29 @@
      "c": "NS - FLIGHT MODE \"ON\"",
      "h": "",
      "d": "2026-11-10"
-    },
-    {
-     "v": "MLl8Ro5MbMg",
-     "t": "🚧 A7 BACĂU–PAȘCANI: 49 KM GATA, DAR LOTUL DIN IAȘI E CEL MAI PROBLEMATIC! 2027 ÎN LOC DE 2026? 🛑",
-     "c": "Ora de Iasi",
-     "h": "",
-     "d": "2026-11-07"
     }
    ],
    "news": [
     {
-     "u": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wcWROX19fY3dEX2xqeno3UkZZR2VfQ3RQSXl5clExRlZONUt1UFptZkE1SmhvRTVJTFd1eVJYcGZlSVdOLUNFcDR5eUJINk5id0lvSEIzSS10SS1zejZpYW9vZ1U1bGNNeWtpYlhaTkNUbEp1WUNN0gF8QVVfeXFMTTVCeVRPN21qbVhTWV90VlRZVEppX3pMUVQ3UF9KNnNMMXB0WmNZZndJRV9yMElPdGo2QjJTSmVfdk9qeV9pU09qODFJMWxvNk4yZnNTZUJ1bkpidGJoUHJQcU5PblNqendDUTlOV0VLY0pDSVRTVkpfb3A3Yw?oc=5",
-     "t": "VIDEO Autostrada A7 Bacău – Pașcani: Au fost montate toate grinzile podului peste Moldova. Ce…",
-     "s": "Economica.net",
+     "u": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOY0NCc0FvTUxlWlAtN0R1U3Z0NHRfMTF0ZWE0MjNLbEdnSTVoQXpDcHVwcGlHaXlWc29EMzZkZEdibEpnQXMzT0kyZjlzczVGQkY3UlZTX0dKRmg2NU5ucnhnS1FaSG5NWGtjRGFlNGtEeWZ5bGVNWTJZWFFqMXR6Q21vX3FFZW1OSzcxX21SWnlXYVpROGp1OUtfZjFlZzAyOHczbWw2RWtsWFZEREtNZ25OYVNBRlBVOVRFU1VsNHY5akhrVG13Z280Zm9MaWFYN2pnZ0JwUWFMNWN1?oc=5",
+     "t": "Autostrada A7 Bacău - Pașcani: Au fost montate toate grinzile podului peste Moldova. Ce lucrări mai execută Umbrărescu (VIDEO)",
+     "s": "Euro Oltenia Info",
+     "d": "2026-11-21"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPTFJ4OFNPOFNQdk5WMmJfWnZ6bEU2anYzX05OWFFidlp2STJ4QjdWTDFsWTRCc1lDeTFoOUFnR3Q4SHcyaTNWN3VqV2U3UllOeG1IQnRmcDhSd0wtNlhPWTYwWi10eVFjdWtST3hzcTNUQkxIc3JNeUFwT01zY3puRG14bWVIVkE1c2FqQ1NReTBRZXRqSG1KYzRSNS1yT3J0MDI3UU1HNmE4RGdpMnZOcFd3TmhrZzQ?oc=5",
+     "t": "VIDEO | Autostrada A7 Bacău-Pașcani: Umbrărescu a ajuns cu lucrările la un stadiu fizic de 63%",
+     "s": "Ziarul de Bacău",
+     "d": "2026-11-21"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVoweWdGaFRRRjFQX2lyRXRTQWNDcnI3QW5TRHFTVzRRVk16NS1FTGVtNnl4U2Z6SXZDajdMc0dRQnR0NnNhMUZtbHJtODN5SnFOdlh6N05CczhHSWVaS2twOURtZUJialQxNXBPd0Ribllub1A4MDRtTmVqTko4czFrTTItSE5lQVdzQ0FHNDk2MVlIbDdCRXln?oc=5",
+     "t": "Autostrada A7 Bacau – Pascani: Avanseaza lucrarile pe cele trei loturi",
+     "s": "ARENA Constructiilor",
      "d": "2026-11-20"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQ1d4UEdvQzZJWmJaWjdGRm9kbVp4SDlUQ0p1YmJnQ1Vuek9Ya3NUSTdIOHc2U2pfdzd5ME1EaTIxWGpBSWt2VXdUX0hrZEhGclpVeDFmY1JPU2M4Nkd6OTZ6UFNuMkN3eGhZQlhNVUl4ZHF2Tk8xSFpvd1Njd3gyWHA4TTVJeF9lMEpBT1VRTUd3LU9xN1lRLURVcEdMWXJSaDhwQlNqdnQxbnhPQzREMFVYQTQ0bFFUVXJRcXRqRW1JXy1jOW5KZndn?oc=5",
-     "t": "UMB continuă lucrările pe A7 Bacău – Pașcani, în ciuda vremii nefavorabile. Care este stadiul celor trei loturi",
-     "s": "Bacau.NET",
-     "d": "2026-11-18"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUkhqdUdicldSY18wY3paRFpUc2dLdVhDdkhISjltaGxFYmNFLXlNMWdLU0d2dXdRVGdnLTFjOUI2NkF0RlI1T1dJbk0wNWFucWlCejlNUnI1aW1XV1VZbktoZUpBbkhGUThzRlB6LVB6T0xDQUxtTjM1ZVFYRGE3VmZlQnRIRVhMVDk2Q1AwR3Z1ZFJrTFNlODhjWFc1UGVtOEw3a09SanE3eFE0MWh3?oc=5",
-     "t": "Aproape un an de restricții pe DJ 208, în zona Mircești, pentru construirea pasajului peste A7",
-     "s": "BIT24.RO",
-     "d": "2026-11-16"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-26",
     "f": 36.78,
@@ -1356,7 +1356,7 @@
      "d": "2026-10-22"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": null,
     "q": "",
@@ -1392,7 +1392,7 @@
      "d": "2026-11-18"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": null,
     "q": "",
@@ -1443,7 +1443,7 @@
      "d": "2026-10-06"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-09-19",
     "faza": "atribuire anulată în instanță, ofertele se reevaluează",
@@ -1475,7 +1475,7 @@
      "d": "2026-10-06"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-09-19",
     "faza": "atribuire anulată în instanță, ofertele se reevaluează",
@@ -1507,7 +1507,7 @@
      "d": "2026-11-04"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": null,
     "q": "",
@@ -1564,6 +1564,12 @@
    ],
    "news": [
     {
+     "u": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNM3htalZDOFZHZl9zejNiTldfZTdsc0JRRC04NVIyOUlmaHRQdlEyRnUwWGxNWUMwM1lld0lpNzdmVTk0RHpDdEN4N3ByU0Y4dUVCMWk2bzBRR1Q3TmNoNUdrT3BoaFR3MVNZOElvNm9HdUhpczJMeGhPc1VHTXZtbklwX19HSkE1dlRwcmxxenYtTjR4cmttMjRCOFJ1V1pQejlhbWc5UEw5cUcwVjBnYVdTSDhaYk5PYVE?oc=5",
+     "t": "Autostrada A8 Tg Mures – Tg Neamt: Divergente, intarzieri, contestatii afecteaza ritmul de lucru",
+     "s": "ARENA Constructiilor",
+     "d": "2026-11-10"
+    },
+    {
      "u": "https://arenaconstruct.ro/autostrada-a8-tg-mures-tg-neamt-divergente-intarzieri-contestatii-afecteaza-ritmul-de-lucru/",
      "t": "Autostrada A8 Tg Mures – Tg Neamt: Divergente, intarzieri, contestatii afecteaza ritmul de lucru",
      "s": "ARENA Constructiilor",
@@ -1574,15 +1580,9 @@
      "t": "(Video) Autostrada A8 prinde contur la Târgu Mureș. Imagini noi de pe tronsonul construit de Nurol, între A3 și DN13",
      "s": "Punctul.ro",
      "d": "2026-11-09"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaklhVy1Yd080ekZqOFN3eWhtUXllSGtiZ09HM3Y5RkpkNlRXanpqUk1RdkNrR1llTjBUVFpyYXRfU1czbXN2MC1JaWp4V3ZWRE9QYVBPSVRQNUxaY2hRTzA0QXFPd1FxY1MxMWFZc25fdjlvOWtCSkFyczY5bEVjZTYwYWduc05ZRnVWSk55OXRHTUw0bDRSNnlzNkpCdnlNMDF1aHhCdGNmaVBtZ3RYaFViUEUzVXNpVzBCQ1p3d1hqWUgwOWdZZDBaUWlyeV83RDRnag?oc=5",
-     "t": "(Video) Autostrada A8 prinde contur la Târgu Mureș. Imagini noi de pe tronsonul construit de Nurol, între A3 și DN13",
-     "s": "Tirnaveni.ro",
-     "d": "2026-11-06"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-02",
     "f": 41.92,
@@ -1618,7 +1618,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": null,
     "q": "",
@@ -1650,7 +1650,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-22",
     "faza": "proiectare – 22% (raport supervizor 9 oct. 2026); certificat constatator pozitiv CNIR (25 mai–23 aug. 2026), întârziere 126 zile la un termen intermediar",
@@ -1698,9 +1698,9 @@
      "d": "2026-11-07"
     },
     {
-     "v": "WqsWwfG0wec",
-     "t": "Autostrada A8 Târgu Mureș-Târgu Neamț. 16% execuție pe lotul 1D Joseni-Ditrău. 6.11.2026",
-     "c": "CNIR",
+     "v": "3nRtZvRQfLE",
+     "t": "Autostrada A8 Targu-Mures Targu-Neamt lotul 1D Joseni Ditrau stadiul fizic 16%",
+     "c": "Infrastructura Romania",
      "h": "",
      "d": "2026-11-06"
     }
@@ -1713,19 +1713,19 @@
      "d": "2026-11-19"
     },
     {
-     "u": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JZV9OTVVGRzh1NGR5SHc5RWVTZ05XM2s5dW5uV0FQYnhWX014U0hCNWFBUUxtXzNWc2lnT3lvZ2hnME9EYS0xYTdKWTh6YXlZSWNrV05qUk1HZFRoMW1KRmliazg0RGF3bWZCS3RiS0tMZEpLbnc?oc=5",
-     "t": "A8 Joseni - Ditrău: Teste de rezistență pentru grinzile podurilor",
-     "s": "Economedia",
-     "d": "2026-11-18"
-    },
-    {
      "u": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbk1PZW4xNktlTDFUMGkzcENTWlpQVGJubHI1U2tTRWRETURabkV0aUZRRzJmQVJ2Rmo0VW5TZndBVjVsd0pVQzJoWDVyRHl1eXFrcEs3emNhYU5CN0QyaWpqa1AxMUZsWHNxTzVZckFIeWpMNmRnZnhiWWczVHVyWk80V0FQNjJEVUpNS2tlS1lQV1ZuS3I5S09jWVpQckFOdkdleWcwTlIxMzlF?oc=5",
      "t": "„Până la rupere”: Cum sunt testate grinzile pentru cele 21 de poduri și viaducte de pe lotul Joseni-Ditrău al Autostrăzii Unirii A8",
      "s": "Libertatea",
      "d": "2026-11-18"
+    },
+    {
+     "u": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JZV9OTVVGRzh1NGR5SHc5RWVTZ05XM2s5dW5uV0FQYnhWX014U0hCNWFBUUxtXzNWc2lnT3lvZ2hnME9EYS0xYTdKWTh6YXlZSWNrV05qUk1HZFRoMW1KRmliazg0RGF3bWZCS3RiS0tMZEpLbnc?oc=5",
+     "t": "A8 Joseni - Ditrău: Teste de rezistență pentru grinzile podurilor",
+     "s": "Economedia",
+     "d": "2026-11-18"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 20,
     "q": "",
@@ -1739,6 +1739,12 @@
    "videos": [],
    "news": [
     {
+     "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPMmdkeUlOcEk3aW9BRGVvcmFFYmZ5bjN0NE9uMmp1VUszNVpoMFhNU1AyMldhbEhqSzNxam5wZjNqTTJNRkw4bWVnYUgxRmcwc1ZPTzhmVFNSeWwwRlNUTmdiNVBMUDYtSXR6RmpCMVhDTFNLdm9VNUdUQkNkbWlHbm1Xb1JWYURFaFZsakNRRjVZMjFVNUxGWW94SmMxakpEZWZ0bEIzT0V6b3d5MExzcWxmZk9UN1I4UE5CVmpYUTBBUlJEZXI3YU5JNE9wWTZZZS1jUEdRS2N6aTNjV0VNV1RfbkJzWmEyY1l0MWhR?oc=5",
+     "t": "Descoperire de senzație pe traseul Autostrăzii A8 din Grințieș - Neamț: ruinele unei făbricute incendiate acum peste un secol",
+     "s": "Mesagerul de Neamț",
+     "d": "2026-11-21"
+    },
+    {
      "u": "https://ziarulevenimentul.ro/stiri/moldova/autostrada-unirii-tot-mai-aproape-de-dezastru-intarzieri-datorii-i-licitatii-blocate--217602882.html",
      "t": "Autostrada Unirii, tot mai aproape de dezastru! Întârzieri, datorii și licitații blocate",
      "s": "Ziarul Evenimentul",
@@ -1749,15 +1755,9 @@
      "t": "Ce se intampla pe cele 12 tronsoane ale Autostrazii Unirii (A8)?",
      "s": "Cine construieste?",
      "d": "2026-10-31"
-    },
-    {
-     "u": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQVUNSX0NYSC1Jc2UwMlZId251MDNzdFhDbDV0dHBIVWlfSmNnRlhhcTg5S0lONlJUcU9nakJKek4wODFiUGJkWktGcS1sZ0RDaTVxTHplb2RBWEhjR190alVWRnlvLWNONW9FWTdZVWlhT2JEWDBjWGh0WmxSaW1OWndHWkZETjJCbHhYT05QdWFUeUxuaHZfdklxTk5uQ0pZTkFMTzEyWWNOalkyQ0ZMZy1pZWR2ajV4emhndzJweUhWeFlNMjNHeHNNX3V6UmtWY05CSWtVVQ?oc=5",
-     "t": "Autostrada A8: UMB primește certificat pozitiv pentru lotul Sărățeni–Joseni, după evaluarea negativă de pe Ditrău–Grințieș",
-     "s": "Punctul.ro",
-     "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-19",
     "faza": "proiectare întârziată: perioada de proiectare (14 luni) expirată la 31 aug. 2026, PTE neaprobat, întârzieri de până la 278 zile; certificat constatator negativ CNIR (retras din SEAP, constatările rămân valabile)",
@@ -1771,6 +1771,12 @@
    "videos": [],
    "news": [
     {
+     "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPMmdkeUlOcEk3aW9BRGVvcmFFYmZ5bjN0NE9uMmp1VUszNVpoMFhNU1AyMldhbEhqSzNxam5wZjNqTTJNRkw4bWVnYUgxRmcwc1ZPTzhmVFNSeWwwRlNUTmdiNVBMUDYtSXR6RmpCMVhDTFNLdm9VNUdUQkNkbWlHbm1Xb1JWYURFaFZsakNRRjVZMjFVNUxGWW94SmMxakpEZWZ0bEIzT0V6b3d5MExzcWxmZk9UN1I4UE5CVmpYUTBBUlJEZXI3YU5JNE9wWTZZZS1jUEdRS2N6aTNjV0VNV1RfbkJzWmEyY1l0MWhR?oc=5",
+     "t": "Descoperire de senzație pe traseul Autostrăzii A8 din Grințieș - Neamț: ruinele unei făbricute incendiate acum peste un secol",
+     "s": "Mesagerul de Neamț",
+     "d": "2026-11-21"
+    },
+    {
      "u": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxObFNxMlUweWpScC15OHcxWDFEVElWSEJudzNRWmVJeWxORVNkRHBKSWJ1bGQzeWtNVHMxTmJBS05OUnpzMTNFZllEMkIyMWZTTFhVUUJURTNOV21RT1BYOXRhOW9BbFUyNHlHRjFCbExyZ2FuLUJfWTBhT0ZKOHZIalY2ajg3Q3V4TnktUnR0UDMydkVnSk1SM1o4OEp2b09hZ0o2NTN1WEEyVHBsWGY2b2hWaUhYV3p6cjV0WGZVczNnVm9RX2xPc1o4Y1BlU0MwaUV1aXpQZ3I?oc=5",
      "t": "Probleme pentru UMB pe A8! Proiectarea lotului Grinties – Pipirig, la doar 10% cu 2 termene contractuale nerespectate",
      "s": "Cine construieste?",
@@ -1781,15 +1787,9 @@
      "t": "Autostrada A8 Tg. Mures – Tg. Neamt: Pe lotul Grinties – Pipirig, UMB trebuie sa termine proiectarea in primavara anului viitor",
      "s": "ARENA Constructiilor",
      "d": "2026-11-11"
-    },
-    {
-     "u": "https://arenaconstruct.ro/autostrada-a8-tg-mures-tg-neamt-pe-lotul-grinties-pipirig-umb-trebuie-sa-termine-proiectarea-in-primavara-anului-viitor/",
-     "t": "Autostrada A8 Tg. Mures – Tg. Neamt: Pe lotul Grinties – Pipirig, UMB trebuie sa termine proiectarea in primavara anului viitor",
-     "s": "ARENA Constructiilor",
-     "d": "2026-11-11"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": null,
     "q": "",
@@ -1821,7 +1821,7 @@
      "d": "2026-10-20"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": null,
     "q": "",
@@ -1871,6 +1871,12 @@
    ],
    "news": [
     {
+     "u": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNM3htalZDOFZHZl9zejNiTldfZTdsc0JRRC04NVIyOUlmaHRQdlEyRnUwWGxNWUMwM1lld0lpNzdmVTk0RHpDdEN4N3ByU0Y4dUVCMWk2bzBRR1Q3TmNoNUdrT3BoaFR3MVNZOElvNm9HdUhpczJMeGhPc1VHTXZtbklwX19HSkE1dlRwcmxxenYtTjR4cmttMjRCOFJ1V1pQejlhbWc5UEw5cUcwVjBnYVdTSDhaYk5PYVE?oc=5",
+     "t": "Autostrada A8 Tg Mures – Tg Neamt: Divergente, intarzieri, contestatii afecteaza ritmul de lucru",
+     "s": "ARENA Constructiilor",
+     "d": "2026-11-10"
+    },
+    {
      "u": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVEo5d2dXWVJRd3dmcTN3cm5seXRtUmp6dlF0Z1k1NWF3MmV1VVhjM3lMbjExSHd5dDdVYlVzMHVuWmxtZ0E4RS1sTEtIMkhqTUE3WmMzRkM1RjhMUEpJeG8wVlUzRXlLUlpKM0RIVGhTSXQ2TzZRYW9NSVZ0Nl9Cckt3bm5xSERKLVdjSTFRNGkzUVY3NkI0YUwyU0Y3ZzY4aTl0TGozUXh5Unp3V1JST09QUFBlZw?oc=5",
      "t": "Încă un lot montan de pe A8 se face mai repede decât Tg. Neamț-Moțca",
      "s": "Ziarul de Iaşi",
@@ -1881,15 +1887,9 @@
      "t": "Epopeea celor 141 de Păcate: Autostrada A8 (Leghin – Târgu Neamț)",
      "s": "Ziarul Tricolorul",
      "d": "2026-11-05"
-    },
-    {
-     "u": "https://ziarulevenimentul.ro/stiri/moldova/autostrada-unirii-tot-mai-aproape-de-dezastru-intarzieri-datorii-i-licitatii-blocate--217602882.html",
-     "t": "Autostrada Unirii, tot mai aproape de dezastru! Întârzieri, datorii și licitații blocate",
-     "s": "Ziarul Evenimentul",
-     "d": "2026-11-01"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-01",
     "f": 4.26,
@@ -1940,7 +1940,7 @@
      "d": "2026-11-02"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-09",
     "faza": "proiectare (diagnostic arheologic; pregătire șantier pe primii 5,5 km, legătura A8–A7)",
@@ -1972,7 +1972,7 @@
      "d": "2026-11-13"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a8-l3": {
    "videos": [
@@ -2032,7 +2032,7 @@
      "d": "2026-11-12"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-28",
     "faza": "proiectare; executarea contractului cu FCC suspendată de Curtea de Apel București (28 oct. 2026, definitiv) până la soluționarea cauzei; nou termen 18 nov. 2026",
@@ -2093,7 +2093,7 @@
      "d": "2026-11-13"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": null,
     "q": "",
@@ -2168,7 +2168,7 @@
      "d": "2026-10-29"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 80,
     "q": "",
@@ -2198,7 +2198,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a9-jm": {
    "videos": [],
@@ -2216,7 +2216,7 @@
      "d": "2026-09-17"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "a13-l1": {
    "videos": [
@@ -2283,7 +2283,7 @@
      "d": "2026-11-07"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-23",
     "f": 31.81,
@@ -2300,16 +2300,16 @@
   "a13-l2": {
    "videos": [
     {
-     "v": "GRxehQD_9kM",
-     "t": "AUTOSTRADA A13 - SIBIU - FAGARAS TOATE LOTURILE RETROSPECTIVA OCTOMBRIE 2026 STADIU LUCRARI CU HARTI",
-     "c": "TECH AND MICRO VISION",
+     "v": "LXu8ASAdjGY",
+     "t": "A13 Sibiu - Făgăraș  Lot 2: Avrig - Arpașu de Jos",
+     "c": "AutoInfraHUB",
      "h": "",
      "d": "2026-11-02"
     },
     {
-     "v": "LXu8ASAdjGY",
-     "t": "A13 Sibiu - Făgăraș  Lot 2: Avrig - Arpașu de Jos",
-     "c": "AutoInfraHUB",
+     "v": "GRxehQD_9kM",
+     "t": "AUTOSTRADA A13 - SIBIU - FAGARAS TOATE LOTURILE RETROSPECTIVA OCTOMBRIE 2026 STADIU LUCRARI CU HARTI",
+     "c": "TECH AND MICRO VISION",
      "h": "",
      "d": "2026-11-02"
     },
@@ -2355,7 +2355,7 @@
      "d": "2026-11-09"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-23",
     "f": 47.84,
@@ -2434,7 +2434,7 @@
      "d": "2026-10-23"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-26",
     "f": 48.62,
@@ -2499,7 +2499,7 @@
      "d": "2026-11-04"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 45,
     "q": "",
@@ -2535,7 +2535,7 @@
      "d": "2026-10-27"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-02",
     "f": 0,
@@ -2571,7 +2571,7 @@
      "d": "2026-10-05"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z"
+   "checkedAt": "2026-11-21T13:01:00.774Z"
   },
   "dex6-bg": {
    "videos": [
@@ -2638,7 +2638,7 @@
      "d": "2026-11-10"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "p": 98,
     "q": "",
@@ -2682,7 +2682,7 @@
      "d": "2026-09-30"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2714,7 +2714,7 @@
      "d": "2026-09-10"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2746,7 +2746,7 @@
      "d": "2026-09-10"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-09-10",
     "faza": "proiectare (autorizație de construire în analiză; exproprieri decise 01.09.2026, start lucrări vizat toamna 2026)",
@@ -2778,7 +2778,7 @@
      "d": "2026-11-07"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-16",
     "f": 0,
@@ -2814,7 +2814,7 @@
      "d": "2026-10-06"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-07",
     "f": 0,
@@ -2844,7 +2844,7 @@
      "d": "2026-05-30"
     }
    ],
-   "checkedAt": "2026-11-20T13:37:20.587Z",
+   "checkedAt": "2026-11-21T13:01:00.774Z",
    "progress": {
     "d": "2026-10-17",
     "f": 0,
